@@ -145,6 +145,11 @@ class KnowledgeService {
     'tanger': ['طنجة'],
     'agadir': ['أكادير', 'اكادير'],
     'fes': ['فاس'],
+    'انترنيت': ['انترنت', 'internet', 'connexion'],
+    'انترنت': ['انترنيت', 'internet', 'اتصال'],
+    'كونيكسيون': ['انترنت', 'اتصال', 'connexion'],
+    'wifi': ['انترنت', 'ويفي', 'connexion'],
+    'ويفي': ['انترنت', 'wifi'],
   };
 
   Set<String> _extractTokens(String text) {

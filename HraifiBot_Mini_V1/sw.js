@@ -1,6 +1,6 @@
 /* le7raifiBot Mini V1 — service worker
    Changez CACHE_VERSION à chaque mise à jour, puis retestez l'installation. */
-const CACHE_VERSION = 'le7raifiBot-v1.2.0';
+const CACHE_VERSION = 'le7raifiBot-v2.1.0';
 const PRECACHE = [
   './',
   './index.html',

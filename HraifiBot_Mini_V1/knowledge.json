@@ -193,6 +193,8 @@
         "طيران",
         "بدون انترنت",
         "دون انترنت",
+        "بلا انترنت",
+        "بلا انترنيت",
         "sans connexion"
       ],
       "fr": "Le7rayfiBot fonctionne à 100% hors-ligne ! Grâce à la technologie PWA et à sa base locale intégrée (knowledge.json), vous pouvez couper le Wi-Fi, activer le mode Avion et continuer à poser vos questions et lire les fiches d'artisans.",

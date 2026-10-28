@@ -28,28 +28,28 @@
 
   const SUGGESTIONS = Object.freeze([
     {
-      id: 'electricien-laayoune',
-      fr: 'Comment trouver un électricien à Laayoune ?',
-      ar: 'كيف أجد كهربائياً في العيون؟',
-      darija: 'كيفاش نلقى تريسيان ف العيون؟'
+      label: { darija: '⚡ تريسيان فالعيون', ar: '⚡ كهربائي بالعيون', en: '⚡ Electrician Laayoune', fr: '⚡ Électricien Laâyoune' },
+      query: { darija: 'كيفاش نلقى تريسيان ف العيون؟', ar: 'كيف أجد كهربائياً في العيون؟', en: 'How to find an electrician in Laayoune?', fr: 'Comment trouver un électricien à Laayoune ?' }
     },
     {
-      id: 'artisanat-patrimoine',
-      fr: 'Quels savoir-faire sont valorisés ?',
-      ar: 'ما المهارات التي تُثمّنها المنصة؟',
-      darija: 'شنو هي الصنعة اللي كتدعمها المنصة؟'
+      label: { darija: '🔧 بلومبي مستعجل', ar: '🔧 سباك مستعجل', en: '🔧 Urgent Plumber', fr: '🔧 Plombier urgent' },
+      query: { darija: 'بغيت بلومبي يصاوب ليا الروبيني', ar: 'أحتاج سباكاً لإصلاح تسرب ماء', en: 'I need an emergency plumber for a leaking pipe', fr: 'Je cherche un plombier pour une fuite d\'eau' }
     },
     {
-      id: 'inscription-artisan',
-      fr: 'Comment un artisan peut-il rejoindre Le7rayfi ?',
-      ar: 'كيف يمكن للحرفي الانضمام إلى Le7rayfi؟',
-      darija: 'كيفاش يقدر الحرايفي يتسجل ف المنصة؟'
+      label: { darija: '🪵 نجار فالداخلة', ar: '🪵 نجار بالداخلة', en: '🪵 Carpenter Dakhla', fr: '🪵 Menuisier Dakhla' },
+      query: { darija: 'كنقلب على نجار محترف فالداخلة', ar: 'أبحث عن نجار مؤهل في الداخلة', en: 'Looking for a qualified carpenter in Dakhla', fr: 'Je cherche un menuisier qualifié à Dakhla' }
     },
     {
-      id: 'hors-ligne',
-      fr: 'Est-ce que ça marche sans Internet ?',
-      ar: 'هل يعمل دون إنترنت؟',
-      darija: 'واش هادشي خدام بلا أنترنيت؟'
+      label: { darija: '☀️ طاقة شمسية', ar: '☀️ طاقة شمسية', en: '☀️ Solar Energy', fr: '☀️ Énergie solaire' },
+      query: { darija: 'شكون كيركب الطاقة الشمسية فالجنوب؟', ar: 'تركيب أنظمة الطاقة الشمسية', en: 'Who installs solar panels in southern Morocco?', fr: 'Installation solaire dans le Sud marocain' }
+    },
+    {
+      label: { darija: '🧵 حرف وصنعة', ar: '🧵 مهارات وتراث', en: '🧵 Sahara Crafts', fr: '🧵 Savoir-faire valorisés' },
+      query: { darija: 'شنو هي الصنعة اللي كتدعمها المنصة؟', ar: 'ما المهارات التي تُثمّنها المنصة؟', en: 'What crafts and skills are featured on Le7rayfi?', fr: 'Quels savoir-faire sont valorisés ?' }
+    },
+    {
+      label: { darija: '📱 بلا أنترنيت', ar: '📱 دون إنترنت', en: '📱 Offline Mode', fr: '📱 Sans Internet' },
+      query: { darija: 'واش هادشي خدام بلا أنترنيت؟', ar: 'هل يعمل دون إنترنت؟', en: 'Does it work without internet?', fr: 'Est-ce que ça marche sans Internet ?' }
     }
   ]);
 
@@ -581,7 +581,7 @@
 
   /* ---------------- État Central de l'Application ---------------- */
   const state = {
-    lang: 'fr',
+    lang: 'darija',
     knowledge: null,
     knowledgeSource: 'bundled',
     knowledgeSavedAt: null,
@@ -604,7 +604,7 @@
     visualizerAnimId: null,
     lipSyncTimer: null,
     selectedVoice: null,
-    speechRate: 0.95
+    speechRate: 0.72
   };
 
   /* ---------------- Sélecteurs DOM ---------------- */
@@ -1072,8 +1072,8 @@
     if (voice) utterance.voice = voice;
 
     utterance.lang = (state.lang === 'en' ? 'en-US' : (state.lang === 'darija' ? 'ar-MA' : (state.lang === 'ar' ? 'ar-SA' : 'fr-FR')));
-    utterance.rate = state.speechRate || (state.lang === 'ar' ? 0.74 : 0.78);
-    utterance.pitch = 0.85;
+    utterance.rate = state.speechRate || (state.lang === 'ar' || state.lang === 'darija' ? 0.68 : 0.74);
+    utterance.pitch = 0.82;
 
     // Word boundary tracking for exact syllable mouth movements
     utterance.onboundary = (event) => {
@@ -1215,6 +1215,7 @@
         const currentText = (finalText || interim).trim();
         state.currentTranscript = currentText;
         if (dom.transcript) dom.transcript.textContent = currentText;
+        if (dom.askInput) dom.askInput.value = currentText;
 
         if (finalText && finalText.trim()) {
           try { recognition.stop(); } catch (e) { /* ignore */ }
@@ -1250,7 +1251,7 @@
 
       recognition.onend = () => {
         if (state.listening) {
-          const buffered = (state.currentTranscript || '').trim();
+          const buffered = (state.currentTranscript || '').trim() || (dom.askInput ? dom.askInput.value.trim() : '');
           cleanUpMicrophone();
           setMood('mood.idle');
           if (buffered) {
@@ -1294,7 +1295,7 @@
       return;
     }
     if (state.listening) {
-      const buffered = (state.currentTranscript || '').trim();
+      const buffered = (state.currentTranscript || '').trim() || (dom.askInput ? dom.askInput.value.trim() : '');
       cancelRecording();
       if (buffered) {
         askQuestion(buffered);
@@ -1333,9 +1334,66 @@
     'انا', 'أنا', 'نحن', 'يمكن', 'الى', 'جد', 'أجد',
     'بغيت', 'باغي', 'خاصني', 'خصني', 'عندي', 'كاين', 'كاينة', 'واش', 'شي',
     'ديال', 'ديالي', 'ف', 'عفاك', 'باش', 'فين', 'كنقلب', 'نلقى', 'نصاوب',
-    'نصلح', 'ليا', 'ليك', 'لينا', 'دابا', 'هاد', 'هادي', 'هادا', 'شنو',
-    'اش', 'أش', 'علاش', 'شكون', 'كيفاش', 'مشكل', 'مشكلة', 'عطب', 'خاسر', 'خاسرة', 'بانة', 'بانا'
+    'نصلح', 'ليا', 'ليك', 'لينا', 'دابا', 'هاد', 'هادي', 'هادا', 'هادشي', 'شنو',
+    'اش', 'أش', 'علاش', 'شكون', 'كيفاش', 'بلا', 'مشكل', 'مشكلة', 'عطب', 'خاسر', 'خاسرة', 'بانة', 'بانا'
   ]);
+
+  const SYNONYMS = Object.freeze({
+    'trician': ['تريسيان', 'electricien', 'كهربائي', 'الضو'],
+    'trissian': ['تريسيان', 'electricien', 'كهربائي', 'الضو'],
+    'electricite': ['كهرباء', 'الضو', 'تريسيان', 'electricien'],
+    'electricien': ['تريسيان', 'كهربائي', 'الضو'],
+    'blombi': ['بلومبي', 'plombier', 'سباك', 'الما'],
+    'plombi': ['بلومبي', 'plombier', 'سباك', 'الما'],
+    'plombier': ['بلومبي', 'سباك', 'تسرب'],
+    'sbagh': ['صباغ', 'peintre', 'صباغة'],
+    'sbagha': ['صباغة', 'peinture', 'صباغ'],
+    'peintre': ['صباغ', 'صباغة'],
+    'peinture': ['صباغة', 'صباغ'],
+    'njar': ['نجار', 'menuisier', 'نجارة'],
+    'njara': ['نجارة', 'menuiserie', 'نجار'],
+    'menuisier': ['نجار', 'نجارة'],
+    'menuiserie': ['نجارة', 'نجار'],
+    'bennay': ['بناي', 'بناء', 'macon'],
+    'macon': ['بناء', 'بناي'],
+    'zlayji': ['زلايجي', 'زليج'],
+    'soudeur': ['سودور', 'حداد', 'ferronnerie'],
+    'haddad': ['حداد', 'ferronnerie', 'سودور'],
+    'clim': ['كليماتيزور', 'climatisation', 'مكيف'],
+    'climatiseur': ['كليماتيزور', 'climatisation'],
+    'climatisation': ['كليماتيزور', 'مكيف'],
+    'mekanik': ['ميكانيك', 'mecanicien'],
+    'mecanicien': ['ميكانيك', 'mecanicien'],
+    'slm': ['سلام', 'salam'],
+    'salamo': ['سلام', 'salam'],
+    'alaykom': ['عليكم'],
+    'chkon': ['شكون', 'من انت'],
+    'chkoune': ['شكون', 'من انت'],
+    'labas': ['لاباس', 'خير'],
+    'cv': ['لاباس', 'خير'],
+    'chokran': ['شكرا', 'merci'],
+    'choukrane': ['شكرا', 'merci'],
+    'merci': ['شكرا', 'remerciement'],
+    'layoun': ['العيون', 'laayoune'],
+    '3youn': ['العيون', 'laayoune'],
+    'laayoune': ['العيون'],
+    'glmim': ['كلميم', 'guelmim'],
+    'guelmim': ['كلميم'],
+    'dakhla': ['الداخلة'],
+    'casa': ['الدار البيضاء', 'كازا'],
+    'kaza': ['الدار البيضاء', 'كازا'],
+    'marrakech': ['مراكش'],
+    'kech': ['مراكش'],
+    'rabat': ['الرباط'],
+    'tanger': ['طنجة'],
+    'agadir': ['أكادير', 'اكادير'],
+    'fes': ['فاس'],
+    'انترنيت': ['انترنت', 'internet', 'connexion'],
+    'انترنت': ['انترنيت', 'internet', 'اتصال'],
+    'كونيكسيون': ['انترنت', 'اتصال', 'connexion'],
+    'wifi': ['انترنت', 'ويفي', 'connexion'],
+    'ويفي': ['انترنت', 'wifi']
+  });
 
   function queryTokens(text) {
     const base = normalizeText(text).split(' ').filter(Boolean);
@@ -1343,6 +1401,9 @@
     for (const token of base) {
       if (STOP_WORDS.has(token)) continue;
       set.add(token);
+      if (SYNONYMS[token]) {
+        for (const s of SYNONYMS[token]) set.add(normalizeText(s));
+      }
       if (!/[\u0600-\u06FF]/.test(token) || token.length < 3) continue;
       const trimmed = token
         .replace(/^وال/, '')
@@ -1351,7 +1412,12 @@
         .replace(/^فال/, '')
         .replace(/^لل/, '')
         .replace(/^ال/, '');
-      if (trimmed && trimmed !== token && !STOP_WORDS.has(trimmed)) set.add(trimmed);
+      if (trimmed && trimmed !== token && !STOP_WORDS.has(trimmed)) {
+        set.add(trimmed);
+        if (SYNONYMS[trimmed]) {
+          for (const s of SYNONYMS[trimmed]) set.add(normalizeText(s));
+        }
+      }
       if (token.startsWith('و') && token.length > 4) set.add(token.slice(1));
       if (trimmed.endsWith('ا') && trimmed.length > 3) set.add(trimmed.slice(0, -1));
       if (trimmed.endsWith('ات') && trimmed.length > 4) set.add(trimmed.slice(0, -2));
@@ -1369,7 +1435,7 @@
       const key = normalizeText(keyword);
       if (!key || STOP_WORDS.has(key)) continue;
       if (key.includes(' ')) {
-        if ((' ' + normalizedQuery + ' ').includes(' ' + key + ' ')) {
+        if ((' ' + normalizedQuery + ' ').includes(' ' + key + ' ') || normalizedQuery.includes(key) || key.includes(normalizedQuery)) {
           score += 8;
           hasPhrase = true;
         }
@@ -1423,11 +1489,11 @@
       }
     }
 
-    if (!best || bestScore < 3) return null;
+    if (!best || bestScore < 2) return null;
 
     // Reject out-of-domain foreign questions (e.g. billet de train pour Tokyo)
     const baseContentWords = normalizedQuery.split(' ').filter(w => w.length >= 3 && !STOP_WORDS.has(w));
-    if (baseContentWords.length >= 3 && !bestDetails.hasPhrase && bestDetails.matchesCount <= 1) {
+    if (baseContentWords.length >= 3 && !bestDetails.hasPhrase && bestDetails.matchesCount <= 1 && bestScore < 4) {
       return null;
     }
 
@@ -1505,82 +1571,6 @@
     if (dom.respReplay) dom.respReplay.disabled = false;
   }
 
-  async function queryOnlineAi(question, lang) {
-    const apiKey = 'sk-WHW7h9Kh6XdI6dzVe19TjoKt6zJdkWomYc2IVK6x0NyZpzxR';
-    const targetLangDesc = lang === 'darija'
-      ? 'Moroccan Darija (in Arabic script)'
-      : lang === 'ar' ? 'Modern Standard Arabic' : 'French';
-
-    let processed = question
-      .replace(/العيون/g, 'Laayoune')
-      .replace(/الداخلة/g, 'Dakhla')
-      .replace(/كلميم|ڭلميم/g, 'Guelmim')
-      .replace(/مراكش/g, 'Marrakech')
-      .replace(/الدار البيضاء|كازا/g, 'Casablanca')
-      .replace(/الرباط/g, 'Rabat')
-      .replace(/فاس/g, 'Fes')
-      .replace(/طنجة/g, 'Tanger')
-      .replace(/أكادير/g, 'Agadir')
-      .replace(/تريسيان|كهربائي|كهرباء|الضو|ضو/g, 'electrician')
-      .replace(/بلومبي|سباك|سباكة|الما|روبيني|قادوس|شوفو/g, 'plumber')
-      .replace(/كليم|كليماتيزور|مكيف|تبريد/g, 'air conditioning')
-      .replace(/ماكينة الصابون|ماكينة لغسيل|تلاجة|غسالة|ثلاجة/g, 'home appliances')
-      .replace(/نجار|نجارة|بيبان|شراجم/g, 'carpenter')
-      .replace(/صباغ|صباغة|حيط/g, 'painter')
-      .replace(/ميكانيك|ميكانيسيان|طوموبيل/g, 'mechanic car')
-      .replace(/طاقة شمسية/g, 'solar energy')
-      .replace(/بناي|بناء|زلايجي|زليج/g, 'mason tiler')
-      .replace(/سودور|حداد/g, 'welder')
-      .replace(/صناعة تقليدية/g, 'traditional crafts');
-
-    const charMap = {
-      'ا': 'a', 'أ': 'a', 'إ': 'i', 'آ': 'aa', 'ء': '2', 'ئ': 'y', 'ؤ': 'w',
-      'ب': 'b', 'ت': 't', 'ث': 'th', 'ج': 'j', 'ح': '7', 'خ': 'kh',
-      'د': 'd', 'ذ': 'dh', 'ر': 'r', 'ز': 'z', 'س': 's', 'ش': 'ch',
-      'ص': 's', 'ض': 'd', 'ط': 't', 'ظ': 'z', 'ع': '3', 'غ': 'gh',
-      'ف': 'f', 'ق': 'q', 'ك': 'k', 'ل': 'l', 'م': 'm', 'ن': 'n',
-      'ه': 'h', 'و': 'w', 'ي': 'y', 'ى': 'a', 'ة': 'a'
-    };
-    let transliterated = '';
-    for (const ch of processed) {
-      transliterated += charMap[ch] !== undefined ? charMap[ch] : ch;
-    }
-    transliterated = transliterated.replace(/\bf\b/g, 'in').replace(/\s+/g, ' ').trim();
-
-    const inputPrompt = `User asks in ${lang}: "${transliterated}". Answer directly to the user in ${targetLangDesc}. Be practical, warm, and helpful (2 to 3 sentences maximum). Mention le7rayfi.com when relevant for finding verified Moroccan artisans.`;
-
-    const systemPrompt = `You are Le7rayfiBot, the intelligent official AI assistant of the Moroccan platform Le7rayfi (https://www.le7rayfi.com/).
-Slogan: "الصنعة الزوينة قريبة ليك".
-Always answer directly in ${targetLangDesc}. Keep answers concise, direct, helpful, and natural (2 to 3 sentences).`;
-
-    try {
-      const res = await fetch('https://agentrouter.org/v1/responses', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json; charset=utf-8',
-          'Authorization': `Bearer ${apiKey}`,
-          'User-Agent': 'codex_cli_rs/0.149.1',
-          'Originator': 'codex_cli_rs'
-        },
-        body: JSON.stringify({
-          model: 'gpt-5.6-sol',
-          instructions: systemPrompt,
-          input: inputPrompt
-        })
-      });
-
-      if (res.ok) {
-        const data = await res.json();
-        const msg = data?.output?.find(o => o.type === 'message');
-        const text = msg?.content?.find(c => c.text)?.text || data?.output?.[0]?.content?.[0]?.text;
-        if (text && text.trim()) return text.trim();
-      }
-    } catch (e) {
-      console.warn('Online AI failed, falling back to local KB', e);
-    }
-    return null;
-  }
-
   async function askQuestion(rawQuestion) {
     if (!state.knowledge) {
       toast(t('error.knowledgeLoad'), 'error');
@@ -1603,13 +1593,17 @@ Always answer directly in ${targetLangDesc}. Keep answers concise, direct, helpf
 
     if (state.askTimer) clearTimeout(state.askTimer);
 
-    // Instant local knowledge base resolution (No AI network delay)
+    // Instant local knowledge base resolution (100% offline, 0ms delay)
     state.processing = false;
     const match = findAnswer(question);
     if (match) {
       state.previousTopic = match.item.id;
       state.response = { itemId: match.item.id, query: question, fallback: false };
-      const answer = (state.lang === 'darija' && match.item.darija) ? match.item.darija : ((state.lang === 'ar' || state.lang === 'darija') ? match.item.ar : match.item.fr);
+      const answer = (state.lang === 'darija' && match.item.darija)
+        ? match.item.darija
+        : ((state.lang === 'ar' || state.lang === 'darija')
+          ? match.item.ar
+          : (state.lang === 'en' && match.item.en ? match.item.en : match.item.fr));
       renderResponseBubble(state.response);
       addMessageToConvo('bot', answer, true, match.item.id);
       speakCurrentResponse();
@@ -1688,12 +1682,14 @@ Always answer directly in ${targetLangDesc}. Keep answers concise, direct, helpf
     if (!dom.suggestions) return;
     dom.suggestions.replaceChildren();
     for (const sug of SUGGESTIONS) {
-      const label = (state.lang === 'darija' ? sug.darija : (state.lang === 'ar' ? sug.ar : sug.fr));
+      const label = sug.label[state.lang] || sug.label.darija || sug.label.fr;
+      const query = sug.query[state.lang] || sug.query.darija || sug.query.fr;
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'chip';
       btn.textContent = label;
-      btn.addEventListener('click', () => askQuestion(label));
+      btn.title = query;
+      btn.addEventListener('click', () => askQuestion(query));
       dom.suggestions.appendChild(btn);
     }
   }
@@ -1929,8 +1925,13 @@ Always answer directly in ${targetLangDesc}. Keep answers concise, direct, helpf
     if (dom.askForm) {
       dom.askForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const val = dom.askInput.value;
-        if (val) askQuestion(val);
+        const text = (dom.askInput ? dom.askInput.value.trim() : '') || (state.currentTranscript || '').trim();
+        if (state.listening) {
+          cancelRecording();
+        }
+        if (text) {
+          askQuestion(text);
+        }
       });
     }
 
@@ -2051,10 +2052,14 @@ Always answer directly in ${targetLangDesc}. Keep answers concise, direct, helpf
     }
 
     // Service Worker registration
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js').catch(err => {
-        console.warn('SW registration failed:', err);
-      });
+    if ('serviceWorker' in navigator && (window.location.protocol === 'https:' || window.location.hostname === 'localhost')) {
+      try {
+        navigator.serviceWorker.register('sw.js').catch(err => {
+          console.warn('SW registration skipped or failed:', err);
+        });
+      } catch (e) {
+        console.warn('SW registration exception:', e);
+      }
     }
   }
 
@@ -2066,16 +2071,20 @@ Always answer directly in ${targetLangDesc}. Keep answers concise, direct, helpf
 
     // Load saved preferences
     const savedLang = localStorage.getItem(STORAGE.lang);
-    if (savedLang && ['fr', 'ar', 'darija'].includes(savedLang)) {
+    if (savedLang && ['fr', 'ar', 'darija', 'en'].includes(savedLang)) {
       state.lang = savedLang;
+    } else {
+      state.lang = 'darija';
     }
 
     const savedRate = localStorage.getItem(STORAGE.speechRate);
     if (savedRate) {
       state.speechRate = parseFloat(savedRate);
-      if (dom.rangeSpeechRate) dom.rangeSpeechRate.value = state.speechRate;
-      if (dom.rateValue) dom.rateValue.textContent = `${state.speechRate.toFixed(2)}x`;
+    } else {
+      state.speechRate = 0.72;
     }
+    if (dom.rangeSpeechRate) dom.rangeSpeechRate.value = state.speechRate;
+    if (dom.rateValue) dom.rateValue.textContent = `${state.speechRate.toFixed(2)}x`;
 
     await loadInitialKnowledge();
     setupEvents();

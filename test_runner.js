@@ -69,9 +69,66 @@ const STOP_WORDS = new Set([
   'انا', 'أنا', 'نحن', 'يمكن', 'الى', 'جد', 'أجد',
   'بغيت', 'باغي', 'خاصني', 'خصني', 'عندي', 'كاين', 'كاينة', 'واش', 'شي',
   'ديال', 'ديالي', 'ف', 'عفاك', 'باش', 'فين', 'كنقلب', 'نلقى', 'نصاوب',
-  'نصلح', 'ليا', 'ليك', 'لينا', 'دابا', 'هاد', 'هادي', 'هادا', 'شنو',
-  'اش', 'أش', 'علاش', 'شكون', 'كيفاش', 'مشكل', 'مشكلة', 'عطب', 'خاسر', 'خاسرة', 'بانة', 'بانا'
+  'نصلح', 'ليا', 'ليك', 'لينا', 'دابا', 'هاد', 'هادي', 'هادا', 'هادشي', 'شنو',
+  'اش', 'أش', 'علاش', 'شكون', 'كيفاش', 'بلا', 'مشكل', 'مشكلة', 'عطب', 'خاسر', 'خاسرة', 'بانة', 'بانا'
 ]);
+
+const SYNONYMS = {
+  'trician': ['تريسيان', 'electricien', 'كهربائي', 'الضو'],
+  'trissian': ['تريسيان', 'electricien', 'كهربائي', 'الضو'],
+  'electricite': ['كهرباء', 'الضو', 'تريسيان', 'electricien'],
+  'electricien': ['تريسيان', 'كهربائي', 'الضو'],
+  'blombi': ['بلومبي', 'plombier', 'سباك', 'الما'],
+  'plombi': ['بلومبي', 'plombier', 'سباك', 'الما'],
+  'plombier': ['بلومبي', 'سباك', 'تسرب'],
+  'sbagh': ['صباغ', 'peintre', 'صباغة'],
+  'sbagha': ['صباغة', 'peinture', 'صباغ'],
+  'peintre': ['صباغ', 'صباغة'],
+  'peinture': ['صباغة', 'صباغ'],
+  'njar': ['نجار', 'menuisier', 'نجارة'],
+  'njara': ['نجارة', 'menuiserie', 'نجار'],
+  'menuisier': ['نجار', 'نجارة'],
+  'menuiserie': ['نجارة', 'نجار'],
+  'bennay': ['بناي', 'بناء', 'macon'],
+  'macon': ['بناء', 'بناي'],
+  'zlayji': ['زلايجي', 'زليج'],
+  'soudeur': ['سودور', 'حداد', 'ferronnerie'],
+  'haddad': ['حداد', 'ferronnerie', 'سودور'],
+  'clim': ['كليماتيزور', 'climatisation', 'مكيف'],
+  'climatiseur': ['كليماتيزور', 'climatisation'],
+  'climatisation': ['كليماتيزور', 'مكيف'],
+  'mekanik': ['ميكانيك', 'mecanicien'],
+  'mecanicien': ['ميكانيك', 'mecanicien'],
+  'slm': ['سلام', 'salam'],
+  'salamo': ['سلام', 'salam'],
+  'alaykom': ['عليكم'],
+  'chkon': ['شكون', 'من انت'],
+  'chkoune': ['شكون', 'من انت'],
+  'labas': ['لاباس', 'خير'],
+  'cv': ['لاباس', 'خير'],
+  'chokran': ['شكرا', 'merci'],
+  'choukrane': ['شكرا', 'merci'],
+  'merci': ['شكرا', 'remerciement'],
+  'layoun': ['العيون', 'laayoune'],
+  '3youn': ['العيون', 'laayoune'],
+  'laayoune': ['العيون'],
+  'glmim': ['كلميم', 'guelmim'],
+  'guelmim': ['كلميم'],
+  'dakhla': ['الداخلة'],
+  'casa': ['الدار البيضاء', 'كازا'],
+  'kaza': ['الدار البيضاء', 'كازا'],
+  'marrakech': ['مراكش'],
+  'kech': ['مراكش'],
+  'rabat': ['الرباط'],
+  'tanger': ['طنجة'],
+  'agadir': ['أكادير', 'اكادير'],
+  'fes': ['فاس'],
+  'انترنيت': ['انترنت', 'internet', 'connexion'],
+  'انترنت': ['انترنيت', 'internet', 'اتصال'],
+  'كونيكسيون': ['انترنت', 'اتصال', 'connexion'],
+  'wifi': ['انترنت', 'ويفي', 'connexion'],
+  'ويفي': ['انترنت', 'wifi']
+};
 
 function queryTokens(text) {
   const base = normalize(text).split(' ').filter(Boolean);
@@ -79,6 +136,9 @@ function queryTokens(text) {
   for (const token of base) {
     if (STOP_WORDS.has(token)) continue;
     set.add(token);
+    if (SYNONYMS[token]) {
+      for (const s of SYNONYMS[token]) set.add(normalize(s));
+    }
     if (!/[\u0600-\u06FF]/.test(token) || token.length < 3) continue;
     const trimmed = token
       .replace(/^وال/, '')
@@ -87,7 +147,12 @@ function queryTokens(text) {
       .replace(/^فال/, '')
       .replace(/^لل/, '')
       .replace(/^ال/, '');
-    if (trimmed && trimmed !== token && !STOP_WORDS.has(trimmed)) set.add(trimmed);
+    if (trimmed && trimmed !== token && !STOP_WORDS.has(trimmed)) {
+      set.add(trimmed);
+      if (SYNONYMS[trimmed]) {
+        for (const s of SYNONYMS[trimmed]) set.add(normalize(s));
+      }
+    }
     if (token.startsWith('و') && token.length > 4) set.add(token.slice(1));
     if (trimmed.endsWith('ا') && trimmed.length > 3) set.add(trimmed.slice(0, -1));
     if (trimmed.endsWith('ات') && trimmed.length > 4) set.add(trimmed.slice(0, -2));
@@ -165,8 +230,13 @@ const testQueries = [
   { q: 'Comment un artisan peut-il rejoindre Le7rayfi ?', expectedId: 'inscription-artisan' },
   { q: 'كيف يمكن للحرفي الانضمام إلى Le7rayfi؟', expectedId: 'inscription-artisan' },
   { q: 'خاصني تريسيان ف العيون عفاك', expectedId: 'electricien-laayoune' },
+  { q: 'كيفاش نلقى تريسيان ف العيون؟', expectedId: 'electricien-laayoune' },
   { q: 'بغيت بلومبي يصاوب ليا الروبيني', expectedId: 'metier-plomberie' },
   { q: 'عندي مشكل ف الكليماتيزور ما كيبردش', expectedId: 'metier-climatisation' },
+  { q: 'كنقلب على نجار محترف فالداخلة', expectedId: 'metier-menuiserie' },
+  { q: 'شكون كيركب الطاقة الشمسية فالجنوب؟', expectedId: 'metier-solaire' },
+  { q: 'شنو هي الصنعة اللي كتدعمها المنصة؟', expectedId: 'artisanat-patrimoine' },
+  { q: 'واش هادشي خدام بلا أنترنيت؟', expectedId: 'hors-ligne' },
   { q: 'Quel est le prix du billet de train pour Tokyo ?', expectedId: null }
 ];
 
