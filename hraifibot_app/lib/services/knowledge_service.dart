@@ -95,11 +95,66 @@ class KnowledgeService {
     return text.replaceAll(RegExp(r'\s+'), ' ').trim();
   }
 
+  static const Map<String, List<String>> _synonyms = {
+    'trician': ['تريسيان', 'electricien', 'كهربائي', 'الضو'],
+    'trissian': ['تريسيان', 'electricien', 'كهربائي', 'الضو'],
+    'electricite': ['كهرباء', 'الضو', 'تريسيان', 'electricien'],
+    'electricien': ['تريسيان', 'كهربائي', 'الضو'],
+    'blombi': ['بلومبي', 'plombier', 'سباك', 'الما'],
+    'plombi': ['بلومبي', 'plombier', 'سباك', 'الما'],
+    'plombier': ['بلومبي', 'سباك', 'تسرب'],
+    'sbagh': ['صباغ', 'peintre', 'صباغة'],
+    'sbagha': ['صباغة', 'peinture', 'صباغ'],
+    'peintre': ['صباغ', 'صباغة'],
+    'peinture': ['صباغة', 'صباغ'],
+    'njar': ['نجار', 'menuisier', 'نجارة'],
+    'njara': ['نجارة', 'menuiserie', 'نجار'],
+    'menuisier': ['نجار', 'نجارة'],
+    'menuiserie': ['نجارة', 'نجار'],
+    'bennay': ['بناي', 'بناء', 'macon'],
+    'macon': ['بناء', 'بناي'],
+    'zlayji': ['زلايجي', 'زليج'],
+    'soudeur': ['سودور', 'حداد', 'ferronnerie'],
+    'haddad': ['حداد', 'ferronnerie', 'سودور'],
+    'clim': ['كليماتيزور', 'climatisation', 'مكيف'],
+    'climatiseur': ['كليماتيزور', 'climatisation'],
+    'climatisation': ['كليماتيزور', 'مكيف'],
+    'mekanik': ['ميكانيك', 'mecanicien'],
+    'mecanicien': ['ميكانيك', 'mecanicien'],
+    'slm': ['سلام', 'salam'],
+    'salamo': ['سلام', 'salam'],
+    'alaykom': ['عليكم'],
+    'chkon': ['شكون', 'من انت'],
+    'chkoune': ['شكون', 'من انت'],
+    'labas': ['لاباس', 'خير'],
+    'cv': ['لاباس', 'خير'],
+    'chokran': ['شكرا', 'merci'],
+    'choukrane': ['شكرا', 'merci'],
+    'merci': ['شكرا', 'remerciement'],
+    'layoun': ['العيون', 'laayoune'],
+    '3youn': ['العيون', 'laayoune'],
+    'laayoune': ['العيون'],
+    'glmim': ['كلميم', 'guelmim'],
+    'guelmim': ['كلميم'],
+    'dakhla': ['الداخلة'],
+    'casa': ['الدار البيضاء', 'كازا'],
+    'kaza': ['الدار البيضاء', 'كازا'],
+    'marrakech': ['مراكش'],
+    'kech': ['مراكش'],
+    'rabat': ['الرباط'],
+    'tanger': ['طنجة'],
+    'agadir': ['أكادير', 'اكادير'],
+    'fes': ['فاس'],
+  };
+
   Set<String> _extractTokens(String text) {
     final base = normalizeText(text).split(' ').where((w) => w.length > 1).toList();
     final tokens = <String>{};
     for (final token in base) {
       tokens.add(token);
+      if (_synonyms.containsKey(token)) {
+        tokens.addAll(_synonyms[token]!);
+      }
       if (token.length >= 4) {
         final stripped = token
             .replaceFirst(RegExp(r'^وال'), '')
@@ -110,6 +165,9 @@ class KnowledgeService {
             .replaceFirst(RegExp(r'^ال'), '');
         if (stripped.length >= 3) {
           tokens.add(stripped);
+          if (_synonyms.containsKey(stripped)) {
+            tokens.addAll(_synonyms[stripped]!);
+          }
         }
       }
     }
@@ -133,8 +191,10 @@ class KnowledgeService {
 
       // Check full keyword phrase match
       for (final kw in normKeywords) {
-        if (kw.isNotEmpty && (normalized == kw || normalized.contains(kw))) {
-          score += 6;
+        if (kw.isNotEmpty) {
+          if (normalized == kw || normalized.contains(kw) || kw.contains(normalized)) {
+            score += 6;
+          }
         }
         for (final token in tokens) {
           if (kw.split(' ').contains(token)) {
@@ -163,7 +223,7 @@ class KnowledgeService {
       }
     }
 
-    if (maxScore >= 3) {
+    if (maxScore >= 2) {
       return bestItem;
     }
     return null;

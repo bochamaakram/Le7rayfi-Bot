@@ -183,13 +183,19 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
 
   void _toggleMic() async {
     if (_mood == RobotMood.listening) {
+      final currentWords = _liveTranscript.trim().isNotEmpty
+          ? _liveTranscript.trim()
+          : _textController.text.trim();
       final buffered = await VoiceService().stopListening(submitBuffer: true);
       setState(() {
         _mood = RobotMood.idle;
         _liveTranscript = '';
       });
-      if (buffered != null && buffered.trim().isNotEmpty) {
-        _handleUserQuestion(buffered);
+      final queryToSend = (buffered != null && buffered.trim().isNotEmpty)
+          ? buffered.trim()
+          : currentWords;
+      if (queryToSend.isNotEmpty) {
+        _handleUserQuestion(queryToSend);
       }
       return;
     }
@@ -210,11 +216,16 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
         if (mounted) {
           setState(() {
             _liveTranscript = words;
+            _textController.text = words;
+            _textController.selection = TextSelection.fromPosition(
+              TextPosition(offset: words.length),
+            );
           });
         }
       },
       onError: (err) {
         if (!mounted) return;
+        debugPrint('Voice STT error: $err');
         setState(() {
           _mood = RobotMood.error;
           _liveTranscript = '';
@@ -224,14 +235,19 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
         });
       },
       onListeningEnded: () {
-        final recognized = VoiceService().lastRecognizedWords;
+        final recognized = VoiceService().lastRecognizedWords.trim();
+        final currentWords = _liveTranscript.trim().isNotEmpty
+            ? _liveTranscript.trim()
+            : _textController.text.trim();
+        final textToSend = recognized.isNotEmpty ? recognized : currentWords;
+
         if (mounted) {
           setState(() {
             _liveTranscript = '';
           });
         }
-        if (recognized.isNotEmpty) {
-          _handleUserQuestion(recognized);
+        if (textToSend.isNotEmpty) {
+          _handleUserQuestion(textToSend);
         } else {
           if (mounted) setState(() => _mood = RobotMood.idle);
         }
@@ -930,7 +946,21 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                 size: 20,
                 color: Color(0xFFF59E0B),
               ),
-              onPressed: () => _handleUserQuestion(_textController.text),
+              onPressed: () {
+                final text = _textController.text.trim().isNotEmpty
+                    ? _textController.text.trim()
+                    : _liveTranscript.trim();
+                if (_mood == RobotMood.listening) {
+                  VoiceService().stopListening();
+                  setState(() {
+                    _mood = RobotMood.idle;
+                    _liveTranscript = '';
+                  });
+                }
+                if (text.isNotEmpty) {
+                  _handleUserQuestion(text);
+                }
+              },
             ),
           ],
         ),

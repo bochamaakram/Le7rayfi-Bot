@@ -27,17 +27,40 @@ class VoiceService {
   VoiceErrorCallback? _onErrorCallback;
   VoidCallback? _onListeningEndedCallback;
 
+  /// Default TTS audio parameters
+  static const double defaultPitch = 0.82; // Deeper, warmer voice
+  static const double defaultSpeechRate = 0.68; // Slower, clearer voice pace
+
+  double _pitch = defaultPitch;
+  double _speechRate = defaultSpeechRate;
+
   bool get isListening => _isListening;
   bool get isSpeaking => _isSpeaking;
   Future<bool> get hasPermission => _speech.hasPermission;
   bool get isAvailable => _speechInitialized && _speech.isAvailable;
   String get lastRecognizedWords => _lastRecognizedWords;
+  double get pitch => _pitch;
+  double get speechRate => _speechRate;
+
+  Future<void> setPitch(double pitch) async {
+    _pitch = pitch;
+    try {
+      await _tts.setPitch(_pitch);
+    } catch (_) {}
+  }
+
+  Future<void> setSpeechRate(double rate) async {
+    _speechRate = rate;
+    try {
+      await _tts.setSpeechRate(_speechRate);
+    } catch (_) {}
+  }
 
   Future<void> init() async {
     // 1. Initialize TTS
     try {
-      await _tts.setPitch(1.0);
-      await _tts.setSpeechRate(0.85); // Natural conversational rate
+      await _tts.setPitch(_pitch);
+      await _tts.setSpeechRate(_speechRate);
       await _tts.setVolume(1.0);
 
       _tts.setStartHandler(() {
@@ -206,7 +229,7 @@ class VoiceService {
 
     try {
       final listenOptions = stt.SpeechListenOptions(
-        listenMode: stt.ListenMode.dictation, // Dictation mode for conversational queries
+        listenMode: stt.ListenMode.confirmation, // Optimal for conversational queries
         cancelOnError: false,
         partialResults: true,
         onDevice: false,
@@ -241,7 +264,7 @@ class VoiceService {
         try {
           debugPrint('STT: Retrying listen with ar_SA fallback...');
           final fallbackOptions = stt.SpeechListenOptions(
-            listenMode: stt.ListenMode.dictation,
+            listenMode: stt.ListenMode.confirmation,
             cancelOnError: false,
             partialResults: true,
             pauseFor: const Duration(seconds: 3),
@@ -290,13 +313,10 @@ class VoiceService {
       _isListening = false;
     }
     _sessionEnded = true;
-    if (submitBuffer && buffered.isNotEmpty) {
-      final result = buffered;
-      _lastRecognizedWords = '';
-      return result;
+    if (submitBuffer && buffered.trim().isNotEmpty) {
+      return buffered.trim();
     }
-    _lastRecognizedWords = '';
-    return null;
+    return buffered.trim().isNotEmpty ? buffered.trim() : null;
   }
 
   Future<void> speak({
@@ -323,6 +343,8 @@ class VoiceService {
 
     try {
       await _tts.setLanguage(ttsLang);
+      await _tts.setPitch(_pitch);
+      await _tts.setSpeechRate(_speechRate);
       _isSpeaking = true;
       if (onComplete != null) {
         _tts.setCompletionHandler(() {

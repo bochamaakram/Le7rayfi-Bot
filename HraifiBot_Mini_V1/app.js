@@ -1072,8 +1072,8 @@
     if (voice) utterance.voice = voice;
 
     utterance.lang = (state.lang === 'en' ? 'en-US' : (state.lang === 'darija' ? 'ar-MA' : (state.lang === 'ar' ? 'ar-SA' : 'fr-FR')));
-    utterance.rate = state.speechRate || (state.lang === 'ar' ? 0.92 : 0.98);
-    utterance.pitch = 1.05;
+    utterance.rate = state.speechRate || (state.lang === 'ar' ? 0.74 : 0.78);
+    utterance.pitch = 0.85;
 
     // Word boundary tracking for exact syllable mouth movements
     utterance.onboundary = (event) => {
@@ -1250,8 +1250,12 @@
 
       recognition.onend = () => {
         if (state.listening) {
+          const buffered = (state.currentTranscript || '').trim();
           cleanUpMicrophone();
           setMood('mood.idle');
+          if (buffered) {
+            askQuestion(buffered);
+          }
         }
       };
 
@@ -1290,7 +1294,11 @@
       return;
     }
     if (state.listening) {
+      const buffered = (state.currentTranscript || '').trim();
       cancelRecording();
+      if (buffered) {
+        askQuestion(buffered);
+      }
       return;
     }
     startRecording();
@@ -1595,19 +1603,8 @@ Always answer directly in ${targetLangDesc}. Keep answers concise, direct, helpf
 
     if (state.askTimer) clearTimeout(state.askTimer);
 
-    // 1. Try online live AI first
-    const onlineAnswer = await queryOnlineAi(question, state.lang);
+    // Instant local knowledge base resolution (No AI network delay)
     state.processing = false;
-
-    if (onlineAnswer) {
-      state.response = { itemId: 'online-ai', customText: onlineAnswer, query: question, fallback: false, isAi: true };
-      renderResponseBubble(state.response);
-      addMessageToConvo('bot', onlineAnswer, true, 'online-ai');
-      speakCurrentResponse();
-      return;
-    }
-
-    // 2. Fallback to local KB
     const match = findAnswer(question);
     if (match) {
       state.previousTopic = match.item.id;
