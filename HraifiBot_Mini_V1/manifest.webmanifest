@@ -1,0 +1,66 @@
+{
+  "id": "./",
+  "name": "le7raifiBot Mini V1 — Le7rayfi",
+  "short_name": "le7raifiBot",
+  "description": "Robot de table bilingue de démonstration : réponses locales FR/AR, NFC, QR et mode hors ligne. Le7rayfi / Sahara Innovation.",
+  "lang": "fr",
+  "dir": "ltr",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "portrait-primary",
+  "background_color": "#0b1b20",
+  "theme_color": "#0b1b20",
+  "categories": [
+    "education",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Poser une question",
+      "short_name": "Question",
+      "url": "./?action=ask",
+      "icons": [
+        {
+          "src": "assets/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Fiche de démonstration",
+      "short_name": "Fiche démo",
+      "url": "./?artisan=ART-DEMO-01",
+      "icons": [
+        {
+          "src": "assets/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

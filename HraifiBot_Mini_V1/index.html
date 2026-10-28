@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description"
+    content="le7raifiBot Mini V1 — Le7rayfi. Assistant vocal robot bilingue FR/AR : réponses locales vérifiées, voix animée, NFC, QR et mode hors ligne.">
+  <meta name="theme-color" content="#0d1e2e">
+  <meta name="color-scheme" content="dark light">
+  <title>le7raifiBot Mini V1 — Le7rayfi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="le7raifiBot">
+  <link rel="stylesheet" href="style.css?v=1.2.0">
+  <script src="app.js?v=1.2.0" defer></script>
+</head>
+
+<body>
+  <!-- Icon sprite -->
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-send" viewBox="0 0 24 24">
+      <path d="M3.4 20.4l17.4-8.4L3.4 3.6l.1 6.5 12.3 1.9-12.3 1.9z" />
+    </symbol>
+    <symbol id="i-speak" viewBox="0 0 24 24">
+      <path
+        d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zm-2.5-8v2.1a6.5 6.5 0 0 1 0 11.8V20a8.5 8.5 0 0 0 0-16z" />
+    </symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24">
+      <path
+        d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-3.1A7 7 0 0 0 19 11h-2z" />
+    </symbol>
+    <symbol id="i-nfc" viewBox="0 0 24 24">
+      <path
+        d="M4.5 8.2a12.3 12.3 0 0 1 0 7.6l1.9.7a14.3 14.3 0 0 0 0-9zM8 7a8.7 8.7 0 0 1 0 10l1.9.7a10.7 10.7 0 0 0 0-11.4zm3.5-1.8a5.2 5.2 0 0 1 0 13.6l1.9.6a7.2 7.2 0 0 0 0-14.8zM16 12a2 2 0 1 0-4 0 2 2 0 0 0 4 0z" />
+    </symbol>
+    <symbol id="i-write" viewBox="0 0 24 24">
+      <path
+        d="M4 17.3V20h2.7L17 9.7 14.3 7 4 17.3zM19.7 7.1a1 1 0 0 0 0-1.4l-1.4-1.4a1 1 0 0 0-1.4 0L15.4 5.8 18.2 8.6l1.5-1.5z" />
+    </symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24">
+      <path
+        d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm8-2h3v3h-3v-3zm5 0h3v3h-3v-3zm-5 5h3v3h-3v-3zm5 0h3v3h-3v-3z" />
+    </symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24">
+      <path
+        d="M19.4 13a7.7 7.7 0 0 0 0-2l2.1-1.6-2-3.4-2.5 1a7.6 7.6 0 0 0-1.7-1L15 3.3h-4L10.7 6a7.6 7.6 0 0 0-1.7 1l-2.5-1-2 3.4L6.6 11a7.7 7.7 0 0 0 0 2l-2.1 1.6 2 3.4 2.5-1a7.6 7.6 0 0 0 1.7 1l.3 2.7h4l.3-2.7a7.6 7.6 0 0 0 1.7-1l2.5 1 2-3.4L19.4 13zM13 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z" />
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="M18.3 5.7L12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3 9.2 12 2.9 5.7 4.3 4.3l6.3 6.3 6.3-6.3z" />
+    </symbol>
+    <symbol id="i-sync" viewBox="0 0 24 24">
+      <path
+        d="M12 4V1L7 6l5 5V8a4 4 0 0 1 4 4c0 .6-.1 1.1-.4 1.6l1.5 1.5A6 6 0 0 0 12 4zm0 12a4 4 0 0 1-4-4c0-.6.1-1.1.4-1.6L6.9 8.9A6 6 0 0 0 12 20v3l5-5-5-5v3z" />
+    </symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24">
+      <path d="M12 3l5 5h-3v6h-4V8H7l5-5zM5 18h14v3H5v-3z" />
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 24 24">
+      <path d="M12 16l-5-5h3V3h4v8h3l-5 5zM5 18h14v3H5v-3z" />
+    </symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24">
+      <path
+        d="M8 3h11a2 2 0 0 1 2 2v12h-2V5H8V3zM5 7h11a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm0 2v10h11V9H5z" />
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="M9 16.2L4.8 12l-1.4 1.4L9 19l12-12-1.4-1.4z" />
+    </symbol>
+    <symbol id="i-info" viewBox="0 0 24 24">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+    </symbol>
+    <symbol id="i-tools" viewBox="0 0 24 24">
+      <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.5 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z" />
+    </symbol>
+  </svg>
+
+  <div class="app-shell">
+    <!-- Header bar -->
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="img">
+            <path d="M12 14L18 20L24 14L30 20L36 14V34C36 36.209 34.209 38 32 38H16C13.791 38 12 36.209 12 34V14Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+            <circle cx="20" cy="26" r="2.2" fill="currentColor"/>
+            <circle cx="28" cy="26" r="2.2" fill="currentColor"/>
+            <path d="M22 32C23.2 33.2 24.8 33.2 26 32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M18 16V12M30 16V12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <div class="brand-text">
+          <div class="brand-title-row">
+            <strong>Le7rayfi</strong>
+            <span class="version-tag">Mini V1</span>
+          </div>
+          <span class="brand-sub" data-i18n="brand.sub">Artisans & savoir-faire</span>
+        </div>
+      </div>
+
+      <div class="topbar-actions">
+        <!-- Network connectivity pill -->
+        <span class="net-pill" id="netStatus" role="status" aria-live="polite">
+          <span class="net-dot" aria-hidden="true"></span>
+          <span id="netLabel">En ligne</span>
+        </span>
+
+        <!-- Language switch: French, Arabic, Darija -->
+        <div class="lang-switch" role="group" aria-label="Language / اللغة">
+          <button type="button" id="langDarija" class="lang-btn is-active" aria-pressed="true" lang="ar-MA" title="الدارجة المغربية">دارجة</button>
+          <button type="button" id="langAr" class="lang-btn" aria-pressed="false" lang="ar">عربية</button>
+          <button type="button" id="langEn" class="lang-btn" aria-pressed="false" lang="en">EN</button>
+          <button type="button" id="langFr" class="lang-btn" aria-pressed="false" lang="fr">FR</button>
+        </div>
+
+        <!-- Secondary options/tools button -->
+        <button type="button" class="icon-btn" id="btnOptions" aria-label="Outils et données" data-i18n-aria="btn.optionsAria">
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-tools"></use>
+          </svg>
+          <span class="icon-btn-label" data-i18n="btn.tools">Outils</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Application Flow -->
+    <main class="main-container">
+      
+      <!-- HERO SECTION: THE ROBOT MASCOT & STAGE -->
+      <section class="robot-hero-stage" aria-label="Robot Le7rayfi">
+        
+        <!-- Ambient Stage Aura / Halos -->
+        <div class="stage-backdrop" aria-hidden="true">
+          <div class="aura-glow aura-gold"></div>
+          <div class="aura-glow aura-teal"></div>
+        </div>
+
+        <div class="robot-stage-layout">
+          
+          <!-- Interactive Character Mascot -->
+          <div class="character-wrapper" id="characterContainer">
+            
+            <div class="mascot-halo" aria-hidden="true"></div>
+
+            <div class="face" id="face" aria-live="polite" aria-label="Robot Le7rayfi" role="img">
+              <!-- Antenna with reactive glow LED -->
+              <span class="antenna" id="robotAntenna">
+                <i class="antenna-bulb"></i>
+              </span>
+
+              <!-- Head -->
+              <div class="head" id="robotHead">
+                <!-- Eyebrows -->
+                <div class="brow brow-l" id="browL"></div>
+                <div class="brow brow-r" id="browR"></div>
+                
+                <!-- Eyes with pupils tracking and dynamic blinking -->
+                <div class="eyes">
+                  <span class="eye eye-l">
+                    <i class="pupil" id="pupilL"></i>
+                    <span class="eye-reflection"></span>
+                  </span>
+                  <span class="eye eye-r">
+                    <i class="pupil" id="pupilR"></i>
+                    <span class="eye-reflection"></span>
+                  </span>
+                </div>
+
+                <!-- Cheeks with reactive warm glow -->
+                <div class="cheeks">
+                  <i class="cheek cheek-l"></i>
+                  <i class="cheek cheek-r"></i>
+                </div>
+
+                <!-- Dynamic Reactive Multi-Segment Mouth for Viseme Lip-Sync -->
+                <div class="mouth" id="robotMouth">
+                  <div class="mouth-interior">
+                    <div class="mouth-teeth"></div>
+                    <div class="mouth-tongue"></div>
+                  </div>
+                  <div class="mouth-contour"></div>
+                </div>
+              </div>
+
+              <!-- Traditional Sahrawi Scarf (Draa) details -->
+              <span class="scarf scarf-a"></span>
+              <span class="scarf scarf-b"></span>
+            </div>
+
+            <!-- Mascot Status Pill -->
+            <div class="mood-pill" id="botMood">
+              <span class="mood-indicator-dot" aria-hidden="true"></span>
+              <span id="moodText" data-i18n="mood.idle">Prêt à répondre</span>
+            </div>
+
+          </div>
+
+          <!-- Dynamic Speech Bubble & Spoken Answer (Appears right by Le7rayfi) -->
+          <div class="robot-bubble-panel" id="robotBubblePanel">
+            <div class="speech-bubble" id="speechBubble">
+              <div class="bubble-header">
+                <div class="bubble-identity">
+                  <span class="bubble-avatar-mini" aria-hidden="true">🤖</span>
+                  <span class="bubble-sender" id="bubbleSender">Le7rayfi</span>
+                  <span class="badge-verified" id="bubbleBadge" hidden data-i18n="response.localBadge">Base locale vérifiée</span>
+                  <span id="respBadge" hidden></span>
+                </div>
+                <div class="bubble-audio-actions">
+                  <button type="button" class="btn-bubble-ctrl" id="respSpeak" disabled aria-label="Lire la réponse" data-i18n-aria="btn.speakAria" title="Lire à voix haute">
+                    <svg class="icon" aria-hidden="true"><use href="#i-speak"></use></svg>
+                    <span data-i18n="btn.speak">Lire</span>
+                  </button>
+                  <button type="button" class="btn-bubble-ctrl" id="respStop" disabled aria-label="Arrêter la lecture" data-i18n-aria="btn.stopAria" title="Arrêter l'audio">
+                    <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+                    <span data-i18n="btn.stop">Arrêter</span>
+                  </button>
+                  <button type="button" class="btn-bubble-ctrl" id="respReplay" disabled aria-label="Relire la réponse" data-i18n-aria="btn.replayAria" title="Relire">
+                    <svg class="icon" aria-hidden="true"><use href="#i-sync"></use></svg>
+                    <span data-i18n="btn.replay">Relire</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="bubble-content">
+                <h3 class="bubble-title sr-only" id="respTitle">Bienvenue</h3>
+                <p class="bubble-text" id="respText">Salam ! Je suis Le7rayfi, votre assistant robot. Appuyez sur le micro pour me parler, ou écrivez votre question.</p>
+                <p class="bubble-meta" id="respMeta" hidden></p>
+              </div>
+            </div>
+
+            <!-- Real-time Audio Waveform Visualizer Canvas (Voice & Mic reactivity) -->
+            <div class="visualizer-wrapper">
+              <canvas id="audioVisualizer" class="audio-waveform-canvas" width="600" height="70" aria-label="Visualiseur audio"></canvas>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- VOICE FIRST ACTION CONSOLE -->
+      <section class="voice-hero-console card" aria-labelledby="voiceConsoleTitle">
+        <h2 id="voiceConsoleTitle" class="sr-only" data-i18n="chat.voiceSection">Contrôle vocal</h2>
+        
+        <div class="voice-center-stage">
+          
+          <!-- Master Microphone Button with pulsating acoustic rings -->
+          <div class="hero-mic-wrapper">
+            <div class="mic-pulse-wave ring-1" aria-hidden="true"></div>
+            <div class="mic-pulse-wave ring-2" aria-hidden="true"></div>
+            <div class="mic-pulse-wave ring-3" aria-hidden="true"></div>
+
+            <button type="button" class="hero-mic-button" id="btnMic" aria-label="Appuyer pour parler" data-i18n-aria="btn.micAria">
+              <span class="mic-icon-container">
+                <svg class="icon mic-svg" aria-hidden="true">
+                  <use href="#i-mic"></use>
+                </svg>
+                <span class="mic-active-waves" aria-hidden="true">
+                  <span class="bar bar-1"></span>
+                  <span class="bar bar-2"></span>
+                  <span class="bar bar-3"></span>
+                  <span class="bar bar-4"></span>
+                  <span class="bar bar-5"></span>
+                </span>
+              </span>
+              <span class="mic-button-text" id="micBtnText" data-i18n="btn.mic">Appuyer pour parler</span>
+            </button>
+          </div>
+
+          <!-- Status and guidance message -->
+          <div class="voice-status-line">
+            <p class="voice-status-text" id="voiceStatus" data-i18n="voice.idle">Appuyez sur le micro et parlez naturellement.</p>
+            <button type="button" class="btn btn-ghost btn-sm btn-cancel-recording" id="btnCancelMic" style="display:none;" data-i18n="voice.cancel">
+              <svg class="icon"><use href="#i-close"></use></svg>
+              <span>Annuler</span>
+            </button>
+          </div>
+
+          <!-- Real-Time Speech Transcript Box -->
+          <div class="transcript-display-card" id="transcriptCard" style="display:none;">
+            <div class="transcript-header">
+              <span class="transcript-caption" data-i18n="voice.youSaid">Transcription en direct :</span>
+              <span class="transcript-indicator-dot"></span>
+            </div>
+            <p class="transcript-content" id="transcript" aria-live="polite" aria-atomic="true"></p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- CONVERSATION HISTORY & TEXT INTERACTION -->
+      <section class="conversation-panel card" aria-labelledby="chatHeading">
+        <div class="panel-header">
+          <div class="panel-header-title">
+            <h2 id="chatHeading" data-i18n="chat.title">Conversation & Échanges</h2>
+            <span class="kb-meta-chip" id="kbMeta">v1.1 · 20 fiches</span>
+          </div>
+          <button type="button" class="btn btn-ghost btn-sm" id="btnClearHistory" title="Effacer l'historique" data-i18n="chat.clear">
+            <svg class="icon"><use href="#i-close"></use></svg>
+            <span>Effacer</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Conversation Messages History -->
+        <div class="conversation-thread" id="convoMessages" role="log" aria-live="polite">
+          <!-- Populated dynamically with user questions & robot answers -->
+        </div>
+
+        <!-- Suggested Question Prompts -->
+        <div class="suggestions-container">
+          <span class="suggestions-label" data-i18n="suggestions.label">Suggestions rapides :</span>
+          <div class="suggestions" id="suggestions" aria-label="Questions suggérées"></div>
+        </div>
+
+        <!-- Compact Text Input Fallback Bar -->
+        <form class="text-input-bar" id="askForm" autocomplete="off">
+          <label class="sr-only" for="askInput" data-i18n="chat.inputLabel">Votre question</label>
+          <div class="input-glow-shell">
+            <input id="askInput" name="question" type="text" maxlength="240" autocomplete="off" spellcheck="false"
+              placeholder="Ou écrivez votre question ici…" data-i18n-placeholder="chat.placeholder">
+            <button class="btn btn-primary btn-submit-question" type="submit" aria-label="Envoyer" data-i18n-aria="chat.sendAria">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-send"></use>
+              </svg>
+              <span data-i18n="chat.send">Envoyer</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Hidden legacy response container to maintain 100% ID compatibility -->
+        <article class="response" id="response" aria-live="polite" aria-atomic="true" hidden></article>
+
+      </section>
+
+      <!-- HARDWARE & LOCAL TOOLS BAR (NFC, QR, SYNC) -->
+      <section class="quick-tools-bar card" aria-labelledby="toolsHeading">
+        <div class="tools-bar-inner">
+          <span class="tools-bar-title" id="toolsHeading">
+            <svg class="icon"><use href="#i-tools"></use></svg>
+            <span data-i18n="actions.title">Outils & Démonstration</span>
+          </span>
+
+          <div class="tools-buttons-row">
+            <button type="button" class="btn btn-ghost btn-tool" id="btnNfcRead" aria-label="Lire un tag NFC" data-i18n-aria="btn.nfcReadAria">
+              <svg class="icon"><use href="#i-nfc"></use></svg>
+              <span data-i18n="btn.nfcRead">Lire NFC</span>
+            </button>
+            <button type="button" class="btn btn-ghost btn-tool" id="btnNfcWrite" aria-label="Écrire un tag NFC" data-i18n-aria="btn.nfcWriteAria">
+              <svg class="icon"><use href="#i-write"></use></svg>
+              <span data-i18n="btn.nfcWrite">Écrire NFC</span>
+            </button>
+            <button type="button" class="btn btn-ghost btn-tool" id="btnQr" aria-label="Afficher les QR codes" data-i18n-aria="btn.qrAria">
+              <svg class="icon"><use href="#i-qr"></use></svg>
+              <span data-i18n="btn.qr">QR Codes</span>
+            </button>
+          </div>
+        </div>
+
+        <p class="nfc-status-pill" id="nfcStatus" role="status">
+          <span class="nfc-dot" aria-hidden="true"></span>
+          <span id="nfcText">NFC prêt sur Chrome Android en HTTPS.</span>
+        </p>
+      </section>
+
+      <!-- FICHE ARTISAN MODAL / CARD -->
+      <section class="artisan card" id="artisanCard" aria-labelledby="artisanName" hidden>
+        <div class="artisan-head">
+          <div>
+            <span class="fictional-badge" data-i18n="artisan.badge">DONNÉES FICTIVES — DÉMONSTRATION</span>
+            <h2 id="artisanName">—</h2>
+            <p class="artisan-sub" id="artisanSub">Fiche de démonstration</p>
+          </div>
+          <button type="button" class="btn btn-ghost btn-sm" id="artisanClose" aria-label="Fermer la fiche"
+            data-i18n-aria="artisan.closeAria">
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-close"></use>
+            </svg>
+            <span data-i18n="artisan.close">Fermer</span>
+          </button>
+        </div>
+        <dl class="artisan-grid" id="artisanFields"></dl>
+        <p class="artisan-note" id="artisanNote"></p>
+        <div class="artisan-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="artisanSpeak">
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-speak"></use>
+            </svg>
+            <span data-i18n="artisan.speak">Lire la fiche</span>
+          </button>
+          <button type="button" class="btn btn-ghost btn-sm" id="artisanStop">
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-close"></use>
+            </svg>
+            <span data-i18n="btn.stop">Arrêter</span>
+          </button>
+          <span class="artisan-source" id="artisanSource"></span>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER WITH DEMO DISCLAIMER & LEGAL ATTRIBUTION -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p><strong data-i18n="footer.demo">Démonstrateur non certifié.</strong> <span data-i18n="footer.demoText">Toutes les fiches sont fictives et ne prouvent aucune disponibilité réelle.</span></p>
+        <p class="footer-meta"><span data-i18n="footer.version">le7raifiBot Mini V1 · Guide du 23 octobre 2026</span> · <a
+            href="https://www.le7rayfi.com/" target="_blank" rel="noopener noreferrer">le7rayfi.com</a></p>
+      </div>
+    </footer>
+
+    <!-- ACCESSIBILITY ANNOUNCER & TOAST ALERTS -->
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    <div class="sr-only" aria-live="polite" id="a11yAnnouncer"></div>
+  </div>
+
+  <!-- QR DIALOG -->
+  <dialog class="dialog" id="qrDialog" aria-labelledby="qrTitle">
+    <div class="dialog-head">
+      <div>
+        <h2 id="qrTitle" data-i18n="qr.title">QR codes de secours</h2>
+        <p data-i18n="qr.subtitle">À utiliser si le NFC n'est pas disponible.</p>
+      </div>
+      <button type="button" class="icon-btn" data-close aria-label="Fermer" data-i18n-aria="dialog.close">
+        <svg class="icon" aria-hidden="true">
+          <use href="#i-close"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="QR">
+      <button type="button" class="tab is-active" role="tab" aria-selected="true" data-qr-tab="site"
+        data-i18n="qr.tabSite">Site Le7rayfi</button>
+      <button type="button" class="tab" role="tab" aria-selected="false" data-qr-tab="demo" data-i18n="qr.tabDemo">Fiche
+        démo</button>
+    </div>
+
+    <div class="qr-panel is-active" data-qr-panel="site">
+      <img class="qr-img" src="assets/qr-le7rayfi.png" width="512" height="512" alt="QR code vers le site Le7rayfi"
+        loading="lazy">
+      <p data-i18n="qr.siteCaption">QR fourni vers le site public Le7rayfi. Il ne pointe pas vers une fiche artisan
+        spécifique.</p>
+      <a class="btn btn-primary" href="https://www.le7rayfi.com/" target="_blank" rel="noopener noreferrer"
+        data-i18n="qr.openSite">Ouvrir le site</a>
+    </div>
+
+    <div class="qr-panel" data-qr-panel="demo" hidden>
+      <img class="qr-img" src="assets/qr-demo.png" width="512" height="512"
+        alt="QR code de démonstration vers la fiche ART-DEMO-01" loading="lazy">
+      <p data-i18n="qr.demoCaption">QR d'exemple vers la fiche fictive ART-DEMO-01. Régénérez-le avec votre domaine réel
+        après déploiement.</p>
+      <p class="hint" data-i18n="qr.demoNote">Le domaine bot.le7rayfi.com est un exemple, pas une adresse active
+        garantie.</p>
+      <button type="button" class="btn btn-primary" id="showDemoCard" data-i18n="qr.showDemo">Afficher la fiche démo
+        (simulation)</button>
+    </div>
+
+    <div class="url-box">
+      <span data-i18n="qr.currentUrl">Adresse actuelle</span>
+      <code id="currentUrl">—</code>
+      <button type="button" class="btn btn-ghost btn-sm" id="copyUrl">
+        <svg class="icon" aria-hidden="true">
+          <use href="#i-copy"></use>
+        </svg>
+        <span data-i18n="qr.copy">Copier</span>
+      </button>
+    </div>
+  </dialog>
+
+  <!-- OPTIONS, SETTINGS & KNOWLEDGE BASE DIALOG -->
+  <dialog class="dialog" id="optionsDialog" aria-labelledby="optionsTitle">
+    <div class="dialog-head">
+      <div>
+        <h2 id="optionsTitle" data-i18n="options.title">Options et données</h2>
+        <p data-i18n="options.subtitle">Importer, exporter ou synchroniser les réponses locales.</p>
+      </div>
+      <button type="button" class="icon-btn" data-close aria-label="Fermer" data-i18n-aria="dialog.close">
+        <svg class="icon" aria-hidden="true">
+          <use href="#i-close"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="stat-line" id="optionsStats">—</div>
+
+    <section class="options-block">
+      <h3 data-i18n="options.voiceSettingsTitle">Paramètres de la Voix</h3>
+      <div class="voice-config-grid">
+        <div class="config-field">
+          <label for="selectVoice" data-i18n="options.voiceSelect">Voix de synthèse :</label>
+          <select id="selectVoice" class="select-field"></select>
+        </div>
+        <div class="config-field">
+          <label for="rangeSpeechRate" data-i18n="options.speechRate">Vitesse d'élocution : <span id="rateValue">1.0x</span></label>
+          <input type="range" id="rangeSpeechRate" min="0.7" max="1.3" step="0.05" value="0.95">
+        </div>
+      </div>
+    </section>
+
+    <section class="options-block">
+      <h3 data-i18n="options.syncTitle">Synchronisation HTTPS</h3>
+      <p class="hint" data-i18n="options.syncHint">Collez l'URL publique d'un fichier JSON autorisé, puis synchronisez.</p>
+      <div class="sync-row">
+        <label class="sr-only" for="syncUrl" data-i18n="options.syncLabel">URL du JSON</label>
+        <input id="syncUrl" type="url" inputmode="url" placeholder="https://exemple.ma/knowledge.json"
+          data-i18n-placeholder="options.syncPlaceholder">
+        <button type="button" class="btn btn-primary" id="btnSync">
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-sync"></use>
+          </svg>
+          <span data-i18n="options.sync">Synchroniser</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="options-block">
+      <h3 data-i18n="options.localTitle">Fichier local</h3>
+      <div class="button-row">
+        <button type="button" class="btn btn-ghost" id="btnImport">
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-upload"></use>
+          </svg>
+          <span data-i18n="options.import">Importer JSON</span>
+        </button>
+        <button type="button" class="btn btn-ghost" id="btnExport">
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-download"></use>
+          </svg>
+          <span data-i18n="options.export">Exporter JSON</span>
+        </button>
+        <button type="button" class="btn btn-danger" id="btnReset" data-i18n="options.reset">Revenir à la base fournie</button>
+      </div>
+      <input type="file" id="fileInput" accept=".json,application/json" hidden>
+      <p class="hint" data-i18n="options.fileHint">UTF-8, structure version + items. La base importée reste prioritaire après redémarrage.</p>
+    </section>
+
+    <section class="options-block limits">
+      <h3 data-i18n="options.limitsTitle">Limites contrôlées par l'application</h3>
+      <ul>
+        <li data-i18n="options.limit1">200 fiches maximum.</li>
+        <li data-i18n="options.limit2">35 mots-clés maximum par fiche.</li>
+        <li data-i18n="options.limit3">180 000 octets maximum pour un fichier importé ou synchronisé.</li>
+      </ul>
+      <p class="warning" data-i18n="options.privacy">Le robot est public : ne placez jamais de mot de passe, jeton,
+        données bancaires ou données personnelles dans le JSON ou une carte NFC.</p>
+    </section>
+  </dialog>
+
+  <!-- ACTIONABLE MICROPHONE PERMISSION GUIDE MODAL -->
+  <dialog class="dialog" id="micPermissionModal" aria-labelledby="micModalTitle">
+    <div class="dialog-head">
+      <div>
+        <h2 id="micModalTitle" data-i18n="micModal.title">Autorisation du microphone requise</h2>
+        <p data-i18n="micModal.subtitle">Pour dialoguer vocalement avec Le7rayfi</p>
+      </div>
+      <button type="button" class="icon-btn" data-close aria-label="Fermer" data-i18n-aria="dialog.close">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="permission-guide-steps">
+        <div class="step-card">
+          <span class="step-num">1</span>
+          <div>
+            <h4 data-i18n="micModal.step1Title">Activez le microphone dans le navigateur</h4>
+            <p data-i18n="micModal.step1Text">Cliquez sur l'icône de cadenas ou de réglages à gauche de l'adresse web, puis autorisez le « Microphone ».</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <span class="step-num">2</span>
+          <div>
+            <h4 data-i18n="micModal.step2Title">Sur mobile Android</h4>
+            <p data-i18n="micModal.step2Text">Vérifiez que Chrome a l'autorisation d'accéder au micro dans les Paramètres Android > Applications > Chrome > Autorisations.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <span class="step-num">3</span>
+          <div>
+            <h4 data-i18n="micModal.step3Title">Alternative écrite immédiate</h4>
+            <p data-i18n="micModal.step3Text">Vous pouvez toujours poser toutes vos questions en les écrivant directement dans le champ de texte ci-dessous.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer-actions">
+        <button type="button" class="btn btn-primary" id="btnRetryMic" data-i18n="micModal.retry">Réessayer l'accès micro</button>
+        <button type="button" class="btn btn-ghost" data-close data-i18n="micModal.useText">Utiliser le texte</button>
+      </div>
+    </div>
+  </dialog>
+
+</body>
+</html>

@@ -1,0 +1,1152 @@
+ LE7RAYFI | SAHARA INNOVATION
+
+
+
+ le7raifiBot Mini V1
+ Guide complet de fabrication, installation et mise en service d’un robot de
+ table avec smartphone Android NFC
+
+
+
+
+                                                                        SMARTPHONE NFC
+
+
+
+
+                                                                        TENUE SAHRAOUIE
+
+
+
+
+                                                                        BASE STABLE + QR
+
+
+
+
+                                                                        MODE LOCAL / EN LIGNE
+
+
+
+
+   Configuration                       Cible du prototype
+
+
+   Appareil central                    Votre smartphone Android NFC existant - aucun micro-ordinateur a acheter
+
+
+   Structure                           Carton plume / carton reutilise + support amovible + vetement sahraoui miniature
+
+
+   Logiciel                            Application web installable (PWA) HTML, CSS, JavaScript
+
+
+   Fonctions                           Visage anime, FR/AR, questions-reponses locales, NFC, QR, synchronisation JSON
+                                       HTTPS
+
+
+   Budget materiel                     Environ 110 a 290 DH - objectif prudent 180 a 300 DH
+
+
+   Statut                              Demonstrateur, non certifie et sans donnees de vrais artisans
+
+
+ Edition du 23 octobre 2026 | Guide destine au technicien, au developpeur et a l’equipe Le7rayfi.
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                                   Page 1
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+
+ Sommaire du guide
+ 01 Resultat final attendu et limites de la V1
+
+ 02 Verifier le smartphone Android NFC
+
+ 03 Liste d’achats et budget optimise
+
+ 04 Plans, dimensions et implantation NFC
+
+ 05 Fabriquer le chassis et l’habillage sahraoui
+
+ 06 Installer l’application le7raifiBot sur Plesk
+
+ 07 Installer la PWA sur Android et regler le telephone
+
+ 08 Programmer une carte NFC et utiliser le QR code
+
+ 09 Questions-reponses, donnees locales et synchronisation
+
+ 10 Fonctions vocales et multilingues
+
+ 11 Demonstration devant le jury : scenario pret
+
+ 12 Plan de tests, securite et depannage
+
+ 13 Repartition des roles, calendrier et feuille de route
+
+ 14 Annexes : codes, fiche mesure, sources techniques
+
+
+
+      A RETENIR
+
+      La V1 n’est PAS un robot conversationnel generatif illimite. Elle sait repondre aux fiches locales. La
+      parole est experimentale et peut necessiter Internet. Le NFC repose sur le telephone, sans module
+      externe.
+
+
+
+ Fichiers logiciels disponibles
+ Le prototype est fourni separement dans le7raifiBot_Mini_V1_PWA.zip. Ce guide decrit le code existant et les
+ etapes pour le deployer. Il ne remplace pas une verification sur le smartphone reel.
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                             Page 2
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+
+ 1. Resultat final attendu
+ le7raifiBot Mini V1 est un petit robot fixe, d’environ 30 a 40 cm, porte par une base stable. Son visage affiche
+ sur le telephone donne une impression de robot vivant. La tenue miniaturisee renvoie a la culture
+ vestimentaire sahraouie, a faire valider par un artisan ou une couturiere du Sud.
+
+
+ Parcours visiteur de demonstration
+  01. Le visiteur s’approche de le7raifiBot, voit son visage anime et selectionne francais ou arabe.
+
+  02. Il demande « Comment trouver un electricien a Laayoune ? » ou choisit une question suggeree.
+
+  03. Le robot affiche une reponse provenant de sa base de connaissances preenregistree.
+
+  04. Il scanne un QR code ou approche une carte NFC de la zone prevue et decouvre une fiche de test.
+
+  05. Le demonstrateur passe le telephone en mode Avion et repose une question connue pour montrer le
+    mode hors ligne.
+
+
+ Ce qui est inclus / ce qui n’est pas inclus
+
+   Dans la V1                                               Hors du perimetre initial
+
+
+   Interface FR/AR et visage anime                          Navigation physique, moteurs et bras
+
+
+   Reponses locales pre-validees                            Dialogue illimite avec modele IA local
+
+
+   Lecture / ecriture NFC experimentale                     Authentification professionnelle forte par NFC
+
+
+   QR vers le site du projet                                Reservations et paiements reels
+
+
+   Sauvegarde et import JSON local                          Synchronisation transactionnelle bidirectionnelle
+
+
+   Parole experimentale selon appareil                      Reconnaissance hors ligne garantie en hassania
+
+
+
+ Regle de credibilite
+ Tous les profils utilises dans la demonstration doivent porter la mention DONNEES FICTIVES -
+ DEMONSTRATION. Ne jamais presenter une disponibilite, une qualification ou un partenaire non verifie
+ comme acquis.
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                              Page 3
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+
+ 2. Verifier le smartphone avant d’acheter
+ Le telephone est le seul equipement electronique indispensable. Faites ces controles avant de decouper la
+ tete du robot.
+
+
+   Point a controler       Methode simple                                      Attendu
+
+
+   Systeme                 Parametres > A propos du telephone                  Android compatible avec Chrome
+                                                                               recent
+
+
+   NFC                     Parametres > Connexions / rechercher « NFC »        Option NFC presente et active
+
+
+   Chrome                  Ouvrir Chrome et verifier les mises a jour          Application compatible
+
+
+   Ecran                   Mesurer largeur x hauteur en mm                     Dimensions exactes relevees
+
+
+   Batterie                Inspection visuelle et 20 min de test               Aucune deformation ni surchauffe
+
+
+   Wi-Fi / stockage        Tester Wi-Fi et espace disponible                   Connexion et espace pour cache
+                                                                               local
+
+
+   Micro /                 Enregistrer puis lire une note audio                Son intelligible
+   haut-parleur
+
+
+   Port de charge          Charger avec un chargeur approprie                  Cordon accessible sans contrainte
+
+
+
+ Localiser le capteur NFC
+  01. Activer NFC sur le telephone.
+
+  02. Avec une carte ou un autocollant NFC, deplacer doucement le tag derriere le telephone jusqu’a trouver la
+    zone de detection.
+
+  03. Noter la position exacte sur un gabarit papier : haut, centre ou bas du dos.
+
+  04. Dessiner sur le boitier une « fenetre NFC » non metallique et accessible a cet endroit.
+
+
+      IMPORTANT POUR LE DESIGN
+
+      Si le telephone est enferme dans la tete, le NFC peut devenir difficile a utiliser. Prevoir une trappe
+      ou zone arriere accessible aux visiteurs, sans plaque metallique, tout en conservant l’ecran visible
+      a l’avant.
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                             Page 4
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+ Fiche de mesures a remplir
+
+   Mesure                                            A completer
+
+
+   Marque / modele                                   .....................................................................................
+
+
+   Largeur x hauteur x epaisseur                     ........................... mm x ........................... mm x .......... mm
+
+
+   Diagonale ecran / hauteur utile                   .....................................................................................
+
+
+   Position antenne NFC                              .....................................................................................
+
+
+   Boutons / haut-parleur / micro                    .....................................................................................
+
+
+   Position port de charge                           .....................................................................................
+
+
+
+
+ 3. Liste d’achats et budget minimise
+ Les prix suivants sont des enveloppes indicatives en dirhams marocains, pas des prix de stock verifies ni
+ des devis. Reutiliser le carton et confier la tenue a un artisan local permet de reduire les depenses.
+
+
+   Element                                                        Quantite                   Fourchette DH                             Role
+
+
+   Telephone NFC deja disponible                                  1                          0                                         Ecran, son, Wi-Fi, NFC
+
+
+   Carton plume / emballage epais                                 1 lot                      0-40                                      Chassis et tete
+
+
+   Colle, ruban, fixations                                        1 lot                      15-30                                     Assemblage
+
+
+   Tissu bleu pour mini-draa                                      1 morceau                  20-40                                     Identite visuelle
+
+
+   Couture locale                                                 1 piece                    30-70                                     Tenue amovible
+
+
+   Support telephone amovible                                     1                          10-25                                     Maintien du telephone
+
+
+   Tags NTAG213                                                   2 ou 3                     20-45                                     Essai NFC
+
+
+   Impression QR et finitions                                     1 lot                      15-40                                     Identification et
+                                                                                                                                       presentation
+
+
+
+ Combien prevoir ?
+
+   Scenario                          Hypothese                                                                                        Budget indicatif
+
+
+   Ultra-economique                  Carton recupere, couture dans l’equipe, pas encore de tag                                        60-130 DH
+
+
+   Version demonstration             Textile et quelques achats simples, QR et 2 tags                                                 150-300 DH
+
+
+   Version finition soignee          Carton plume neuf, meilleure couture et renforts                                                 250-450 DH
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                                                                         Page 5
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+ Outils
+  • Regle, metre ruban, crayon, cutter et tapis de protection, ciseaux, pistolet a colle utilise prudemment,
+    tournevis et petites attaches.
+
+  • Papier A4 pour faire un gabarit du telephone et tester la position de son antenne NFC.
+
+  • Un second telephone est utile pour lire les QR et les cartes lors des demonstrations; ce n’est pas
+    indispensable a la fabrication.
+
+
+ Ne PAS acheter pour cette V1
+ Ni Raspberry Pi, ni module PN532, ni ecran externe, ni enceinte USB, ni batterie auxiliaire, ni servomoteur.
+ Ces equipements sont inutiles tant que le smartphone remplit correctement le role de cerveau du robot.
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                             Page 6
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+
+ 4. Plans et implantation du smartphone
+
+                         VUE AVANT                                           VUE ARRIERE
+
+
+
+
+                                                                                                       zone NFC
+
+
+                                                                                                       acces tag
+
+
+
+
+ Schema de principe, non a l’echelle : la zone NFC est localisee derriere le telephone. Le visiteur doit pouvoir en approcher un
+ tag.
+
+   Piece                      Dimensions indicatives                   Consigne
+
+
+   Base                       22 x 18 cm                               Stable, renforcee; verifier centre de gravite
+
+
+   Corps                      20 x 14 x 15 cm                          Ouverture technique arriere
+
+
+   Tete                       Selon telephone, env. 14 x 18 cm         Laisser visible la surface tactile
+
+
+   Hauteur totale             30 a 40 cm                               Ajuster aux proportions du telephone
+
+
+   Fenetre NFC                Selon emplacement reel                   Paroi fine, non metallique, acces libre
+
+
+   Passage du cable           Selon chargeur                           Pas de tension sur prise USB-C
+
+
+
+ Gabarit avant decoupe
+  01. Poser le smartphone face vers le haut sur une feuille et tracer soigneusement son contour.
+
+  02. Dessiner la decoupe du cadre en prenant en compte la zone affichable et les marges de fixation.
+
+  03. Reporter sur le gabarit la camera, la grille audio, le port de recharge et l’antenne NFC au dos.
+
+  04. Ajouter un espace de ventilation et une trappe permettant le retrait du telephone sans demontage du
+    robot.
+
+  05. Verifier avec une maquette en papier AVANT de couper dans du carton rigide.
+
+
+ Positionnement ergonomique
+ L’ecran doit etre oriente vers les yeux du visiteur. Un leger angle vers le haut est preferable si le robot
+ repose sur une table basse. Les boutons « Questions », « NFC » et « Langue » doivent rester accessibles
+ sans retirer le telephone.
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                                         Page 7
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+
+ 5. Fabrication du corps, de la tete et de la tenue
+ Etape A - fabriquer la base et le torse
+  01. Decouper une base de 22 x 18 cm et tester sa stabilite avec une boite lestee a la place de la tete.
+
+  02. Assembler le torse en carton plume rigide ou carton double cannelure. Utiliser des renforts triangulaires
+    internes aux angles.
+
+  03. Prevoir une ouverture de maintenance arriere pour acceder aux fixations et au cable de charge.
+
+  04. Fixer la tete au torse avec un support robuste, et verifier l’absence de basculement quand l’ecran est
+    touche.
+
+
+ Etape B - monter le smartphone dans la tete
+  01. Decouper la facade pour voir l’ecran sans masque opaque sur les zones utiles.
+
+  02. Confectionner un berceau amovible avec une protection douce; ne pas coller l’appareil sur le carton.
+
+  03. Maintenir le telephone avec des attaches ou un support mecanique qui permet un retrait rapide.
+
+  04. Reserver l’espace du cable, des boutons physiques, du micro et du haut-parleur.
+
+  05. Laisser libre la zone NFC derriere l’appareil et tester a nouveau la lecture a travers le materiau final.
+
+
+ Etape C - habillage inspire de la culture sahraouie
+  01. Choisir une mini-draa bleue ou une autre tenue avec validation culturelle par un artisan/couturier local.
+
+  02. Faire une tenue amovible et laver/secher le tissu avant montage si necessaire.
+
+  03. Fixer le vetement uniquement sur le corps du robot et pas sur le telephone.
+
+  04. Ajouter discretemement une etiquette « le7raifiBot Sahara - Le7rayfi » et un QR vers le site.
+
+  05. Photographier la fabrication et crediter le savoir-faire de l’artisan ou de la couturiere, avec accord.
+
+
+ Securite physique et thermique
+  • Ne pas modifier la batterie du telephone, ni souder des fils a l’appareil, ni charger un smartphone
+    endommage.
+
+  • Ne pas bloquer les ouvertures de dissipation; faire une evaluation apres 20 minutes puis 60 minutes.
+
+  • Aucun bord coupant ni cable tendu accessible au public; proteger le robot de l’humidite et des chutes.
+
+  • Ne pas maintenir l’appareil en charge 24 h/24 sans politique de surveillance et de gestion de batterie
+    appropriee.
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                                Page 8
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+
+ 6. Installation sur Plesk : pas a pas
+ L’application V1 fonctionne comme une Progressive Web App (PWA). Pour Chrome Android et Web NFC, il
+ faut un site heberge en HTTPS. Le dossier PWA est autonome : il ne faut pas remplacer le code du site
+ principal Le7rayfi.
+
+
+ Organisation des fichiers
+
+   Fichier / dossier                          Fonction
+
+
+   index.html                                 Ecran principal, visage, questions, fiche artisan, QR et NFC
+
+
+   style.css                                  Design adaptatif et affichage bilingue
+
+
+   app.js                                     Reponses locales, voix experimentale, NFC, JSON
+
+
+   knowledge.json                             Base de connaissances initiale
+
+
+   sw.js                                      Cache d’application hors ligne via service worker
+
+
+   manifest.webmanifest                       Installation sur l’ecran d’accueil Android
+
+
+   assets/                                    Icones et QR Le7rayfi
+
+
+   README.md                                  Notes de deploiement et de maintenance
+
+
+
+ Publier le sous-domaine
+  01. Dans Plesk, creer le sous-domaine de DEMONSTRATION, par exemple bot.le7rayfi.com. L’exemple n’est
+    pas suppose deja actif.
+
+  02. Verifier le DNS (enregistrement A/CNAME selon l’hebergement) et attendre la propagation.
+
+  03. Activer HTTPS / certificat TLS valide dans les parametres du domaine.
+
+  04. Extraire le dossier ZIP et televerser le CONTENU du dossier le7raifiBot_Mini_V1 dans le repertoire public du
+    sous-domaine.
+
+  05. S’assurer que index.html se trouve a la racine publique, avec les autres fichiers et le dossier assets.
+
+  06. Ouvrir l’URL HTTPS depuis un ordinateur puis depuis Chrome Android.
+
+  07. Verifier que l’interface, les icones et le QR s’affichent; si necessaire, tester les fichiers JSON et manifest
+    directement en HTTPS.
+
+
+ Precautions de deploiement
+  • Conserver une copie des fichiers d’origine et ne pas ecraser le site principal.
+
+  • Ne pas publier de mots de passe, cles API ou exports clients dans le dossier public.
+
+  • L’application utilise une base fictive; ne pas y placer de donnees sensibles ou non consenties.
+
+  • Lors d’une mise a jour du cache PWA, changer la version CACHE dans sw.js et tester la reinstall/recharge.
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                                Page 9
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+
+ 7. Installer et configurer sur Android
+ Installation PWA
+  01. Connecter le telephone au Wi-Fi et ouvrir Chrome.
+
+  02. Ouvrir l’adresse HTTPS du robot dans un onglet principal.
+
+  03. Laisser charger la page, ses images et les fichiers de connaissances.
+
+  04. Ouvrir le menu de Chrome et selectionner « Installer l’application » ou « Ajouter a l’ecran d’accueil »
+    selon l’appareil.
+
+  05. Lancer le7raifiBot depuis son icone, puis verifier qu’il s’ouvre sans erreur.
+
+  06. Passer en mode Avion, fermer puis rouvrir l’application; poser une question deja connue.
+
+  07. Si le cache ne fonctionne pas, reconnecter Internet, recharger et recommencer le test.
+
+
+ Reglages pratiques pour une demonstration
+  • Bloquer la rotation en mode portrait si le boitier a ete dimensionne ainsi.
+
+  • Ajuster la luminosite de l’ecran et desactiver les notifications personnelles.
+
+  • Utiliser un profil Android de demonstration, sans acces aux comptes personnels ou professionnels.
+
+  • Desactiver les applications inutiles en arriere-plan et configurer un delai de veille adapte. Le mode kiosque
+    total peut necessiter une application Android dediee.
+
+  • Tester l’autonomie; en charge, utiliser un chargeur d’origine ou certifie et un cable sans tension mecanique.
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                          Page 10
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+ Capture du prototype logiciel
+
+
+
+
+ Apercu de la V1 : accueil anime, recherche de reponse, NFC et QR, options de synchronisation. Interface prevue pour
+ affichage vertical.
+
+
+
+ 8. NFC et QR : creation et utilisation
+ Le lecteur NFC est celui du smartphone. Les etiquettes NTAG213 doivent etre compatibles NDEF et
+ programmables. La bibliotheque Web NFC est experimentee dans Chrome Android sous HTTPS; ce n’est
+ pas une garantie de compatibilite sur tous les appareils.
+
+
+ Programmation pas a pas d’un tag de demonstration
+  01. Activer le NFC sur Android et deverrouiller le telephone.
+
+  02. Ouvrir le7raifiBot sous HTTPS dans Chrome; garder la page au premier plan.
+
+  03. Cliquer « Ecrire NFC », puis accepter la demande de permission du navigateur.
+
+  04. Approcher la carte vierge de l’antenne NFC (derriere le telephone, dans la fenetre NFC du boitier).
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                                     Page 11
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+  05. Attendre le message de succes : la V1 inscrit une URL de type
+    https://bot.le7rayfi.com/?artisan=ART-DEMO-01, si hebergee sur ce sous-domaine.
+
+  06. Cliquer « Lire NFC », approcher le tag et verifier l’affichage de la fiche fictive.
+
+  07. Faire une verification avec un second appareil compatible si possible.
+
+
+ Ce que stocke la carte
+ Une URL publique ou un identifiant de fiche (NDEF). Le tag ne contient pas le dossier complet du
+ professionnel. Il ne faut pas y enregistrer de mot de passe, de secret, de donnees bancaires, de photo
+ privee ou de numero non autorise.
+
+
+ Fallback QR
+  • Le QR fourni pointe vers https://www.le7rayfi.com/ : il ne pointe pas encore vers une fiche artisan
+    specifique.
+
+  • Pour la demonstration de fiche specifique, generer un nouveau QR d’URL de demo, distinct du QR de site.
+
+  • Si Web NFC n’apparait pas, tester Chrome Android directement plutot que la PWA installee; si l’API reste
+    indisponible, utiliser le QR et expliquer la limite.
+
+
+ Regle de securite NFC
+ Les cartes NTAG213 classiques peuvent etre recopiees. Elles servent a ouvrir une fiche, pas a prouver
+ qu’un artisan est certifie ou a autoriser l’administration.
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                        Page 12
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+
+ 9. Questions-reponses et donnees locales
+
+
+               UTILISATEUR                                   SMARTPHONE                                 LOCAL
+               question / toucher                           PWA + NFC + audio                        reponses JSON
+
+
+
+
+                                                         SERVEUR LE7RAYFI
+                                                             mise a jour HTTPS
+
+
+
+
+ Le smartphone interroge en priorite des fiches locales. La synchronisation sert a recuperer une version mise a jour des
+ reponses publiques, pas a ouvrir la base MySQL en direct.
+
+
+ Le fonctionnement reel de la V1
+  • Question connue : comparaison des mots-cles avec knowledge.json ou la base importee dans le telephone.
+
+  • Question inconnue : message de repli invitant a obtenir plus d’informations; aucune adresse inventee.
+
+  • Hors ligne : la page deja installee et les donnees locales restent accessibles si les ressources ont ete mises
+      en cache.
+
+  • En ligne : un operateur peut demander la recuperation d’un fichier JSON public HTTPS apres verification de
+      la source.
+
+  • Stockage : le prototype enregistre les reponses importees via localStorage, qui peut etre efface par le
+      systeme ou le navigateur.
+
+
+ Structure JSON attendue
+ {
+
+  "version": "1.1",
+
+  "items": [
+
+      {
+
+      "id": "heritage-sud",
+
+      "keywords": ["artisanat", "patrimoine", "metiers du Sud"],
+
+      "fr": "Le7rayfi valorise les savoir-faire des artisans.",
+
+      "ar": "Reponse arabe validee par l'equipe."
+
+      }
+
+  ]
+
+ }
+
+
+ Modifier / importer / exporter
+  01. Editer le fichier knowledge.json avec un editeur UTF-8 et conserver la structure JSON valide.
+
+  02. Verifier pour chaque fiche un identifiant, des mots-cles, une reponse fr et une reponse ar.
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                                         Page 13
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+  03. Dans l’application, utiliser « Importer JSON » pour charger les reponses locales; « Exporter JSON » pour
+    conserver une sauvegarde.
+
+  04. Tester toutes les questions dans les deux langues apres chaque mise a jour.
+
+  05. Pour recuperer le contenu distant, saisir une URL JSON publique HTTPS dans « Options », puis utiliser «
+    Synchroniser ».
+
+ Limites actuelles du code : jusqu’a 200 fiches valides; 35 mots-cles par fiche; taille maximum du fichier de synchronisation
+ approximativement 180 000 caracteres/octets selon le controle; pas de mode edition fiche par fiche.
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                                      Page 14
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+
+ 10. Connexion a Le7rayfi : evolution controlee
+ La V1 fournie n’a pas de connexion operationnelle a la base MySQL principale ni aux espaces authentifies.
+ Elle peut recuperer un simple fichier JSON public d’information via HTTPS. Pour une integration reelle, le
+ technicien doit ajouter un service serveur.
+
+
+ Architecture cible de la future API
+
+   Couche                                     Responsabilite
+
+
+   Panneau admin Le7rayfi                     Valider les textes, les métiers, les fiches publiques et les dates
+
+
+   API publique en lecture seule              Publier exclusivement les champs autorises et le JSON de connaissances
+
+
+   Controle de version                        Retourner version / date de mise a jour / statut de publication
+
+
+   Application le7raifiBot                      Importer, verifier puis stocker localement les connaissances
+
+
+   Hors ligne                                 Afficher des informations avec mention de derniere mise a jour
+
+
+
+ Politique editoriale pour les provinces du Sud
+  • Collaborer avec des artisans, associations et personnes ressources locales pour valider le vocabulaire,
+    notamment hassani.
+
+  • Documenter egalement les metiers modernes (electricite, climatisation, solaire, maintenance, services
+    hotels).
+
+  • Associer a chaque fiche : auteur, source, date, niveau de validation et permission de publication.
+
+  • Ne pas annoncer la disponibilite temps reel d’un artisan sans une source de donnees actualisee.
+
+  • Conserver les droits et consentements pour les enregistrements audio, images et savoir-faire traditionnels.
+
+
+ A ne jamais faire
+ Ne jamais inserer les identifiants MySQL, un token administrateur ou des mots de passe dans app.js,
+ knowledge.json ou une carte NFC. Le robot est public : le code HTML/JS et les valeurs inscrites sur les tags
+ peuvent etre lus ou copies.
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                                     Page 15
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+
+ 11. Voix, francais, arabe et hassania
+ L’interface affiche du contenu en francais et en arabe. Le bouton de lecture vocale utilise les voix
+ disponibles sur Android. Le bouton microphone s’appuie sur l’API de reconnaissance du navigateur : sa
+ disponibilite et son fonctionnement hors ligne ne sont pas garantis.
+
+
+ Tests obligatoires avant presentation
+
+   Test vocal                 Procedure                                      Attendu
+
+
+   Lecture FR                 Afficher une reponse FR puis « Lire »          Voix intelligible si disponible
+
+
+   Lecture AR                 Choisir arabe et « Lire »                      Voix installee ou limite signalee
+
+
+   Micro FR                   Appuyer sur « Parler » et autoriser le micro   Question transcrite si API compatible
+
+
+   Micro AR                   Poser une question courte en arabe             Verifier le taux d’erreur reel
+
+
+   Mode avion                 Recommencer le test oral                       Ne pas promettre la fonction si echec
+
+
+   Hassania                   Demonstration par mots et phrases valides      Extension future, non garantie V1
+
+
+
+ Alternative fiable pour le jury
+ Prevoir les questions suggerees a l’ecran et une reponse tactile. Si le micro ou la synthese vocale sont
+ indisponibles le jour de l’evenement, la demonstration reste totalement faisable avec texte, QR et NFC.
+
+
+ Amelioration vocale V1.1
+ Pour garantir une voix hors ligne, enregistrer localement des fichiers audio autorises (FR, arabe, puis
+ hassania avec locuteurs natifs), et les associer aux reponses connues. Ne promettre un modele vocal
+ generatif local qu’apres test du processeur, de la memoire et du stockage du telephone.
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                             Page 16
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+
+ 12. Scenario pret pour une demonstration de 3
+ minutes
+   Temps                   Action                                                     Ce que le jury constate
+
+
+   0:00-0:20               Presenter le7raifiBot et le contexte des artisans du Sud     Identite locale et probleme cible
+
+
+   0:20-0:55               Question en francais : metier / service                    Reponse locale claire
+
+
+   0:55-1:25               Basculer en arabe, question sur l’artisanat                Bilinguisme de l’interface
+
+
+   1:25-1:55               Lire un tag ART-DEMO-01 ou scanner le QR                   Lien entre objet physique et
+                                                                                      numerique
+
+
+   1:55-2:25               Activer mode Avion et reposer une question                 Persistance locale verifiee
+
+
+   2:25-3:00               Montrer la feuille de route et les partenaires souhaites   Passage du prototype au pilote
+                                                                                      terrain
+
+
+
+ Script oral
+ « Voici le7raifiBot Sahara, prototype de Le7rayfi. Nous avons transforme un smartphone Android NFC
+ existant en un robot a faible cout, inspire du patrimoine vestimentaire du Sud. Notre demonstration montre
+ comment informer les habitants, rendre les artisans plus visibles et conserver des connaissances utiles
+ meme lorsque la connexion Internet est faible. Le prochain objectif est de valider des contenus et des
+ usages avec les artisans et les partenaires locaux. »
+
+
+ Preparer le plan de secours
+  • Capture d’ecran du prototype et quelques questions locales preparees.
+
+  • QR code imprime et lien public vers la plateforme.
+
+  • Une carte NFC programme et testee avant le depart; une deuxieme carte vierge de secours.
+
+  • Copies locales du dossier logiciel et des connaissances, sans donnees personnelles.
+
+  • Chargeur, cable de reserve, alimentation et petit kit de fixation.
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                                   Page 17
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+
+ 13. Fiche de recette et plan de tests
+   Test                                 Critere                                                                                           OK / KO / N.A.
+
+
+   Visage anime                         Animation visible sans artefacts                                                                  ................
+
+
+   Interface FR                         Elements lisibles en francais                                                                     ................
+
+
+   Interface AR                         Direction RTL et contenu correct                                                                  ................
+
+
+   Recherche connue                     Reponse correcte en base locale                                                                   ................
+
+
+   Recherche inconnue                   Message prudent, sans invention                                                                   ................
+
+
+   Mode hors ligne                      Question connue apres mode avion                                                                  ................
+
+
+   Tag NFC                              Lecture / ecriture si appareil compatible                                                         ................
+
+
+   QR code                              Ouverture du site voulu                                                                           ................
+
+
+   Synchronisation                      Import d’un JSON valide depuis HTTPS                                                              ................
+
+
+   Sauvegarde                           Export local des connaissances                                                                    ................
+
+
+   Fixation                             Telephone stable et extractible                                                                   ................
+
+
+   Securite                             Pas de surchauffe apres test prolonge                                                             ................
+
+
+
+ Fiche de validation du prototype
+
+   Champ                                          A remplir
+
+
+   Telephone utilise                              ...........................................................................................
+
+
+   Version Chrome / Android                       ...........................................................................................
+
+
+   URL HTTPS                                      ...........................................................................................
+
+
+   Date du test                                   ...........................................................................................
+
+
+   Responsable technique                          ...........................................................................................
+
+
+   Anomalies a corriger                           ...........................................................................................
+
+
+   Visa / validation                              ...........................................................................................
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                                                                           Page 18
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+
+ 14. Depannage rapide
+   Probleme                          Cause probable                             Action
+
+
+   PWA ne s’installe pas             HTTP, manifest mal servi, erreur service   Verifier HTTPS, fichiers et Chrome;
+                                     worker                                     recharger
+
+
+   Mode avion ne marche pas          Cache pas encore installe ou mis a jour    Ouvrir en ligne, attendre puis retester
+
+
+   Le NFC ne repond pas              NFC desactive, page non HTTPS,             Activer NFC, deverrouiller, ouvrir Chrome
+                                     permission                                 HTTPS
+
+
+   Tag detecte mais fiche            Mauvais contenu NDEF ou identifiant        Reecrire la carte avec ART-DEMO-01
+   absente
+
+
+   Lecture NFC difficile             Coque trop epaisse ou antenne mal          Reperer l’antenne et rapprocher la carte
+                                     placee
+
+
+   QR ne correspond pas a la         QR fourni vers site general                Creer QR specifique si besoin
+   fiche
+
+
+   Voix ne fonctionne pas            Langue/voix ou API indisponible            Utiliser questions ecrites; installer voix si
+                                                                                disponible
+
+
+   Mise a jour non visible           Base importee prioritaire ou ancien        Importer nouvelle base; verifier version du
+                                     cache                                      cache
+
+
+   Robot bascule                     Base trop legere / tete trop haute         Renforcer base et abaisser centre de
+                                                                                gravite
+
+
+   Telephone chauffe                 Ventilation insuffisante / batterie        Arreter; refroidir; revoir boitier et charge
+                                     fatiguee
+
+
+
+ Journal technique a garder
+ A chaque correction, noter : date, fichier ou composant modifie, version, resultat du test, nom du
+ responsable. Conserver les anciennes versions de la PWA pour revenir rapidement en arriere.
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                                      Page 19
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+
+ 15. Equipe, calendrier et evolution
+   Role                                     Mission concrete
+
+
+   Pilote Le7rayfi                          Contenus, validation, demo et relations avec les artisans
+
+
+   Technicien / maker                       Structure, support, NFC, securite materielle
+
+
+   Developpeur web                          Plesk, HTTPS, PWA, JSON et tests
+
+
+   Couturiere / artisan du Sud              Miniature vestimentaire fidele aux savoir-faire
+
+
+   Referent local                           Verification des informations et retours des utilisateurs
+
+
+
+ Programme d’execution
+
+   Jour               Resultat obligatoire
+
+
+   J1                 Mesure du telephone, essai NFC, liste de materiaux, gabarit
+
+
+   J2                 Montage de la structure, berceau amovible et essai thermique
+
+
+   J3                 Mise en ligne PWA HTTPS, installation Android, test offline
+
+
+   J4                 Essais NFC et QR, habillement, finitions et photos
+
+
+   J5                 Recette complete, scenario de 3 minutes, corrections
+
+
+
+ Vers une V2 utile dans les provinces du Sud
+  • V1.1 : rendre le contenu plus complet, inclure la hassania validee et des reponses audio enregistrées hors
+    ligne.
+
+  • V2 : connecter une API publique de Le7rayfi avec profils consentis, dates de mise a jour et mecanismes de
+    verification.
+
+  • V2+ : experimenter des algorithmes de recherche locale et une synchronisation plus robuste, apres mesure
+    de performance.
+
+  • Deployement pilote : tester un appareil a Laayoune avec un partenaire local et interroger utilisateurs et
+    artisans sur son utilite.
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                         Page 20
+le7raifiBot MINI V1 / LE7RAYFI
+
+
+
+
+ 16. Annexes pratiques
+ A. Exemple de contenu du tag
+ Fiche de demonstration seulement :
+
+ https://bot.le7rayfi.com/?artisan=ART-DEMO-01
+
+ Cette adresse est un EXEMPLE. Elle ne sera valable que si l’equipe a effectivement deploye l’application sous ce domaine.
+ L’ecriture NFC du programme construit l’URL a partir de l’adresse reelle ouverte dans le navigateur.
+
+
+ B. Extrait des chemins du projet
+  index.html
+
+  style.css
+
+  app.js
+
+  knowledge.json
+
+  sw.js
+
+  manifest.webmanifest
+
+  assets/icon-192.png
+
+  assets/icon-512.png
+
+  assets/qr-le7rayfi.png
+
+
+ C. Sources techniques utiles
+ https://developer.chrome.com/docs/capabilities/nfc
+
+ https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
+
+ https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation
+
+ https://www.nxp.com/products/rfid-nfc/nfc-hf/ntag-for-tags-and-labels/ntag-213-215-216-nfc-forum-type-2-tag-compliant-ic-
+ with-144-504-888-bytes-user-memory:NTAG213_215_216
+
+ https://www.le7rayfi.com/
+
+
+ D. Donnees a demander au responsable du telephone
+ Modele exact, version Android et Chrome, confirmation que le NFC detecte un tag, photo des faces avant et
+ arriere, position du micro et du port de charge, dimensions en millimetres. Ces renseignements sont
+ necessaires avant d’arreter le plan definitif du boitier.
+
+
+
+      LIVRABLE ATTENDU DU TECHNICIEN
+
+      Un robot stable et presentable, une PWA operationnelle sur le smartphone Android NFC, une
+      demonstration FR/AR hors ligne, un QR valide, un essai NFC documente, les mesures du boitier, un
+      journal de test et une estimation des ameliorations possibles.
+
+
+
+
+ Le7rayfi - le7raifiBot Mini V1 - Manuel technique detaille - 23 octobre 2026
+
+
+
+
+GUIDE DETAILLE | Fabrication - NFC - PWA - Offline                                                                    Page 21
+

@@ -1,0 +1,348 @@
+{
+  "version": "2.0",
+  "updated": "2026-10-27",
+  "items": [
+    {
+      "id": "accueil",
+      "keywords": [
+        "bonjour",
+        "salut",
+        "salam",
+        "salam alikoum",
+        "hello",
+        "مرحبا",
+        "السلام عليكم",
+        "اهلا",
+        "أهلا"
+      ],
+      "fr": "Salam et bienvenue ! Je suis Le7rayfiBot, votre assistant intelligent de la plateforme Le7rayfi. Je peux vous aider à trouver des artisans, découvrir les métiers et savoir-faire du Maroc et des provinces du Sud. Posez une question ou choisissez une suggestion.",
+      "ar": "السلام عليكم ومرحباً بكم! أنا حريف بوت، المساعد الذكي ديال منصة لحرايفي. نقدر نعاونكم تلقاو حرفيين، وتكتاشفو المهن والصنعة ف المغرب والأقاليم الجنوبية. سولني أو اختار اقتراح.",
+      "darija": "سلام وليكم! أنا حريف بوت، المساعد الذكي ديال لحرايفي. نقدر نعاونك تلقا الحرايفي، وتعرف على الصنعة والمهن ف المغرب. سولني شي حاجة أو اختار واحد الاقتراح."
+    },
+    {
+      "id": "electricien-laayoune",
+      "keywords": [
+        "electricien",
+        "électricien",
+        "electricite",
+        "électricité",
+        "كهربائي",
+        "الكهرباء",
+        "كهرباء",
+        "panne",
+        "dépannage",
+        "depannage",
+        "installation electrique",
+        "laayoune",
+        "laâyoune",
+        "العيون"
+      ],
+      "fr": "Pour trouver un électricien à Laâyoune, consultez l'annuaire Le7rayfi sur le7rayfi.com. Vous pouvez rechercher par métier et par ville pour trouver des artisans vérifiés avec leurs coordonnées, spécialités et zones d'intervention.",
+      "ar": "للعثور على كهربائي في العيون، استعمل دليل لحرايفي على le7rayfi.com. تقدر تبحث حسب المهنة والمدينة باش تلقا حرفيين موثقين مع معلومات الاتصال والتخصصات ومناطق العمل."
+    },
+    {
+      "id": "artisanat-patrimoine",
+      "keywords": [
+        "artisanat",
+        "patrimoine",
+        "savoir faire",
+        "savoir-faire",
+        "metiers du sud",
+        "مهن",
+        "حرف",
+        "تراث",
+        "الصناعة التقليدية",
+        "حرفي",
+        "حرفيين",
+        "مهارات",
+        "المهارات",
+        "منصة",
+        "المنصة"
+      ],
+      "fr": "Le7rayfi valorise les savoir-faire des artisans du Maroc et des provinces du Sud : textile, bijoux, bois, métal, cuir, et services du quotidien. Découvrez les profils d'artisans sur le7rayfi.com par métier et par ville.",
+      "ar": "تثمن منصة لحرايفي مهارات الحرفيين في المغرب والأقاليم الجنوبية: النسيج، الحلي، الخشب، المعادن، الجلد والخدمات اليومية. اكتشف ملفات الحرفيين على le7rayfi.com حسب المهنة والمدينة."
+    },
+    {
+      "id": "metiers-documentes",
+      "keywords": [
+        "metiers",
+        "métiers",
+        "services",
+        "climatisation",
+        "solaire",
+        "maintenance",
+        "hotel",
+        "فنادق",
+        "صيانة",
+        "طاقة شمسية",
+        "تكييف"
+      ],
+      "fr": "Les métiers disponibles sur Le7rayfi couvrent l'électricité, la climatisation, l'énergie solaire, la plomberie, la peinture, la menuiserie, la maintenance et l'artisanat traditionnel. Chaque profil artisan inclut son métier, sa ville et ses coordonnées.",
+      "ar": "تشمل المهن المتوفرة على لحرايفي الكهرباء والتكييف والطاقة الشمسية والسباكة والصباغة والنجارة والصيانة والصناعة التقليدية. كل ملف حرفي يتضمن مهنته ومدينته ومعلومات الاتصال."
+    },
+    {
+      "id": "inscription-artisan",
+      "keywords": [
+        "inscription",
+        "inscrire",
+        "rejoindre",
+        "artisan",
+        "حرفي",
+        "تسجيل",
+        "انضمام",
+        "اشتراك",
+        "rejoindre le7rayfi",
+        "انضمام الى le7rayfi",
+        "انضمام الى المنصة"
+      ],
+      "fr": "Pour rejoindre Le7rayfi en tant qu'artisan, créez votre compte sur le7rayfi.com. Renseignez votre métier, votre ville et vos coordonnées. Votre profil sera vérifié puis publié dans l'annuaire pour que les clients puissent vous contacter.",
+      "ar": "للانضمام إلى لحرايفي كحرفي، أنشئ حسابك على le7rayfi.com. أدخل مهنتك ومدينتك ومعلومات الاتصال. سيتم التحقق من ملفك ثم نشره في الدليل لكي يتواصل معك الزبناء."
+    },
+    {
+      "id": "hassania",
+      "keywords": [
+        "hassania",
+        "hassaniya",
+        "hasania",
+        "الحسانية",
+        "حسانية",
+        "langue",
+        "arabe",
+        "اللغة",
+        "العربية",
+        "دارجة"
+      ],
+      "fr": "L'interface Le7rayfi est disponible en français, arabe standard et darija marocaine. Le support de la hassania est prévu dans les prochaines mises à jour avec des locuteurs natifs.",
+      "ar": "واجهة لحرايفي متاحة بالفرنسية والعربية الفصحى والدارجة المغربية. إضافة الحسانية مخططة في التحديثات القادمة بمشاركة متحدثين أصليين."
+    },
+    {
+      "id": "nfc-fonctionnement",
+      "keywords": [
+        "nfc",
+        "tag",
+        "carte",
+        "ntag",
+        "badge",
+        "lecture",
+        "ecriture",
+        "كتابة",
+        "قراءة",
+        "بطاقة",
+        "شريحة"
+      ],
+      "fr": "Le lecteur NFC est celui du smartphone Android. La carte de démonstration contient seulement une URL ou un identifiant de fiche, jamais le dossier complet ni un secret. Une carte NTAG213 peut être copiée : elle sert à ouvrir une fiche, pas à certifier un artisan.",
+      "ar": "قارئ NFC هو هاتف أندرويد نفسه. تحتوي بطاقة العرض على رابط أو معرف بطاقة فقط، وليس الملف الكامل أو أي سر. يمكن نسخ بطاقة NTAG213، لذا فهي تفتح بطاقة تعريف ولا تشهد بأن الحرفي معتمد."
+    },
+    {
+      "id": "qr-acces",
+      "keywords": [
+        "qr",
+        "qrcode",
+        "code qr",
+        "scanner",
+        "scan",
+        "رمز",
+        "باركود",
+        "مسح"
+      ],
+      "fr": "Le QR code sert de solution de secours quand le NFC n'est pas disponible. Celui fourni avec la démonstration renvoie vers le site Le7rayfi ; un QR spécifique peut être généré pour la fiche fictive ART-DEMO-01.",
+      "ar": "يعمل رمز QR كحل بديل عند تعذر NFC. الرمز المرفق بالعرض يحيل إلى موقع Le7rayfi، ويمكن إنشاء رمز خاص بالبطاقة الافتراضية ART-DEMO-01."
+    },
+    {
+      "id": "hors-ligne",
+      "keywords": [
+        "hors ligne",
+        "offline",
+        "avion",
+        "mode avion",
+        "sans internet",
+        "انترنت",
+        "دون اتصال",
+        "طيران",
+        "بدون انترنت",
+        "دون انترنت",
+        "sans connexion"
+      ],
+      "fr": "Après une première ouverture en ligne, la PWA met en cache l'interface, les réponses locales et les ressources. En mode Avion, les questions connues restent disponibles. La voix et la synchronisation peuvent nécessiter Internet.",
+      "ar": "بعد الفتح الأول عبر الإنترنت، تخزن PWA الواجهة والإجابات المحلية والموارد. في وضع الطيران تبقى الأسئلة المعروفة متاحة. قد يحتاج الصوت والمزامنة إلى الإنترنت."
+    },
+    {
+      "id": "voix",
+      "keywords": [
+        "voix",
+        "parler",
+        "micro",
+        "microphone",
+        "audio",
+        "ecouter",
+        "lire",
+        "صوت",
+        "ميكروفون",
+        "استماع",
+        "قراءة"
+      ],
+      "fr": "La lecture vocale utilise les voix installées sur Android et le micro s'appuie sur la reconnaissance du navigateur. Ces fonctions sont expérimentales : leur disponibilité et leur fonctionnement hors ligne ne sont pas garantis. Les questions à l'écran restent la solution fiable.",
+      "ar": "تستخدم القراءة الصوتية الأصوات المثبتة على أندرويد، ويعتمد الميكروفون على التعرف الصوتي في المتصفح. هذه الوظائف تجريبية وقد لا تعمل دائماً أو دون إنترنت. تبقى الأسئلة المكتوبة على الشاشة الحل الموثوق."
+    },
+    {
+      "id": "donnees-fictives",
+      "keywords": [
+        "donnees",
+        "fictives",
+        "demo",
+        "démonstration",
+        "exemple",
+        "fake",
+        "وهمية",
+        "افتراضية",
+        "عرض",
+        "تجريبي"
+      ],
+      "fr": "Toutes les fiches et tous les profils de cette démonstration portent la mention DONNÉES FICTIVES — DÉMONSTRATION. Ils ne prouvent ni une disponibilité, ni une qualification, ni un partenariat réel. Aucune donnée personnelle ne doit être saisie dans cette version.",
+      "ar": "جميع البطاقات والملفات في هذا العرض تحمل عبارة بيانات افتراضية — عرض تجريبي. وهي لا تثبت أي توفر أو مؤهل أو شراكة حقيقية. يجب عدم إدخال أي بيانات شخصية في هذه النسخة."
+    },
+    {
+      "id": "contact",
+      "keywords": [
+        "contact",
+        "telephone",
+        "téléphone",
+        "numero",
+        "numéro",
+        "appeler",
+        "whatsapp",
+        "اتصال",
+        "هاتف",
+        "رقم",
+        "واتساب"
+      ],
+      "fr": "Cette démonstration ne publie aucun numéro de téléphone ni contact direct non vérifié. Pour joindre Le7rayfi, utilisez uniquement les canaux officiels indiqués sur le site le7rayfi.com. Aucune adresse ne doit être inventée.",
+      "ar": "لا ينشر هذا العرض أي رقم هاتف أو جهة اتصال مباشرة غير موثقة. للتواصل مع Le7rayfi، استخدم فقط القنوات الرسمية المذكورة على موقع le7rayfi.com. لا ينبغي اختراع أي عنوان."
+    },
+    {
+      "id": "budget",
+      "keywords": [
+        "budget",
+        "cout",
+        "coût",
+        "prix",
+        "combien",
+        "dirham",
+        "dh",
+        "تكلفة",
+        "ثمن",
+        "سعر",
+        "درهم",
+        "ميزانية"
+      ],
+      "fr": "Le budget matériel indicatif de la V1 se situe autour de 110 à 290 DH, avec un objectif prudent de 180 à 300 DH. Le smartphone existant reste l'équipement le plus important ; le carton, le textile et deux ou trois tags suffisent pour la démonstration.",
+      "ar": "الميزانية التقديرية للمواد في النسخة الأولى تتراوح حول 110 إلى 290 درهماً، بهدف حذر من 180 إلى 300 درهم. يبقى الهاتف الموجود أهم جهاز، ويكفي الكرتون والقماش وبطاقتان أو ثلاث من بطاقات NFC للعرض."
+    },
+    {
+      "id": "securite-nfc",
+      "keywords": [
+        "securite",
+        "sécurité",
+        "secret",
+        "mot de passe",
+        "password",
+        "administrateur",
+        "admin",
+        "أمان",
+        "كلمة المرور",
+        "سر",
+        "مسؤول"
+      ],
+      "fr": "Ne stockez jamais un mot de passe, un jeton administrateur ou des données bancaires dans le code, le fichier JSON ou une carte NFC. Le robot est public : tout contenu HTML, JavaScript ou NDEF peut être lu et copié.",
+      "ar": "لا تخزن أبداً كلمة مرور أو رمز مسؤول أو بيانات بنكية في الشيفرة أو ملف JSON أو بطاقة NFC. الروبوت عمومي، وكل محتوى HTML أو JavaScript أو NDEF يمكن قراءته ونسخه."
+    },
+    {
+      "id": "zones",
+      "keywords": [
+        "zone",
+        "zones",
+        "laayoune",
+        "العيون",
+        "provinces du sud",
+        "الجنوب",
+        "الأقاليم الجنوبية",
+        "couverture",
+        "تغطية"
+      ],
+      "fr": "Le pilote est pensé pour Laayoune et les provinces du Sud, mais aucun déploiement réel n'est encore confirmé. La couverture, les partenaires et les horaires devront être validés localement avant toute annonce publique.",
+      "ar": "صُمم المشروع التجريبي لمدينة العيون والأقاليم الجنوبية، لكن لا يوجد نشر حقيقي مؤكد بعد. يجب التحقق من التغطية والشركاء والمواعيد محلياً قبل أي إعلان عام."
+    },
+    {
+      "id": "partenariat",
+      "keywords": [
+        "partenaire",
+        "partenariat",
+        "association",
+        "cooperation",
+        "coopération",
+        "شراكة",
+        "جمعية",
+        "تعاون"
+      ],
+      "fr": "Le7rayfi souhaite travailler avec des artisans, des associations et des référents locaux pour valider le vocabulaire, les métiers et les contenus. Les partenariats présentés dans cette démonstration sont des objectifs, pas des accords signés.",
+      "ar": "تسعى Le7rayfi إلى التعاون مع حرفيين وجمعيات ومرجعين محليين للتحقق من المصطلحات والمهن والمحتويات. الشراكات المذكورة في هذا العرض أهداف وليست اتفاقيات موقعة."
+    },
+    {
+      "id": "version-future",
+      "keywords": [
+        "v2",
+        "version",
+        "roadmap",
+        "feuille de route",
+        "futur",
+        "evolution",
+        "évolution",
+        "تطوير",
+        "مستقبل",
+        "نسخة"
+      ],
+      "fr": "La V1.1 doit enrichir les contenus, ajouter la hassania validée et des réponses audio enregistrées hors ligne. La V2 vise une API publique Le7rayfi avec profils consentis, dates de mise à jour et mécanismes de vérification.",
+      "ar": "يجب أن تثري النسخة 1.1 المحتويات وتضيف الحسانية الموثقة وإجابات صوتية مسجلة تعمل دون اتصال. أما النسخة 2 فتهدف إلى واجهة برمجية عمومية لـ Le7rayfi بملفات بموافقة أصحابها وتواريخ تحديث وآليات تحقق."
+    },
+    {
+      "id": "remerciement",
+      "keywords": [
+        "merci",
+        "chokran",
+        "shukran",
+        "شكرا",
+        "شكراً"
+      ],
+      "fr": "Avec plaisir. Cette démonstration a pour but de montrer comment Le7rayfi peut rendre les savoir-faire locaux plus visibles, tout en restant prudent sur les données réelles.",
+      "ar": "على الرحب والسعة. يهدف هذا العرض إلى إظهار كيف يمكن لـ Le7rayfi جعل المهارات المحلية أكثر وضوحاً، مع الحرص على عدم تقديم بيانات حقيقية غير مؤكدة."
+    },
+    {
+      "id": "qui-es-tu",
+      "keywords": [
+        "qui es tu",
+        "qui es-tu",
+        "ton nom",
+        "robot",
+        "le7raifiBot",
+        "من انت",
+        "ما اسمك",
+        "روبوت"
+      ],
+      "fr": "Je suis le7raifiBot Mini V1, un prototype de robot de table construit autour d'un smartphone Android NFC existant. Mon rôle est de présenter des réponses locales bilingues et de relier une carte NFC ou un QR à une fiche de démonstration.",
+      "ar": "أنا حريف بوت النسخة الأولى، نموذج روبوت طاولة مبني حول هاتف أندرويد NFC موجود. دوري عرض إجابات محلية بلغتين وربط بطاقة NFC أو رمز QR ببطاقة عرض تجريبية."
+    },
+    {
+      "id": "aide-utilisation",
+      "keywords": [
+        "utiliser",
+        "utilisation",
+        "aide",
+        "help",
+        "كيف",
+        "مساعدة"
+      ],
+      "fr": "Choisissez une question suggérée ou écrivez votre question, puis appuyez sur Envoyer. Utilisez Lire pour la voix, Parler pour le micro, NFC pour lire ou écrire une carte, et QR pour les liens de secours. Les options permettent d'importer ou d'exporter les connaissances.",
+      "ar": "اختر سؤالاً مقترحاً أو اكتب سؤالك ثم اضغط إرسال. استخدم قراءة للصوت، وتحدث للميكروفون، وNFC لقراءة أو كتابة بطاقة، وQR للروابط البديلة. تسمح الخيارات باستيراد أو تصدير المعارف."
+    }
+  ]
+}
