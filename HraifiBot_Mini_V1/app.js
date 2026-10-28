@@ -82,6 +82,111 @@
 
   /* ---------------- Dictionnaire des Textes & Langues ---------------- */
   const I18N = {
+    en: {
+      'page.title': 'Le7rayfiBot Mini V1 — Le7rayfi',
+      'brand.sub': 'Artisans & Crafts in Morocco',
+      'net.online': 'Online',
+      'net.offline': 'Offline',
+      'mood.idle': 'Ready to listen',
+      'mood.listening': 'Listening to you…',
+      'mood.thinking': 'Thinking…',
+      'mood.speaking': 'Answering you…',
+      'mood.error': 'One moment…',
+      'btn.mic': 'Tap to speak',
+      'btn.micAria': 'Tap to speak to the robot',
+      'voice.idle': 'Tap the microphone and speak naturally.',
+      'voice.listening': 'Listening… Speak now.',
+      'voice.processing': 'Searching responses…',
+      'voice.speaking': 'Le7rayfi is answering…',
+      'voice.cancel': 'Cancel',
+      'voice.youSaid': 'You said:',
+      'chat.title': 'Conversation & Chats',
+      'chat.inputLabel': 'Your question',
+      'chat.placeholder': 'Or type your question here…',
+      'chat.send': 'Send',
+      'chat.sendAria': 'Send question',
+      'chat.clear': 'Clear',
+      'chat.voiceSection': 'Voice control',
+      'suggestions.label': 'Quick suggestions:',
+      'response.emptyTitle': 'Welcome',
+      'response.emptyText': 'Salam! I am Le7rayfi, your assistant robot. Tap the mic to talk to me, or choose a suggestion.',
+      'response.localTitle': 'Verified Local Response',
+      'response.localBadge': 'Verified Local Card',
+      'response.unknownTitle': 'Not listed in local V1',
+      'response.unknownText': 'This information is not verified in the local offline database. Check le7rayfi.com for live listings.',
+      'response.meta': 'Local card · {id}',
+      'btn.speak': 'Read aloud',
+      'btn.speakAria': 'Read response aloud',
+      'btn.stop': 'Stop',
+      'btn.stopAria': 'Stop audio playback',
+      'btn.replay': 'Replay',
+      'btn.replayAria': 'Replay response',
+      'btn.tools': 'Tools',
+      'btn.optionsAria': 'Open tools and data',
+      'actions.title': 'Tools & Demo',
+      'btn.nfcRead': 'Read NFC',
+      'btn.nfcReadAria': 'Read an NFC card',
+      'btn.nfcWrite': 'Write NFC',
+      'btn.nfcWriteAria': 'Write demo card to NFC',
+      'btn.qr': 'QR Codes',
+      'btn.qrAria': 'Show QR codes',
+      'nfc.idle': 'NFC ready on Chrome Android over HTTPS.',
+      'nfc.unsupported': 'Web NFC unavailable. Use Chrome Android or QR code.',
+      'nfc.scanning': 'Hold NFC card to phone…',
+      'nfc.writing': 'Hold blank card to program…',
+      'nfc.writeOk': 'Card written: {url}',
+      'nfc.readOk': 'Card read: {id}',
+      'nfc.timeout': 'NFC timed out. Try again.',
+      'nfc.permission': 'NFC permission denied.',
+      'nfc.error': 'NFC operation failed. Ensure NFC is enabled.',
+      'nfc.cancelled': 'NFC operation cancelled.',
+      'artisan.badge': 'DEMO PROFILE',
+      'artisan.close': 'Close',
+      'artisan.closeAria': 'Close artisan card',
+      'artisan.speak': 'Read card',
+      'artisan.field.trade': 'Trade',
+      'artisan.field.zone': 'Zone',
+      'artisan.field.availability': 'Availability',
+      'artisan.field.contact': 'Contact',
+      'artisan.notFoundName': 'Profile not found',
+      'artisan.notFoundText': 'This demo only recognizes demo profiles ART-DEMO-01 and ART-DEMO-02.',
+      'artisan.sourceLine': '{id} · demo profile · {date}',
+      'footer.demo': 'Demonstrator.',
+      'footer.demoText': 'Profiles are for demonstration on le7rayfi.com.',
+      'footer.version': 'Le7rayfiBot Mini V1',
+      'dialog.close': 'Close',
+      'qr.title': 'Backup QR Codes',
+      'qr.subtitle': 'Use if NFC is unavailable.',
+      'qr.tabSite': 'Le7rayfi Site',
+      'qr.tabDemo': 'Demo Card',
+      'qr.siteCaption': 'QR to the public Le7rayfi website.',
+      'qr.openSite': 'Open site',
+      'qr.demoCaption': 'QR to demo card ART-DEMO-01.',
+      'qr.demoNote': 'The domain bot.le7rayfi.com is an example.',
+      'qr.showDemo': 'Show demo profile',
+      'qr.currentUrl': 'Current URL',
+      'qr.copy': 'Copy',
+      'options.title': 'Options and data',
+      'options.subtitle': 'Import, export or sync local responses.',
+      'options.modeOffline': 'Force 100% offline mode',
+      'options.exportKb': 'Export knowledge base (JSON)',
+      'options.importKb': 'Import knowledge base (JSON)',
+      'options.sync': 'Sync from server',
+      'options.syncing': 'Syncing…',
+      'options.syncSuccess': 'Sync successful! {count} items updated.',
+      'options.syncFail': 'Sync failed. Check connection.',
+      'options.reset': 'Reset to defaults',
+      'toast.copied': 'URL copied to clipboard!',
+      'toast.copyFail': 'Failed to copy URL.',
+      'toast.offline': 'Switched to offline mode.',
+      'toast.online': 'Connected to network.',
+      'toast.demoShown': 'Demo profile displayed.',
+      'toast.speakUnsupported': 'Speech synthesis unsupported in this browser.',
+      'toast.recUnsupported': 'Speech recognition unsupported. Try Chrome or Android.',
+      'toast.recNoMatch': 'No speech recognized. Please speak clearly.',
+      'toast.recError': 'Speech error: {err}',
+      'error.knowledgeLoad': 'Failed to load knowledge base.',
+    },
     fr: {
       'page.title': 'le7raifiBot Mini V1 — Le7rayfi',
       'brand.sub': 'Artisans & savoir-faire',
@@ -514,6 +619,7 @@
     dom.langFr = $('#langFr');
     dom.langAr = $('#langAr');
     dom.langDarija = $('#langDarija');
+    dom.langEn = $('#langEn');
     dom.btnOptions = $('#btnOptions');
     dom.face = $('#face');
     dom.robotMouth = $('#robotMouth');
@@ -936,9 +1042,9 @@
     const voices = window.speechSynthesis.getVoices();
     if (!voices || !voices.length) return null;
 
-    const prefix = (langCode === 'ar' || langCode === 'darija') ? 'ar' : 'fr';
+    const prefix = (langCode === 'ar' || langCode === 'darija') ? 'ar' : (langCode === 'en' ? 'en' : 'fr');
     // Prioritize natural or target dialect voices
-    const targetLang = (langCode === 'darija') ? 'ar-ma' : (langCode === 'ar' ? 'ar' : 'fr');
+    const targetLang = (langCode === 'darija') ? 'ar-ma' : (langCode === 'ar' ? 'ar' : (langCode === 'en' ? 'en' : 'fr'));
 
     let match = voices.find(v => (v.lang || '').toLowerCase().startsWith(targetLang));
     if (!match) {
@@ -965,7 +1071,7 @@
     const voice = state.selectedVoice || getBestVoiceForLanguage(state.lang);
     if (voice) utterance.voice = voice;
 
-    utterance.lang = (state.lang === 'darija' ? 'ar-MA' : (state.lang === 'ar' ? 'ar-SA' : 'fr-FR'));
+    utterance.lang = (state.lang === 'en' ? 'en-US' : (state.lang === 'darija' ? 'ar-MA' : (state.lang === 'ar' ? 'ar-SA' : 'fr-FR')));
     utterance.rate = state.speechRate || (state.lang === 'ar' ? 0.92 : 0.98);
     utterance.pitch = 1.05;
 
@@ -1085,7 +1191,7 @@
     try {
       const recognition = new Recognition();
       state.recognition = recognition;
-      recognition.lang = (state.lang === 'darija') ? 'ar-MA' : (state.lang === 'ar' ? 'ar-SA' : 'fr-FR');
+      recognition.lang = (state.lang === 'en') ? 'en-US' : ((state.lang === 'darija') ? 'ar-MA' : (state.lang === 'ar' ? 'ar-SA' : 'fr-FR'));
       recognition.interimResults = true;
       recognition.continuous = false;
       recognition.maxAlternatives = 1;
@@ -1505,25 +1611,34 @@ Always answer directly in ${targetLangDesc}. Keep answers concise, direct, helpf
      LANGUES & I18N
      ========================================================= */
   function applyLanguage(lang) {
-    state.lang = (lang === 'darija' || lang === 'ar') ? lang : 'fr';
+    state.lang = (lang === 'darija' || lang === 'ar' || lang === 'en') ? lang : 'fr';
     const isRtl = state.lang === 'ar' || state.lang === 'darija';
 
-    document.documentElement.lang = isRtl ? 'ar' : 'fr';
+    document.documentElement.lang = isRtl ? 'ar' : (state.lang === 'en' ? 'en' : 'fr');
     document.documentElement.dir = isRtl ? 'rtl' : 'ltr';
 
     document.body.classList.toggle('lang-ar', state.lang === 'ar');
     document.body.classList.toggle('lang-darija', state.lang === 'darija');
+    document.body.classList.toggle('lang-en', state.lang === 'en');
 
     try { localStorage.setItem(STORAGE.lang, state.lang); } catch (e) { /* ignore */ }
 
     // Update active button state
-    if (dom.langFr && dom.langAr && dom.langDarija) {
+    if (dom.langFr) {
       dom.langFr.classList.toggle('is-active', state.lang === 'fr');
-      dom.langAr.classList.toggle('is-active', state.lang === 'ar');
-      dom.langDarija.classList.toggle('is-active', state.lang === 'darija');
       dom.langFr.setAttribute('aria-pressed', String(state.lang === 'fr'));
+    }
+    if (dom.langAr) {
+      dom.langAr.classList.toggle('is-active', state.lang === 'ar');
       dom.langAr.setAttribute('aria-pressed', String(state.lang === 'ar'));
+    }
+    if (dom.langDarija) {
+      dom.langDarija.classList.toggle('is-active', state.lang === 'darija');
       dom.langDarija.setAttribute('aria-pressed', String(state.lang === 'darija'));
+    }
+    if (dom.langEn) {
+      dom.langEn.classList.toggle('is-active', state.lang === 'en');
+      dom.langEn.setAttribute('aria-pressed', String(state.lang === 'en'));
     }
 
     // Translate DOM elements
@@ -1785,6 +1900,7 @@ Always answer directly in ${targetLangDesc}. Keep answers concise, direct, helpf
     if (dom.langFr) dom.langFr.addEventListener('click', () => applyLanguage('fr'));
     if (dom.langAr) dom.langAr.addEventListener('click', () => applyLanguage('ar'));
     if (dom.langDarija) dom.langDarija.addEventListener('click', () => applyLanguage('darija'));
+    if (dom.langEn) dom.langEn.addEventListener('click', () => applyLanguage('en'));
 
     // Master Hero Mic & Voice actions
     if (dom.btnMic) dom.btnMic.addEventListener('click', toggleMic);
