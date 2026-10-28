@@ -66,7 +66,11 @@ const STOP_WORDS = new Set([
   'quelles', 'sont', 'peut', 'on', 'ca', 'cette', 'mon', 'ton', 'son', 'votre',
   'في', 'من', 'على', 'إلى', 'الى', 'عن', 'مع', 'هل', 'ما', 'كيف', 'لماذا', 'هذا',
   'هذه', 'ذلك', 'التي', 'الذي', 'و', 'او', 'أو', 'ثم', 'ان', 'أن', 'لا', 'هو', 'هي',
-  'انا', 'أنا', 'نحن', 'يمكن', 'الى', 'جد', 'أجد'
+  'انا', 'أنا', 'نحن', 'يمكن', 'الى', 'جد', 'أجد',
+  'بغيت', 'باغي', 'خاصني', 'خصني', 'عندي', 'كاين', 'كاينة', 'واش', 'شي',
+  'ديال', 'ديالي', 'ف', 'عفاك', 'باش', 'فين', 'كنقلب', 'نلقى', 'نصاوب',
+  'نصلح', 'ليا', 'ليك', 'لينا', 'دابا', 'هاد', 'هادي', 'هادا', 'شنو',
+  'اش', 'أش', 'علاش', 'شكون', 'كيفاش', 'مشكل', 'مشكلة', 'عطب', 'خاسر', 'خاسرة', 'بانة', 'بانا'
 ]);
 
 function queryTokens(text) {
@@ -160,6 +164,9 @@ const testQueries = [
   { q: 'هل يعمل الروبوت دون إنترنت؟', expectedId: 'hors-ligne' },
   { q: 'Comment un artisan peut-il rejoindre Le7rayfi ?', expectedId: 'inscription-artisan' },
   { q: 'كيف يمكن للحرفي الانضمام إلى Le7rayfi؟', expectedId: 'inscription-artisan' },
+  { q: 'خاصني تريسيان ف العيون عفاك', expectedId: 'electricien-laayoune' },
+  { q: 'بغيت بلومبي يصاوب ليا الروبيني', expectedId: 'metier-plomberie' },
+  { q: 'عندي مشكل ف الكليماتيزور ما كيبردش', expectedId: 'metier-climatisation' },
   { q: 'Quel est le prix du billet de train pour Tokyo ?', expectedId: null }
 ];
 

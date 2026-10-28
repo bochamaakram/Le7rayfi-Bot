@@ -103,21 +103,31 @@ class VoiceService {
   /// Resolve the best available locale for speech recognition.
   /// On Android, engine locales look like 'ar_MA' or 'fr_FR'.
   Future<String?> _resolveBestLocale(String currentLang) async {
+    final defaultFallback = switch (currentLang) {
+      'darija' => 'ar_MA',
+      'ar' => 'ar_SA',
+      'fr' => 'fr_FR',
+      'en' => 'en_US',
+      _ => 'ar_MA',
+    };
+
     List<String> preferred;
     if (currentLang == 'en') {
       preferred = ['en_us', 'en_gb', 'en_ca', 'en_au', 'en'];
     } else if (currentLang == 'fr') {
       preferred = ['fr_fr', 'fr_ca', 'fr_be', 'fr'];
+    } else if (currentLang == 'ar') {
+      preferred = ['ar_sa', 'ar_ma', 'ar_eg', 'ar_ae', 'ar'];
     } else {
-      // Darija / Arabic
-      preferred = ['ar_ma', 'ar_sa', 'ar_eg', 'ar_ae', 'ar'];
+      // Darija: prefer Moroccan Arabic, then North African, then Standard Arabic
+      preferred = ['ar_ma', 'ar_001', 'ar_dz', 'ar_tn', 'ar_sa', 'ar_eg', 'ar_ae', 'ar'];
     }
 
     try {
       final locales = await _speech.locales();
       if (locales.isEmpty) {
-        debugPrint('STT: No locales returned by engine, will use system default.');
-        return null;
+        debugPrint('STT: No locales returned by engine, using concrete fallback: $defaultFallback');
+        return defaultFallback;
       }
 
       // 1. Try exact matches on normalized strings
@@ -151,8 +161,9 @@ class VoiceService {
       debugPrint('Locale resolution error: $e');
     }
 
-    // Returning null tells SpeechToText to use the platform's default recognition locale
-    return null;
+    // Always return concrete default fallback rather than null (null causes system French fallback)
+    debugPrint('STT: Falling back to default locale tag: $defaultFallback');
+    return defaultFallback;
   }
 
   Future<bool> startListening({
@@ -187,7 +198,7 @@ class VoiceService {
     _onErrorCallback = onError;
     _onListeningEndedCallback = onListeningEnded;
 
-    // Resolve best locale (null = system default)
+    // Resolve best locale (concrete locale ID, never null)
     final localeId = await _resolveBestLocale(currentLang);
     debugPrint('STT: Starting listen session with locale: $localeId');
 
@@ -195,7 +206,7 @@ class VoiceService {
 
     try {
       final listenOptions = stt.SpeechListenOptions(
-        listenMode: stt.ListenMode.confirmation, // Optimal for conversational bot
+        listenMode: stt.ListenMode.dictation, // Dictation mode for conversational queries
         cancelOnError: false,
         partialResults: true,
         onDevice: false,
@@ -224,7 +235,42 @@ class VoiceService {
       );
       return true;
     } catch (e) {
-      debugPrint('STT listen error: $e');
+      debugPrint('STT listen error with $localeId: $e');
+      // If listen failed with locale, attempt fallback with ar_SA or en_US
+      if (localeId != null && (localeId.contains('ar') || currentLang == 'darija' || currentLang == 'ar')) {
+        try {
+          debugPrint('STT: Retrying listen with ar_SA fallback...');
+          final fallbackOptions = stt.SpeechListenOptions(
+            listenMode: stt.ListenMode.dictation,
+            cancelOnError: false,
+            partialResults: true,
+            pauseFor: const Duration(seconds: 3),
+            listenFor: const Duration(seconds: 30),
+            localeId: 'ar_SA',
+          );
+          await _speech.listen(
+            onResult: (result) {
+              final words = result.recognizedWords;
+              if (words.isNotEmpty) {
+                _lastRecognizedWords = words;
+                onResult(words);
+              }
+              if (result.finalResult && !_sessionEnded) {
+                _sessionEnded = true;
+                _isListening = false;
+                onListeningEnded();
+              }
+            },
+            onSoundLevelChange: onSoundLevelChange != null
+                ? (_) => onSoundLevelChange()
+                : null,
+            listenOptions: fallbackOptions,
+          );
+          return true;
+        } catch (e2) {
+          debugPrint('STT retry error: $e2');
+        }
+      }
       _isListening = false;
       onError?.call(e.toString());
       return false;
@@ -263,13 +309,16 @@ class VoiceService {
     }
     await stopSpeaking();
 
-    String ttsLang = 'ar-XA';
+    String ttsLang = 'ar-SA';
     if (lang == 'en') {
       ttsLang = 'en-US';
     } else if (lang == 'fr') {
       ttsLang = 'fr-FR';
+    } else if (lang == 'darija') {
+      // Android / iOS TTS engines support standard Arabic phonetic vocalization of Darija
+      ttsLang = 'ar-SA';
     } else {
-      ttsLang = 'ar';
+      ttsLang = 'ar-SA';
     }
 
     try {

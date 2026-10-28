@@ -19,7 +19,7 @@ import/export JSON et fonctionnement hors ligne.
 | `index.html` | Écran principal : visage animé, questions, fiche artisan, NFC, QR |
 | `style.css` | Design adaptatif, mode sombre, interface FR/AR et RTL |
 | `app.js` | Recherche locale, voix, NFC, QR, import/export/synchronisation |
-| `knowledge.json` | Base de connaissances initiale (20 fiches FR + AR) |
+| `knowledge.json` | Base de connaissances locale complète (85 fiches détaillées FR + AR + Darija) |
 | `sw.js` | Service worker et cache hors ligne |
 | `manifest.webmanifest` | Installation sur l'écran d'accueil Android |
 | `assets/` | Icônes PWA, favicon, QR site et QR fiche démo |

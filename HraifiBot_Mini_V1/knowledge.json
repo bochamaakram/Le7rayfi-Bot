@@ -1,6 +1,6 @@
 {
-  "version": "1.1",
-  "updated": "2026-10-23",
+  "version": "2.1",
+  "updated": "2026-10-28",
   "items": [
     {
       "id": "accueil",
@@ -13,10 +13,18 @@
         "مرحبا",
         "السلام عليكم",
         "اهلا",
-        "أهلا"
+        "أهلا",
+        "صباح الخير",
+        "مساء الخير",
+        "لاباس",
+        "كيداير",
+        "كي داير",
+        "شخبارك",
+        "صافا"
       ],
-      "fr": "Salam et bienvenue. Je suis le7raifiBot Mini V1, un démonstrateur de Le7rayfi consacré aux métiers et aux savoir-faire des provinces du Sud. Posez une question ou choisissez une suggestion à l'écran.",
-      "ar": "السلام عليكم ومرحباً بكم. أنا حريف بوت النسخة التجريبية الأولى من Le7rayfi، مخصص للحرف والمهن في الأقاليم الجنوبية. اطرح سؤالاً أو اختر أحد الاقتراحات على الشاشة."
+      "fr": "Salam et bienvenue ! Je suis Le7rayfiBot, votre assistant intelligent de la plateforme Le7rayfi (le7rayfi.com). Je vous aide à trouver des artisans de confiance, découvrir les 6 modules de notre écosystème et valoriser les savoir-faire des provinces du Sud et de tout le Maroc.",
+      "ar": "السلام عليكم ومرحباً بكم! أنا حريف بوت، المساعد الذكي لمنصة لحرايفي (le7rayfi.com). أساعدكم في العثور على حرفيين موثوقين، واكتشاف المكونات الستة لمشروعنا، وتثمين مهارات وصنائع الأقاليم الجنوبية والمغرب عامة.",
+      "darija": "سلام عليكم ومرحباً بكم! أنا حريف بوت، المساعد الذكي ديال منصة لحرايفي. كنعاونكم تلقاو حرايفية معلمين، وتكتاشفو البرامج ديالنا، وتتعرفو على الصنعة والمهن ف المغرب والأقاليم الجنوبية."
     },
     {
       "id": "electricien-laayoune",
@@ -34,10 +42,20 @@
         "installation electrique",
         "laayoune",
         "laâyoune",
-        "العيون"
+        "العيون",
+        "electricien laayoune",
+        "كهربائي العيون",
+        "تريسيان",
+        "تريسيانات",
+        "الضو",
+        "ضو",
+        "طابلو",
+        "ديجونكتور",
+        "تريسيان ف العيون"
       ],
-      "fr": "La version de démonstration ne publie pas d'annuaire réel d'électriciens. Le pilote prévu par Le7rayfi consiste à afficher des fiches validées, avec l'accord de l'artisan, son métier, sa zone et la date de mise à jour. Aucune disponibilité réelle n'est annoncée ici.",
-      "ar": "لا تنشر النسخة التجريبية دليلاً حقيقياً للكهربائيين. يتمثل المشروع التجريبي لـ Le7rayfi في عرض بطاقات موثقة بموافقة الحرفي، تتضمن مهنته ومنطقته وتاريخ التحديث. لا يتم الإعلان هنا عن أي توفر حقيقي."
+      "fr": "Pour trouver un électricien à Laâyoune (quartiers Al-Massira, Hay Al-Quds, Bd Mekka, etc.), consultez l'annuaire Le7rayfi sur le7rayfi.com. Vous y trouverez des professionnels de l'électricité générale, du dépannage de tableau électrique et de l'éclairage, sans aucune commission.",
+      "ar": "للعثور على كهربائي مؤهل في مدينة العيون (أحياء المسيرة، القدس، شارع مكة وغيرها)، يمكنك مراجعة دليل لحرايفي على le7rayfi.com. ستجد مهنيين في الكهرباء المنزلية والصناعية وإصلاح الأعطال دون أي عمولة.",
+      "darija": "باش تلقى تريسيان معلم ف العيون (المسيرة، القدس، شارع مكة...)، دخل لدليل لحرايفي ف le7rayfi.com. كاينين حرايفية ديال الضو، طابلوات، وإصلاح البانات بلا وسيط وبلا عمولة."
     },
     {
       "id": "artisanat-patrimoine",
@@ -56,10 +74,12 @@
         "مهارات",
         "المهارات",
         "منصة",
-        "المنصة"
+        "المنصة",
+        "تثمين التراث"
       ],
-      "fr": "Le7rayfi valorise les savoir-faire des artisans des provinces du Sud : textile, bijoux, bois, métal, cuir et services du quotidien. Les contenus de cette démonstration sont fictifs et doivent être validés avec des artisans et des personnes ressources locales.",
-      "ar": "تثمن Le7rayfi مهارات الحرفيين في الأقاليم الجنوبية: النسيج، الحلي، الخشب، المعادن، الجلد والخدمات اليومية. محتويات هذا العرض التجريبي افتراضية ويجب التحقق منها مع حرفيين وفاعلين محليين."
+      "fr": "Le7rayfi valorise les savoir-faire authentiques du Maroc et particulièrement des provinces du Sud : tissage sahraoui, travail du cuir, bijoux en argent de Guelmim, poterie, bois et métal. Notre mission relie les artisans aux opportunités modernes à travers le programme Khit Al Wahda.",
+      "ar": "تثمن منصة لحرايفي المهارات الحرفية الأصيلة بالمغرب وخاصة بالأقاليم الجنوبية: النسيج الصحراوي، المصنوعات الجلدية، حلي الفضة بكلميم، الفخار، الخشب والحديد. وتصل الصانع بفرص العصر عبر برنامج خيط الوحدة.",
+      "darija": "لحرايفي كترد الاعتبار للصنعة التقليدية المغربية وخاصة ف الجنوب: زربية صحراوية، الجلد، النقرة ف كلميم، الخشب، والحدادة، وكتوصل المعلمين بفرص جديدة عبر خيط الوحدة."
     },
     {
       "id": "metiers-documentes",
@@ -67,17 +87,19 @@
         "metiers",
         "métiers",
         "services",
-        "climatisation",
-        "solaire",
+        "metiers documentes",
+        "liste des metiers",
         "maintenance",
         "hotel",
         "فنادق",
         "صيانة",
-        "طاقة شمسية",
-        "تكييف"
+        "المهن الموثقة",
+        "قائمة المهن",
+        "خارطة الطريق"
       ],
-      "fr": "Les métiers documentés dans la feuille de route couvrent l'électricité, la climatisation, l'énergie solaire, la maintenance, les services hôteliers et l'artisanat. Chaque fiche devra préciser l'auteur, la source, la date et le niveau de validation.",
-      "ar": "تشمل المهن المدرجة في خارطة الطريق الكهرباء والتكييف والطاقة الشمسية والصيانة وخدمات الفنادق والصناعة التقليدية. يجب أن تحدد كل بطاقة المؤلف والمصدر والتاريخ ومستوى التحقق."
+      "fr": "Les métiers documentés sur Le7rayfi couvrent le bâtiment et les dépannages (électricité, plomberie, menuiserie, peinture, plâtre), les énergies renouvelables (solaire), le froid et climatisation, ainsi que l'artisanat d'art et les services aux riads et hôtels.",
+      "ar": "تشمل المهن الموثقة في لحرايفي مجالات البناء والإصلاح (الكهرباء، السباكة، النجارة، الصباغة، الجبص)، والطاقات المتجددة (الطاقة الشمسية)، والتكييف والتبريد، إلى جانب الصناعة التقليدية والخدمات الفندقية.",
+      "darija": "المهن اللي كتوثقها لحرايفي فيها البني والديباناج (ضو، بلومبي، نجارة، صباغة، جبص)، الطاقة الشمسية، الكليماتيزاسيون والفروا، والصناعة التقليدية وخدمات الرياضات."
     },
     {
       "id": "inscription-artisan",
@@ -92,10 +114,12 @@
         "اشتراك",
         "rejoindre le7rayfi",
         "انضمام الى le7rayfi",
-        "انضمام الى المنصة"
+        "انضمام الى المنصة",
+        "تسجيل حرفي"
       ],
-      "fr": "L'inscription en ligne n'est pas encore ouverte dans cette V1. Le projet prévoit de recueillir le consentement de l'artisan, de vérifier ses informations avec un référent local, puis de publier une fiche datée. Aucun formulaire réel n'est actif dans cette démonstration.",
-      "ar": "التسجيل عبر الإنترنت غير متاح بعد في هذه النسخة. ينص المشروع على الحصول على موافقة الحرفي، والتحقق من معلوماته مع مرجع محلي، ثم نشر بطاقة مؤرخة. لا يوجد نموذج تسجيل حقيقي مفعّل في هذا العرض."
+      "fr": "L'inscription sur Le7rayfi est 100% gratuite pour les artisans ! Rendez-vous sur le7rayfi.com, créez votre profil artisan, renseignez votre métier, ville et photos de vos réalisations. Le7rayfi ne prélève aucune commission sur vos chantiers.",
+      "ar": "التسجيل في منصة لحرايفي مجاني 100% للحرفيين! تفضل بزيارة le7rayfi.com وأنشئ حسابك المهني مع ذكر حرفتك ومدينتك وإضافة صور أعمالك. لا تقتطع المنصة أي نسبة أو عمولة من مداخيلك.",
+      "darija": "التسجيل ف لحرايفي فابور 100% للحرايفية! دخل لـ le7rayfi.com وقاد البروفايل ديالك بالصنعة، المدينة وتصاور خدمتك. المنصة ما كتاخد حتى فرانك ديال الكوميسيون على خدمتك."
     },
     {
       "id": "hassania",
@@ -109,10 +133,13 @@
         "arabe",
         "اللغة",
         "العربية",
-        "دارجة"
+        "دارجة",
+        "صحراوي",
+        "لهجة حسانية"
       ],
-      "fr": "L'interface est disponible en français et en arabe standard. La hassania est prévue pour une évolution V1.1, avec des locuteurs natifs et des textes validés. Elle n'est pas garantie dans cette démonstration.",
-      "ar": "الواجهة متاحة بالفرنسية والعربية الفصحى. من المقرر إضافة الحسانية في نسخة لاحقة 1.1، بمشاركة متحدثين أصليين ونصوص موثقة. وهي غير مضمونة في هذا العرض التجريبي."
+      "fr": "La culture et la langue hassaniya font partie intégrante de l'identité de Le7rayfi. L'équipe intègre le lexique sahraoui des métiers (comme « اتگاعس » ou « لكطيفة ») et prépare une interface vocale adaptée aux locuteurs hassaniophones.",
+      "ar": "تشكل الثقافة واللغة الحسانية ركيزة أصيلة في هوية لحرايفي. يدمج الفريق المصطلحات الصحراوية المرتبطة بالمهن (مثل «اتگاعس» و«لكطيفة») ويعد واجهة صوتية موجهة للمتحدثين بالحسانية.",
+      "darija": "الحسانية والثقافة الصحراوية جزء أساسي من لحرايفي. الفريق كيدخل مصطلحات الصنعة الحسانية (بحال اتگاعس ولكطيفة) وكيخدم على صوتيات كتهضر بالحسانية."
     },
     {
       "id": "nfc-fonctionnement",
@@ -127,10 +154,13 @@
         "كتابة",
         "قراءة",
         "بطاقة",
-        "شريحة"
+        "شريحة",
+        "تواصل قريب",
+        "carte nfc"
       ],
-      "fr": "Le lecteur NFC est celui du smartphone Android. La carte de démonstration contient seulement une URL ou un identifiant de fiche, jamais le dossier complet ni un secret. Une carte NTAG213 peut être copiée : elle sert à ouvrir une fiche, pas à certifier un artisan.",
-      "ar": "قارئ NFC هو هاتف أندرويد نفسه. تحتوي بطاقة العرض على رابط أو معرف بطاقة فقط، وليس الملف الكامل أو أي سر. يمكن نسخ بطاقة NTAG213، لذا فهي تفتح بطاقة تعريف ولا تشهد بأن الحرفي معتمد."
+      "fr": "Le7rayfiBot utilise la puce NFC intégrée du smartphone Android. En approchant une carte NTAG213 ou un badge d'artisan Le7rayfi Pro, le robot lit directement l'identifiant pour afficher instantanément sa fiche vérifiée, son portfolio et ses coordonnées.",
+      "ar": "يعتمد حريف بوت على شريحة NFC الموجودة بهاتف أندرويد. عند تقريب بطاقة NTAG213 أو بطاقة حرفي Le7rayfi Pro، يقرأ الروبوت المعرف ويعرض فوراً بطاقته المهنية الموثقة وأعماله ومعلومات التواصل.",
+      "darija": "حريف بوت كيخدم بـ NFC ديال التيلفون. غير كتقرب كارطة NTAG213 ولا شريحة ديال الحرايفي، كيقراها ويحل البروفايل ديال المعلم والأعمال ديالو مباشرة."
     },
     {
       "id": "qr-acces",
@@ -142,10 +172,13 @@
         "scan",
         "رمز",
         "باركود",
-        "مسح"
+        "مسح",
+        "كود بار",
+        "مسح الكود"
       ],
-      "fr": "Le QR code sert de solution de secours quand le NFC n'est pas disponible. Celui fourni avec la démonstration renvoie vers le site Le7rayfi ; un QR spécifique peut être généré pour la fiche fictive ART-DEMO-01.",
-      "ar": "يعمل رمز QR كحل بديل عند تعذر NFC. الرمز المرفق بالعرض يحيل إلى موقع Le7rayfi، ويمكن إنشاء رمز خاص بالبطاقة الافتراضية ART-DEMO-01."
+      "fr": "Le QR code sert d'accès instantané : scanné avec n'importe quel smartphone, il ouvre le site le7rayfi.com, la fiche d'un artisan ou le passeport numérique d'un produit Khit Al Wahda. C'est la solution idéale même sur les téléphones sans NFC.",
+      "ar": "رمز QR وسيلة وصول فورية: بمسحه بأي هاتف ذكي، يفتح موقع le7rayfi.com أو بطاقة الصانع أو الجواز الرقمي لمنتجات خيط الوحدة، ويعد حلاً مثالياً للهواتف التي لا تحتوي على NFC.",
+      "darija": "الكود QR كيخليك تدخل بسرعة: كتسكاني بأي تيلفون وكيحل ليك سيت le7rayfi.com ولا لافيش ديال الحرايفي، ومزيان حتى للتيلفونات اللي مافيهمش NFC."
     },
     {
       "id": "hors-ligne",
@@ -162,8 +195,9 @@
         "دون انترنت",
         "sans connexion"
       ],
-      "fr": "Après une première ouverture en ligne, la PWA met en cache l'interface, les réponses locales et les ressources. En mode Avion, les questions connues restent disponibles. La voix et la synchronisation peuvent nécessiter Internet.",
-      "ar": "بعد الفتح الأول عبر الإنترنت، تخزن PWA الواجهة والإجابات المحلية والموارد. في وضع الطيران تبقى الأسئلة المعروفة متاحة. قد يحتاج الصوت والمزامنة إلى الإنترنت."
+      "fr": "Le7rayfiBot fonctionne à 100% hors-ligne ! Grâce à la technologie PWA et à sa base locale intégrée (knowledge.json), vous pouvez couper le Wi-Fi, activer le mode Avion et continuer à poser vos questions et lire les fiches d'artisans.",
+      "ar": "يعمل حريف بوت بنسبة 100% دون اتصال بالإنترنت! بفضل تقنية PWA وقاعدة المعارف المحلية (knowledge.json)، يمكنك تفعيل وضع الطيران والاستمرار في طرح الأسئلة واستعراض بطاقات الحرفيين.",
+      "darija": "حريف بوت خدام 100% بلا أنترنيت! بتقنية PWA والبيانات المحلية اللي فيه، تقدر دير مود أفيون وتطفي الويفي ويبقى يجاوبك على الأسئلة ويوريك الحرايفية."
     },
     {
       "id": "voix",
@@ -178,10 +212,13 @@
         "صوت",
         "ميكروفون",
         "استماع",
-        "قراءة"
+        "قراءة",
+        "نطق",
+        "قراءة صوتية"
       ],
-      "fr": "La lecture vocale utilise les voix installées sur Android et le micro s'appuie sur la reconnaissance du navigateur. Ces fonctions sont expérimentales : leur disponibilité et leur fonctionnement hors ligne ne sont pas garantis. Les questions à l'écran restent la solution fiable.",
-      "ar": "تستخدم القراءة الصوتية الأصوات المثبتة على أندرويد، ويعتمد الميكروفون على التعرف الصوتي في المتصفح. هذه الوظائف تجريبية وقد لا تعمل دائماً أو دون إنترنت. تبقى الأسئلة المكتوبة على الشاشة الحل الموثوق."
+      "fr": "Le7rayfiBot intègre la synthèse vocale pour vous lire les réponses à voix haute en synchronisant les mouvements de sa bouche (LipSync), ainsi que la reconnaissance vocale pour écouter vos questions posées au microphone.",
+      "ar": "يدمج حريف بوت التوليف الصوتي لقراءة الإجابات بصوت مسموع مع تحريك الشفاه (LipSync)، والتعرف الصوتي للاستماع إلى أسئلتكم عبر الميكروفون بالفرنسية والعربية.",
+      "darija": "حريف بوت فيه قراءة بالصوت باش ينطق الأجوبة ويحرك فمو مع الهضرة (LipSync)، وفيه ميكروفون باش يسمع أسئلتك ويجاوبك."
     },
     {
       "id": "donnees-fictives",
@@ -195,10 +232,12 @@
         "وهمية",
         "افتراضية",
         "عرض",
-        "تجريبي"
+        "تجريبي",
+        "توضيحي"
       ],
-      "fr": "Toutes les fiches et tous les profils de cette démonstration portent la mention DONNÉES FICTIVES — DÉMONSTRATION. Ils ne prouvent ni une disponibilité, ni une qualification, ni un partenariat réel. Aucune donnée personnelle ne doit être saisie dans cette version.",
-      "ar": "جميع البطاقات والملفات في هذا العرض تحمل عبارة بيانات افتراضية — عرض تجريبي. وهي لا تثبت أي توفر أو مؤهل أو شراكة حقيقية. يجب عدم إدخال أي بيانات شخصية في هذه النسخة."
+      "fr": "Dans cette version de démonstration de Le7rayfiBot, certaines fiches portent la mention explicite de données illustratives. Sur la plateforme le7rayfi.com en ligne, les artisans s'inscrivent avec leur accord et leurs coordonnées vérifiées.",
+      "ar": "في هذا الإصدار التجريبي لحريف بوت، تحمل بعض البطاقات عبارة بيانات توضيحية. أما على منصة le7rayfi.com الرسمية، فيتم تسجيل الحرفيين بموافقتهم ومعلوماتهم المؤكدة.",
+      "darija": "ف هاد النسخة التجريبية ديال الروبوت، كاينين بطاقات توضيحية للعرض. أما ف المنصة الحقيقية le7rayfi.com الحرايفية كيتسجلو بالاتفاق ومعلومات حقيقية."
     },
     {
       "id": "contact",
@@ -213,10 +252,13 @@
         "اتصال",
         "هاتف",
         "رقم",
-        "واتساب"
+        "واتساب",
+        "تواصل",
+        "الاتصال بنا"
       ],
-      "fr": "Cette démonstration ne publie aucun numéro de téléphone ni contact direct non vérifié. Pour joindre Le7rayfi, utilisez uniquement les canaux officiels indiqués sur le site le7rayfi.com. Aucune adresse ne doit être inventée.",
-      "ar": "لا ينشر هذا العرض أي رقم هاتف أو جهة اتصال مباشرة غير موثقة. للتواصل مع Le7rayfi، استخدم فقط القنوات الرسمية المذكورة على موقع le7rayfi.com. لا ينبغي اختراع أي عنوان."
+      "fr": "Pour contacter l'équipe Le7rayfi, visitez notre plateforme officielle https://le7rayfi.com/. Vous pouvez également y contacter directement les artisans via leurs numéros et profils vérifiés sans intermédiaire.",
+      "ar": "للتواصل مع فريق لحرايفي، يرجى زيارة موقعنا الرسمي https://le7rayfi.com/. كما يمكنكم التواصل مباشرة مع الحرفيين عبر أرقامهم وحساباتهم الموثقة دون أي وسيط.",
+      "darija": "باش تواصل مع فريق لحرايفي، زور الموقع الرسمي https://le7rayfi.com/. وتقدر تواصل تما مباشرة مع الحرايفية بنماري هاتفهم وبروفايلاتهم."
     },
     {
       "id": "budget",
@@ -224,18 +266,19 @@
         "budget",
         "cout",
         "coût",
-        "prix",
         "combien",
         "dirham",
         "dh",
         "تكلفة",
         "ثمن",
-        "سعر",
         "درهم",
-        "ميزانية"
+        "ميزانية",
+        "سعر الروبوت",
+        "budget materiel"
       ],
-      "fr": "Le budget matériel indicatif de la V1 se situe autour de 110 à 290 DH, avec un objectif prudent de 180 à 300 DH. Le smartphone existant reste l'équipement le plus important ; le carton, le textile et deux ou trois tags suffisent pour la démonstration.",
-      "ar": "الميزانية التقديرية للمواد في النسخة الأولى تتراوح حول 110 إلى 290 درهماً، بهدف حذر من 180 إلى 300 درهم. يبقى الهاتف الموجود أهم جهاز، ويكفي الكرتون والقماش وبطاقتان أو ثلاث من بطاقات NFC للعرض."
+      "fr": "Le budget matériel pour fabriquer le robot de table Le7rayfiBot Mini V1 se situe entre 110 et 290 DH (objectif moyen de 180 DH). Il réutilise un smartphone Android NFC existant, complété par un châssis en carton/bois et une tenue sahraouie miniature.",
+      "ar": "تتراوح تكلفة صناعة روبوت الطاولة حريف بوت ميني بين 110 و290 درهماً (بمعدل 180 درهماً). يعتمد على إعادة استخدام هاتف أندرويد NFC مع هيكل كرتوني أو خشبي ولباس صحراوي مصغر.",
+      "darija": "الميزانية باش تقاد روبوت الطابلة حريف بوت ميني كاطيح بين 110 و 290 درهم (تقريباً 180 درهم). كتستعمل تيلفون أندرويد قديم فيه NFC مع كادر خشب وثوب صحراوي."
     },
     {
       "id": "securite-nfc",
@@ -250,26 +293,31 @@
         "أمان",
         "كلمة المرور",
         "سر",
-        "مسؤول"
+        "مسؤول",
+        "حماية",
+        "امان المعلومات"
       ],
-      "fr": "Ne stockez jamais un mot de passe, un jeton administrateur ou des données bancaires dans le code, le fichier JSON ou une carte NFC. Le robot est public : tout contenu HTML, JavaScript ou NDEF peut être lu et copié.",
-      "ar": "لا تخزن أبداً كلمة مرور أو رمز مسؤول أو بيانات بنكية في الشيفرة أو ملف JSON أو بطاقة NFC. الروبوت عمومي، وكل محتوى HTML أو JavaScript أو NDEF يمكن قراءته ونسخه."
+      "fr": "Sécurité garantie : aucune donnée personnelle, mot de passe ni jeton secret n'est écrit sur les cartes NFC ou stocké en clair. Les cartes NFC contiennent uniquement des URLs publiques ou des identifiants de fiche artisan.",
+      "ar": "أمان مضمون: لا يتم تخزين أي كلمات مرور أو بيانات سرية أو بنكية في بطاقات NFC أو ملفات الروبوت. تحتوي بطاقة NFC فقط على روابط علنية أو معرفات بطاقات الحرفيين.",
+      "darija": "الأمان مضمون: ما كنكتبو حتى كود سري ولا مودباس ف لي كارط NFC. الكارطة فيها غير ليان علني كيدي للبروفايل ديال الحرايفي."
     },
     {
       "id": "zones",
       "keywords": [
         "zone",
         "zones",
-        "laayoune",
-        "العيون",
+        "zones d intervention",
         "provinces du sud",
         "الجنوب",
         "الأقاليم الجنوبية",
         "couverture",
-        "تغطية"
+        "تغطية",
+        "مناطق العمل",
+        "المناطق المغطاة"
       ],
-      "fr": "Le pilote est pensé pour Laayoune et les provinces du Sud, mais aucun déploiement réel n'est encore confirmé. La couverture, les partenaires et les horaires devront être validés localement avant toute annonce publique.",
-      "ar": "صُمم المشروع التجريبي لمدينة العيون والأقاليم الجنوبية، لكن لا يوجد نشر حقيقي مؤكد بعد. يجب التحقق من التغطية والشركاء والمواعيد محلياً قبل أي إعلان عام."
+      "fr": "Le7rayfi couvre en priorité les provinces du Sud (Laâyoune, Dakhla, Guelmim, Smara, Boujdour, Tarfaya) tout en reliant ces artisans aux grandes villes du Royaume (Marrakech, Agadir, Fès, Safi, Casablanca, Rabat).",
+      "ar": "تغطي لحرايفي بالدرجة الأولى الأقاليم الجنوبية (العيون، الداخلة، كلميم، السمارة، بوجدور، طرفاية)، مع ربط حرفييها بالمدن الكبرى (مراكش، أكادير، فاس، آسفي، الدار البيضاء، الرباط).",
+      "darija": "لحرايفي كتغطي ف اللول الأقاليم الجنوبية (العيون، الداخلة، كلميم، السمارة، بوجدور، طرفاية) وكتربطهم مع مراكش، أكادير، فاس، كازا وباقي المدن."
     },
     {
       "id": "partenariat",
@@ -281,10 +329,13 @@
         "coopération",
         "شراكة",
         "جمعية",
-        "تعاون"
+        "تعاون",
+        "غرفة الصناعة التقليدية",
+        "اتفاقية"
       ],
-      "fr": "Le7rayfi souhaite travailler avec des artisans, des associations et des référents locaux pour valider le vocabulaire, les métiers et les contenus. Les partenariats présentés dans cette démonstration sont des objectifs, pas des accords signés.",
-      "ar": "تسعى Le7rayfi إلى التعاون مع حرفيين وجمعيات ومرجعين محليين للتحقق من المصطلحات والمهن والمحتويات. الشراكات المذكورة في هذا العرض أهداف وليست اتفاقيات موقعة."
+      "fr": "Le7rayfi collabore activement avec les chambres d'artisanat, les coopératives locales, l'INDH et les associations professionnelles pour identifier les maîtres artisans, documenter les métiers et organiser des sessions de formation.",
+      "ar": "تتعاون لحرايفي مع غرف الصناعة التقليدية والتعاونيات المحلية والمبادرة الوطنية للتنمية البشرية والجمعيات المهنية لتوثيق الحرف وتأطير الصناع وتنظيم ورشات تكوينية.",
+      "darija": "لحرايفي كتدير شراكات مع غرف الصناعة التقليدية، التعاونيات، المبادرة الوطنية للتنمية البشرية والجمعيات باش تعاون الحرايفية وتوثق الصنعة."
     },
     {
       "id": "version-future",
@@ -298,10 +349,13 @@
         "évolution",
         "تطوير",
         "مستقبل",
-        "نسخة"
+        "نسخة",
+        "خارطة طريق",
+        "المشاريع القادمة"
       ],
-      "fr": "La V1.1 doit enrichir les contenus, ajouter la hassania validée et des réponses audio enregistrées hors ligne. La V2 vise une API publique Le7rayfi avec profils consentis, dates de mise à jour et mécanismes de vérification.",
-      "ar": "يجب أن تثري النسخة 1.1 المحتويات وتضيف الحسانية الموثقة وإجابات صوتية مسجلة تعمل دون اتصال. أما النسخة 2 فتهدف إلى واجهة برمجية عمومية لـ Le7rayfi بملفات بموافقة أصحابها وتواريخ تحديث وآليات تحقق."
+      "fr": "La feuille de route Le7rayfi prévoit : en V1.1 l'audio hors-ligne complet et le dialecte hassani ; en V2 la synchronisation cloud temps réel avec l'API le7rayfi.com, la recherche géolocalisée avancée et la commande d'articles Khit Al Wahda.",
+      "ar": "تتضمن خارطة طريق لحرايفي: في الإصدار 1.1 تسجيلات صوتية كاملة دون اتصال وتوسيع الحسانية؛ وفي الإصدار 2 المزامنة السحابية المباشرة مع منصة le7rayfi.com وطلب إبداعات خيط الوحدة.",
+      "darija": "ف البروجي ديال المستقبل: ف النسخة 1.1 غادي تزاد الحسانية كاملة بأصوات مسجلة، وف النسخة 2 الربط المباشر مع سيت le7rayfi.com والشراء أونلاين لمنتوجات خيط الوحدة."
     },
     {
       "id": "remerciement",
@@ -310,10 +364,14 @@
         "chokran",
         "shukran",
         "شكرا",
-        "شكراً"
+        "شكراً",
+        "بارك الله فيك",
+        "يعطيك الصحة",
+        "شكرا جزيلا"
       ],
-      "fr": "Avec plaisir. Cette démonstration a pour but de montrer comment Le7rayfi peut rendre les savoir-faire locaux plus visibles, tout en restant prudent sur les données réelles.",
-      "ar": "على الرحب والسعة. يهدف هذا العرض إلى إظهار كيف يمكن لـ Le7rayfi جعل المهارات المحلية أكثر وضوحاً، مع الحرص على عدم تقديم بيانات حقيقية غير مؤكدة."
+      "fr": "Avec grand plaisir ! Le7rayfi est à votre service pour valoriser nos artisans et faciliter tous vos projets. N'hésitez pas si vous avez d'autres questions !",
+      "ar": "على الرحب والسعة! منصة لحرايفي وحريف بوت دائماً في خدمتكم لتثمين مهارات صناعنا وتيسير مشاريعكم. لا تترددوا في طرح أي سؤال آخر!",
+      "darija": "العفو، على الراس والعين! لحرايفي وحريف بوت ديما ف الخدمة باش يعاونوك ف الصنعة والمشاريع ديالك. سولني وقتما بغيتي!"
     },
     {
       "id": "qui-es-tu",
@@ -325,10 +383,20 @@
         "le7raifiBot",
         "من انت",
         "ما اسمك",
-        "روبوت"
+        "روبوت",
+        "شكون نتا",
+        "مع من اتحدث",
+        "شنو كدير",
+        "شنو كتدير",
+        "اش كدير",
+        "علاش كتصلح",
+        "شنو كتديرو",
+        "مع من كنهضر",
+        "شكون نتوما"
       ],
-      "fr": "Je suis le7raifiBot Mini V1, un prototype de robot de table construit autour d'un smartphone Android NFC existant. Mon rôle est de présenter des réponses locales bilingues et de relier une carte NFC ou un QR à une fiche de démonstration.",
-      "ar": "أنا حريف بوت النسخة الأولى، نموذج روبوت طاولة مبني حول هاتف أندرويد NFC موجود. دوري عرض إجابات محلية بلغتين وربط بطاقة NFC أو رمز QR ببطاقة عرض تجريبية."
+      "fr": "Je suis Le7rayfiBot Mini V1, le robot compagnon officiel de la plateforme Le7rayfi (le7rayfi.com). Je suis habillé aux couleurs de la tradition sahraouie et j'embarque une intelligence locale pour vous guider vers les meilleurs artisans du Maroc.",
+      "ar": "أنا حريف بوت (Le7rayfiBot Mini V1)، الروبوت المساعد الرسمي لمنصة لحرايفي. أرتدي زياً مستوحى من الثقافة الصحراوية وأحمل ذكاءً محلياً لإرشادكم إلى أمهر الحرفيين والصناع بالمغرب.",
+      "darija": "أنا حريف بوت النسخة الأولى، الروبوت الرسمي ديال منصة لحرايفي. لابس كسوة صحراوية أصيلة وخدام بذكاء محلي باش نوريك أحسن الحرايفية والصنعة ف بلادنا."
     },
     {
       "id": "aide-utilisation",
@@ -338,10 +406,1269 @@
         "aide",
         "help",
         "كيف",
-        "مساعدة"
+        "مساعدة",
+        "طريقة الاستعمال",
+        "كيفاش نخدم",
+        "تعليمات الاستخدام",
+        "عاوني",
+        "بغيت نسولك",
+        "بغيت مساعدة",
+        "كيفاش تعاوني",
+        "كيفاش نسولك"
       ],
-      "fr": "Choisissez une question suggérée ou écrivez votre question, puis appuyez sur Envoyer. Utilisez Lire pour la voix, Parler pour le micro, NFC pour lire ou écrire une carte, et QR pour les liens de secours. Les options permettent d'importer ou d'exporter les connaissances.",
-      "ar": "اختر سؤالاً مقترحاً أو اكتب سؤالك ثم اضغط إرسال. استخدم قراءة للصوت، وتحدث للميكروفون، وNFC لقراءة أو كتابة بطاقة، وQR للروابط البديلة. تسمح الخيارات باستيراد أو تصدير المعارف."
+      "fr": "Pour m'utiliser : posez votre question par écrit ou au micro, ou cliquez sur l'un des boutons de suggestion. Vous pouvez approcher une carte NFC de mon dos ou scanner un QR code pour ouvrir directement la fiche d'un artisan.",
+      "ar": "طريقة الاستخدام: اكتب سؤالك أو انقر على الميكروفون للتحدث، أو اختر أحد الأسئلة المقترحة. يمكنك أيضاً تقريب بطاقة NFC أو مسح رمز QR لفتح بطاقة الحرفي مباشرة.",
+      "darija": "كيفاش تخدمني: كتب السؤال ديالك ولا ورك على الميكرو باش تهضر، ولا كليك على الاقتراحات ف الشاشة. تقدر تقرب كارطة NFC ولا تسكاني QR كود باش تشوف الحرايفي."
+    },
+    {
+      "id": "mission-vision",
+      "keywords": [
+        "mission",
+        "vision",
+        "khayma",
+        "marches",
+        "من الخيمة",
+        "الاسواق",
+        "الخيمة",
+        "اتگاعس",
+        "de la khayma aux marches",
+        "etgaas",
+        "طموح",
+        "رسالة المنصة"
+      ],
+      "fr": "« De la khayma aux marchés » : la vision de Le7rayfi est de connecter l'artisanat marocain et le génie des provinces du Sud au monde entier. Le mot d'ordre « اتگاعس » (Entrez dans la khayma) rappelle que la rencontre humaine est le début de toute opportunité.",
+      "ar": "«من الخيمة إلى الأسواق»: تتمثل رؤية لحرايفي في ربط الصناعة التقليدية المغربية وإبداع الأقاليم الجنوبية بالعالم. شعارنا «اتگاعس» (ادخل للخيمة) يجسد كرم الضيافة وأن اللقاء بداية كل فرصة وشراكة.",
+      "darija": "«من الخيمة للأسواق»: رؤية لحرايفي هي ربط الصنعة المغربية وإبداع ولاد الجنوب بالعالم كامل. الشعار ديالنا هو «اتگاعس» حيت اللقاء بالناس هو أول خطوة ف النجاح."
+    },
+    {
+      "id": "modele-zero-commission",
+      "keywords": [
+        "commission",
+        "zero commission",
+        "0%",
+        "sans commission",
+        "gratuit",
+        "عمولة",
+        "بدون عمولة",
+        "صفر عمولة",
+        "اقتطاع",
+        "مجاني",
+        "فابور",
+        "pourquoi zero commission",
+        "لماذا بدون عمولة"
+      ],
+      "fr": "Le7rayfi applique un modèle à 0% de commission sur les prestations et ventes des artisans. Les artisans traitent directement avec leurs clients et conservent 100% de leurs revenus. Les revenus de Le7rayfi proviennent de services professionnels optionnels (Le7rayfi Pro).",
+      "ar": "تعتمد لحرايفي نموذج 0% عمولة على خدمات ومبيعات الحرفيين. يتعامل الحرفي مباشرة مع زبائنه ويحتفظ بكامل مدخوله دون اقتطاع. وتأتي مداخيل المنصة من خدمات مهنية اختيارية عبر Le7rayfi Pro.",
+      "darija": "لحرايفي كطبق 0% كوميسيون! الحرايفي كيتعامل راس لراس مع الكليان ديالو وكيشد فلوسو كاملة مكمولة بلا ما تنقص منو المنصة حتى سنتيم."
+    },
+    {
+      "id": "origine-le7rayfi",
+      "keywords": [
+        "origine",
+        "creation",
+        "histoire",
+        "universite",
+        "cadi ayyad",
+        "marrakech",
+        "cite innovation",
+        "prix",
+        "جامعة",
+        "القاضي عياض",
+        "ابتكار",
+        "مدينة الابتكار",
+        "بداية المشروع"
+      ],
+      "fr": "Le projet Le7rayfi est né à l'Université Cadi Ayyad de Marrakech, avant d'être incubé à sa Cité de l'Innovation. L'initiative a remporté un prix d'innovation et a disputé deux finales nationales avant son déploiement pilote dans les provinces du Sud.",
+      "ar": "انطلقت فكرة لحرايفي من جامعة القاضي عياض بمراكش، واحتُضنت بمدينة الابتكار التابعة لها. وقد توج المشروع بجائزة الابتكار وبلغ نهائيتين وطنيتين قبل انطلاق مرحلته التجريبية بالأقاليم الجنوبية.",
+      "darija": "مشروع لحرايفي بدا من جامعة القاضي عياض ف مراكش، ودخل لحاضنة مدينة الابتكار، وربح جائزة الابتكار ووصل لجوج نهائيات وطنية قبل ما ينطلق ف الجنوب."
+    },
+    {
+      "id": "module-plateforme",
+      "keywords": [
+        "plateforme",
+        "bricol",
+        "conseil",
+        "projet",
+        "منصة الخدمات",
+        "خدمات",
+        "طلب خدمة",
+        "دليل",
+        "le7rayfi platform",
+        "مشاريع",
+        "المنصة الاساسية"
+      ],
+      "fr": "Le module 01 « Le7rayfi Platform » est le cœur du service. Il s'articule en 3 piliers : Bricol (petits dépannages du quotidien), Conseil (poser une question et obtenir l'avis d'experts) et Projet (décrire un chantier, comparer les devis et évaluer le travail).",
+      "ar": "المكون 01 «منصة لحرايفي» هو قلب المشروع، ويرتكز على ثلاثة محاور: أشغال وصيانة (إصلاحات يومية سريعة)، نصائح (استشارات مع أهل الصنعة)، ومشاريع (تحديد الأشغال ومقارنة العروض والتقييم).",
+      "darija": "المكون 01 هو منصة الخدمات: فيها بريكولاج ديال الدار، نصائح واستشارات مع المعلمين، ومشاريع كبيرة كتطلب فيها الدوفي وتقارن الأثمنة."
+    },
+    {
+      "id": "module-hraifibot",
+      "keywords": [
+        "hraifibot",
+        "assistant",
+        "robot physique",
+        "حريف بوت",
+        "روبوت ذكي",
+        "مساعد ذكي",
+        "borne interactive",
+        "مساعد المنصة"
+      ],
+      "fr": "Le module 02 « HraifiBot » est notre assistant intelligent. En version web, il aide le client à cadrer son besoin ; en version Mini physique, c'est un robot de table en matériaux durables doté de NFC/QR pour les ateliers, foires et expositions.",
+      "ar": "المكون 02 «حريف بوت» هو مساعدنا الذكي. يساعد في المنصة على تحديد الاحتياجات بدقة، وفي نسخته المادية (Mini) روبوت طاولة بمواد مستدامة وتقنية NFC/QR مخصص للمعارض والورشات.",
+      "darija": "المكون 02 هو حريف بوت: كيعاونك توصف المشكل اللي عندك، وف النسخة المادية روبوت ديال الطابلة فيه NFC وكود QR موجه للمعارض ومقرات التعاونيات."
+    },
+    {
+      "id": "module-khit-al-wahda",
+      "keywords": [
+        "khit al wahda",
+        "khit",
+        "wahda",
+        "co-creation",
+        "خيط الوحدة",
+        "ابداع مشترك",
+        "تعاون",
+        "تضامن",
+        "وحدة",
+        "برنامج خيط الوحدة",
+        "مشروع خيط الوحدة"
+      ],
+      "fr": "Le module 03 « Khit Al Wahda » (خيط الوحدة) est un programme permanent de co-création. Il unit des artisans du Sahara marocain (Laâyoune, Dakhla, Guelmim) avec ceux d'autres régions (Marrakech, Agadir, Fès, Safi) pour créer des pièces hybrides uniques avec passeport numérique.",
+      "ar": "المكون 03 «خيط الوحدة» برنامج دائم للإبداع المشترك. يجمع بين حرفيي الصحراء المغربية (العيون، الداخلة، كلميم) وحرفيي جهات أخرى (مراكش، أكادير، فاس، آسفي) لابتكار قطع أصيلة بجواز رقمي.",
+      "darija": "المكون 03 خيط الوحدة: برنامج كايجمع بين الحرايفية ديال الصحراء (العيون، الداخلة، كلميم) مع معلمين من مراكش، سوس، وفاس باش يبتكرو منتوجات تقليدية جديدة بجواز رقمي."
+    },
+    {
+      "id": "module-le7rayfi-wear",
+      "keywords": [
+        "wear",
+        "vetement",
+        "t-shirt",
+        "tote bag",
+        "mode",
+        "ملابس",
+        "قمصان",
+        "ازياء",
+        "le7rayfi wear",
+        "dtf",
+        "ملابس العمل",
+        "حقائب قماشية"
+      ],
+      "fr": "Le module 04 « Le7rayfi Wear » propose des vêtements et accessoires contemporains inspirés des métiers traditionnels (T-shirts en coton premium, tote bags, tenues professionnelles) imprimés en DTF avec typographies arabes authentiques et QR interactif.",
+      "ar": "المكون 04 «لحرايفي وير» يقدم ملابس وإكسسوارات عصرية مستوحاة من عوالم الحرف (تيشرتات قطنية، حقائب قماشية، ألبسة عمل مهنية) بطباعة DTF عالية الجودة وخط عربي أصيل مع رمز QR.",
+      "darija": "المكون 04 لحرايفي وير: حوايج واكسسوارات عصرية مستوحاة من الصنعة التقليدية (تريكويات، صاك ديال الثوب، لباس الحرايفية) بطباعة نقية وخط عربي مع كود QR."
+    },
+    {
+      "id": "module-le7rayfi-pro",
+      "keywords": [
+        "pro",
+        "le7rayfi pro",
+        "entreprise",
+        "carte de visite",
+        "site web",
+        "portfolio",
+        "شركات",
+        "خدمات مهنية",
+        "بطاقة اعمال",
+        "موقع الكتروني",
+        "pme",
+        "دليل الشركات"
+      ],
+      "fr": "Le module 05 « Le7rayfi Pro » fournit des outils digitaux avancés pour artisans et entreprises : cartes de visite connectées NFC/QR, création de sites web vitrines professionnels, portfolios en ligne et référencement dans l'annuaire Pro B2B.",
+      "ar": "المكون 05 «لحرايفي برو» يقدم حلولاً رقمية للحرفيين والمقاولات: بطاقات عمل ذكية بتقنية NFC/QR، تصميم مواقع إلكترونية احترافية، معارض أعمال رقمية، وإدراج في دليل الشركات B2B.",
+      "darija": "المكون 05 لحرايفي برو: كيقاد للحرايفية والشركات كارطة فيزيت ذكية بـ NFC، مواقع إلكترونية، بورتفوليو بروفيسيونيل، ودليل الشركات باش يتلاقاو مع كليان كبار."
+    },
+    {
+      "id": "module-academy",
+      "keywords": [
+        "academy",
+        "formation",
+        "atelier",
+        "apprendre",
+        "cours",
+        "اكاديمية",
+        "تكوين",
+        "تعلم",
+        "ورشات",
+        "le7rayfi academy",
+        "دروس",
+        "تكوين الحرفيين"
+      ],
+      "fr": "Le module 06 « Le7rayfi Academy » forme les artisans aux compétences clés : prise de photos professionnelles sur smartphone, calcul des coûts et rédaction de devis clairs, gestion de la relation client, marketing digital et protection des créations.",
+      "ar": "المكون 06 «أكاديمية لحرايفي» توفر ورشات تطبيقية للحرفيين: التصوير الاحترافي بالهاتف، حساب التكاليف وصياغة عروض الأسعار، إدارة علاقات الزبناء، التسويق الرقمي وحماية التصاميم.",
+      "darija": "المكون 06 أكاديمية لحرايفي: ورشات تطبيقية للمعلمين كيتعلمو فيها يصوروا خدمتهم بالتيلفون، يحسبو الدوفيات، يتعاملو مع الكليان، ويسوقو راسهم ف الأنترنيت."
+    },
+    {
+      "id": "creations-sac-traverse",
+      "keywords": [
+        "sac traverse",
+        "traverse",
+        "حقيبة عبور",
+        "sac",
+        "cuir et tissage",
+        "حقيبة",
+        "maroquinerie marrakech",
+        "tissage laayoune",
+        "حقيبة جلد ونسيج"
+      ],
+      "fr": "Le « Sac Traverse » (حقيبة عبور) est une création phare du programme Khit Al Wahda : il associe une bande tissée artisanale aux teintes sable et bleu réalisée à Laâyoune avec une structure en cuir noble confectionnée par un maroquinier de Marrakech.",
+      "ar": "«حقيبة عبور» (Sac Traverse) ابتكار متميز من برنامج خيط الوحدة: يجمع بين شريط منسوج بلوني الرمل والأزرق صُنع في العيون، وهيكل من الجلد الطبيعي أبدعه معلم دباغة وصناعة جلدية في مراكش.",
+      "darija": "«صاك عبور» (Sac Traverse): ابتكار واعر ديال خيط الوحدة، كيخلط بين شريط منسوج ف العيون بلون الرمل والبحر، مع خدمة الجلد المتقونة ف مراكش."
+    },
+    {
+      "id": "creations-etoffe-horizons",
+      "keywords": [
+        "etoffe horizons",
+        "horizons",
+        "وشاح افاق",
+        "وشاح",
+        "scarf",
+        "شال",
+        "وشاح افاق الداخلة",
+        "etoffe dakhla"
+      ],
+      "fr": "L'« Étoffe Horizons » (وشاح آفاق) est une étoffe légère et raffinée, conçue entre la ville de Dakhla pour son inspiration nomade et le Souss-Massa pour son savoir-faire textile et ses finitions cousues main de haute précision.",
+      "ar": "«وشاح آفاق» (Étoffe Horizons) قطعة نسيج خفيفة وأنيقة، تجمع بين الروح الصحراوية المستلهمة من الداخلة وخبرة جهة سوس-ماسة في التطريز والتشطيبات اليدوية المتقنة.",
+      "darija": "«وشاح آفاق»: وشاح خفيف وهمة، جامع بين الإلهام الصحراوي ديال الداخلة وحرفية الخياطة والتشطيب ديال سوس ماسة."
+    },
+    {
+      "id": "creations-plateau-rencontre",
+      "keywords": [
+        "plateau rencontre",
+        "صينية لقاء",
+        "plateau",
+        "vannerie",
+        "guelmim bois agadir",
+        "صينية",
+        "خشب وحلفاء",
+        "صينية خشب"
+      ],
+      "fr": "Le « Plateau Rencontre » (صينية لقاء) allie un plateau en bois noble travaillé à Agadir et un insert tressé en fibres végétales (vannerie) réalisé à Guelmim. Cet insert est amovible pour faciliter le nettoyage et l'entretien au quotidien.",
+      "ar": "«صينية لقاء» (Plateau Rencontre) تحفة تجمع قاعدة خشبية مصقولة صُنعت في أكادير، مع جزء مضفور من الألياف النباتية (الحلفاء) من إبداع حرفيي كلميم، وهو قابل للإزالة لتسهيل التنظيف.",
+      "darija": "«صينية لقاء»: بلاطو كيحمق جامع بين العود المخدوم ف أكادير مع ضفير الحلفاء والنخيل ديال كلميم، وكيتحيد باش يتغسل ويبقى ديما نقي."
+    },
+    {
+      "id": "creations-lumiere-nomade",
+      "keywords": [
+        "lumiere nomade",
+        "ضوء رحال",
+        "lampe",
+        "ceramique",
+        "textile",
+        "safi laayoune",
+        "مصباح",
+        "خزف آسفي",
+        "مصباح ضوء رحال"
+      ],
+      "fr": "« Lumière Nomade » (ضوء رحال) est un luminaire d'art qui fait dialoguer une base sculptée en céramique émaillée de Safi avec un abat-jour textile chaleureux tissé par des artisanes de Laâyoune.",
+      "ar": "«ضوء رحال» (Lumière Nomade) مصباح فني يجمع بين قاعدة خزفية تقليدية من مدينة آسفي العريقة وغطاء إضاءة نسيجي دافئ صاغته أيادي ناسجات مبدعات بمدينة العيون.",
+      "darija": "«ضوء رحال»: أباجورة فنية كتجمع بين قاع الفخار والخزف المتقون ديال آسفي، مع غطا نسيجي مخدوم باليد ف العيون."
+    },
+    {
+      "id": "creations-lektifa",
+      "keywords": [
+        "lektifa",
+        "لكطيفة",
+        "tapis",
+        "khayma",
+        "tapis sahraoui",
+        "زربية صحراوية",
+        "فراش الخيمة",
+        "نسيج صحراوي",
+        "زربية لكطيفة",
+        "tapis lektifa"
+      ],
+      "fr": "« Lektifa » (لكطيفة) est le tapis traditionnel qui meuble l'intérieur de la khayma sahraouie. Tissé en laine et poils de dromadaire, il offre une isolation thermique remarquable contre le sable et la chaleur du désert.",
+      "ar": "«لكطيفة» هي البساط أو السجاد الصحراوي الأصيل المخصص لفرش الخيمة. يُنسج من الصوف ووبر الإبل ليمنح عزلاً حرارياً ممتازاً ضد حرارة ورطوبة رمال الصحراء.",
+      "darija": "«لكطيفة»: هي الزربية الصحراوية التقليدية اللي كتفرش ف الخيمة. كتنسج بالصوف ووبر الجمال وكتعزل السخونية والبرد ديال الرملة."
+    },
+    {
+      "id": "creations-gift-box",
+      "keywords": [
+        "gift box",
+        "علبة هدايا",
+        "coffret",
+        "cadeau",
+        "علبة هدايا خيط الوحدة",
+        "علبة",
+        "هدية حرفية",
+        "علبة هدايا"
+      ],
+      "fr": "La « Khit Al Wahda Gift Box » (علبة هدايا خيط الوحدة) est un coffret d'exception réunissant deux pièces d'artisans de régions complémentaires, accompagnées d'un livret racontant l'histoire de la rencontre et de leurs savoir-faire.",
+      "ar": "«علبة هدايا خيط الوحدة» صندوق راقٍ يجمع قطعتين من إبداع حرفيين من جهتين مختلفتين، مع بطاقة مميزة تروي قصة لقائهما ومسار تصنيع كل قطعة بوفاء للتراث.",
+      "darija": "«كوفري خيط الوحدة»: بواطة هدايا واعرة فيها جوج بياسات من جوج مناطق مختالفين، مع كتيب كيعاود قصة الصانعين كيفاش تلاقاو وصاوبوها."
+    },
+    {
+      "id": "creations-majlis-al-wahda",
+      "keywords": [
+        "majlis al wahda",
+        "مجلس الوحدة",
+        "majlis",
+        "riad",
+        "صالون",
+        "فنادق ورياضات",
+        "ديكور",
+        "مجلس تقليدي"
+      ],
+      "fr": "Le concept « Majlis Al Wahda » (مجلس الوحدة) est une offre d'aménagement et de décoration haut de gamme conçue pour les riads, hôtels de charme et salons d'accueil, combinant assises, tissages et luminaires issus de la co-création artisanale.",
+      "ar": "«مجلس الوحدة» مفهوم لتأثيث وديكور الفنادق والرياضات وفضاءات الاستقبال الراقية، يجمع بين الجلسات والمنسوجات والإضاءة المستوحاة من التعاون الحرفي بين الأقاليم.",
+      "darija": "«مجلس الوحدة»: صالون وديكور فاخر للرياضات واللوطيلات، جامع بين الفراش، التضياف والضو الأصيل اللي مصاوب باليد من كاع جهات المغرب."
+    },
+    {
+      "id": "kharitat-al-wahda",
+      "keywords": [
+        "kharitat al wahda",
+        "خريطة الوحدة",
+        "atlas",
+        "carte",
+        "خريطة المهن",
+        "atlas des metiers",
+        "جغرافيا الحرف",
+        "اطلس الحرف"
+      ],
+      "fr": "« Khariṭat Al Wahda » (خريطة الوحدة) est un atlas numérique interactif développé par Le7rayfi pour cartographier les métiers, les matières premières locales, les maîtres artisans et les routes du patrimoine entre le Sahara et tout le Maroc.",
+      "ar": "«خريطة الوحدة» أطلس رقمي تفاعلي تطوره لحرايفي لتوثيق وتوزيع الحرف والمواد الأولية وأصحاب الصنعة ومسارات التراث بين الصحراء المغربية وباقي جهات المملكة.",
+      "darija": "«خريطة الوحدة»: خريطة رقمية تفاعلية فيها كاع المهن، المواد الأولية، والمعلمين الكبار باش تعرف الصنعة ف كل قنت ف المغرب."
+    },
+    {
+      "id": "passeport-numerique",
+      "keywords": [
+        "passeport numerique",
+        "passeport",
+        "tracabilite",
+        "جواز رقمي",
+        "جواز القطعة",
+        "شهادة المنشأ",
+        "تتبع",
+        "الجواز الرقمي للقطعة"
+      ],
+      "fr": "Le « Passeport Numérique » de chaque pièce artisanale Khit Al Wahda garantit la traçabilité complète de l'objet : identifiant unique, artisans créateurs, matières premières, région d'origine et vidéo de fabrication accessible via QR code.",
+      "ar": "«الجواز الرقمي» لكل قطعة من خيط الوحدة يضمن تتبعاً شاملاً: المعرف الفريد، أسماء الحرفيين المساهمين، المواد المستخدمة، جهة الإنتاج وفيديو مراحل الصنع عبر رمز QR.",
+      "darija": "«الجواز الرقمي»: بطاقة هوية كتربطها مع القطعة بـ QR كود، كتعرف منها شكون الحرايفي اللي صاوبها، المواد منين جاو، وتاريخ الصنع."
+    },
+    {
+      "id": "podcast-snai3i",
+      "keywords": [
+        "snai3i",
+        "podcast",
+        "chaine youtube",
+        "chaine snai3i",
+        "صنايعي",
+        "صنايعي بلس",
+        "بودكاست",
+        "بودكاست صنايعي",
+        "يوتيوب",
+        "حوارات صنايعي",
+        "حلقات صنايعي"
+      ],
+      "fr": "Snaï3i+ (صنايعي+) est le podcast officiel propulsé par Le7rayfi sur YouTube et le7rayfi.com. Il donne la parole aux artisans, experts et entrepreneurs pour partager leurs défis, secrets de métier, parcours de formation et opportunités du digital.",
+      "ar": "«صنايعي+» هو البودكاست الرسمي لمنصة لحرايفي على يوتيوب وle7rayfi.com. يستضيف الحرفيين والخبراء لمناقشة أسرار المهن، ريادة الأعمال، التكوين المهني وفرص الاقتصاد الرقمي.",
+      "darija": "«صنايعي+»: البودكاست الرسمي ديال لحرايفي ف اليوتيوب، كيجيب معلمين وخبراء كيعاودو على مسارهم، الصنعة، والتسويق وكيفاش ينجحو ف خدمتهم."
+    },
+    {
+      "id": "podcast-indh-regragui",
+      "keywords": [
+        "regragui",
+        "abdelaziz regragui",
+        "indh podcast",
+        "الرغيوي",
+        "عبد العزيز الرغيوي",
+        "بودكاست المبادرة",
+        "حلقة التنمية البشرية",
+        "حلقة الرغيوي"
+      ],
+      "fr": "Épisode Snaï3i+ « De la formation à l'autonomie » : interview de M. Abdelaziz Regragui sur le rôle de l'INDH (Initiative Nationale pour le Développement Humain) dans l'accompagnement des artisans et des porteurs de projets au Maroc.",
+      "ar": "حلقة صنايعي+ «من التكوين إلى التمكين»: حوار مع الأستاذ عبد العزيز الرغيوي حول برامج المبادرة الوطنية للتنمية البشرية (INDH) في دعم الحرفيين وإدماج الشباب في سوق الشغل.",
+      "darija": "حلقة صنايعي+ مع ذ. عبد العزيز الرغيوي: كتهضر على المبادرة الوطنية للتنمية البشرية ودورها ف تكوين ودعم الحرايفية والشباب أصحاب المشاريع."
+    },
+    {
+      "id": "podcast-electricite-benmabrouk",
+      "keywords": [
+        "ben mabrouk",
+        "charaf eddine",
+        "charaf eddine ben mabrouk",
+        "بن مبروك",
+        "شرف الدين بن مبروك",
+        "بودكاست الكهرباء",
+        "حلقة شرف الدين"
+      ],
+      "fr": "Épisode Snaï3i+ avec Charaf Eddine Ben Mabrouk : retour inspirant sur son parcours, du métier d'électricien terrain à la création de son entreprise et à la gestion d'équipes sur de grands chantiers.",
+      "ar": "حلقة صنايعي+ مع شرف الدين بن مبروك: قصة نجاح ملهمة من ممارسة مهنة الكهرباء ميدانياً إلى تأسيس مقاولة ناجحة وإدارة المشاريع والفرق المهنية.",
+      "darija": "حلقة صنايعي+ مع شرف الدين بن مبروك: قصة زوينة كتعاود كيفاش تحول من تريسيان ف الميدان لصاحب مقاولة كيشد شوانط كبار."
+    },
+    {
+      "id": "podcast-platre-hazayez",
+      "keywords": [
+        "hazayez",
+        "atiq abou el hazayez",
+        "maalem atiq",
+        "الهزايز",
+        "عتيق ابو الهزايز",
+        "المعلم عتيق",
+        "بودكاست الجبص",
+        "حلقة الجبص"
+      ],
+      "fr": "Épisode Snaï3i+ « Le plâtre : expérience et défis du métier » avec le Maâlem Atiq Abou El Hazayez, maître plâtrier réputé, qui partage les secrets de la sculpture sur plâtre marocain et la transmission aux apprentis.",
+      "ar": "حلقة صنايعي+ «حرفة الجبص: أسرار المهنة بين الخبرة والتحديات» مع المعلم عتيق أبو الهزايز، حيث يتحدث عن أسرار نقش الجبص المغربي وتحديات توريث الحرفة للأجيال الصاعدة.",
+      "darija": "حلقة صنايعي+ مع المعلم عتيق أبو الهزايز: كيعاود على أسرار نقش الجبص المغربي الأصيل، والصبر اللي كيبغيه، وكيفاش يعلم الشباب الصنعة."
+    },
+    {
+      "id": "podcast-marketing-khessas",
+      "keywords": [
+        "khessas",
+        "taoufik elkhessas",
+        "taoufik el khessas",
+        "الخصاص",
+        "توفيق الخصاص",
+        "بودكاست التسويق",
+        "حلقة التسويق"
+      ],
+      "fr": "Épisode Snaï3i+ avec Taoufik El Khessas sur le marketing numérique et la formation continue : comment un artisan peut utiliser WhatsApp, Instagram et Le7rayfi pour attirer de nouveaux clients qualifiés.",
+      "ar": "حلقة صنايعي+ مع توفيق الخصاص حول التسويق الرقمي والتكوين المستمر: كيف يستفيد الحرفي من شبكات التواصل الاجتماعي ومنصة لحرايفي لتطوير علامته وجلب الزبناء.",
+      "darija": "حلقة صنايعي+ مع توفيق الخصاص: كيفاش الحرايفي يخدم بالتسويق ف واتساب وانستغرام وسيت لحرايفي باش يعمر أجندتو بالكليان."
+    },
+    {
+      "id": "podcast-autoentrepreneur-hedri",
+      "keywords": [
+        "hedri",
+        "abderrahmane el hedri",
+        "el hedri",
+        "الهدري",
+        "عبد الرحمان الهدري",
+        "بودكاست المقاول الذاتي",
+        "حلقة المقاول الذاتي",
+        "حلقة الهدري"
+      ],
+      "fr": "Épisode Snaï3i+ avec Abderrahmane El Hedri dédié au statut d'Auto-Entrepreneur au Maroc : démarches d'inscription, facturation légale, plafonds de chiffre d'affaires et couverture médicale CNSS (AMO).",
+      "ar": "حلقة صنايعي+ مع عبد الرحمان الهدري حول نظام المقاول الذاتي بالمغرب: خطوات التسجيل، إصدار الفواتير القانونية، الامتيازات الضريبية والتغطية الصحية (AMO).",
+      "darija": "حلقة صنايعي+ مع عبد الرحمان الهدري: شرح كامل لكيفاش دير مقاول ذاتي، تخرج فاكتورات قانونية، وتستافد من لاCNSS والتغطية الصحية."
+    },
+    {
+      "id": "podcast-maroc-digital-taleb",
+      "keywords": [
+        "taleb essalama",
+        "zakaria taleb",
+        "zakaria taleb essalama",
+        "طالب السلامة",
+        "زكريا طالب السلامة",
+        "بودكاست المغرب الرقمي",
+        "حلقة المغرب الرقمي"
+      ],
+      "fr": "Épisode Snaï3i+ avec Zakaria Taleb Essalama sur la stratégie Maroc Digital 2030 : opportunités de numérisation pour le tissu artisanal et inclusion des métiers manuels dans l'économie de la connaissance.",
+      "ar": "حلقة صنايعي+ مع زكريا طالب السلامة حول استراتيجية المغرب الرقمي 2030: دور الرقمنة في تمكين الحرفيين ودمج الصناع التقليديين في الاقتصاد المعرفي الجديد.",
+      "darija": "حلقة صنايعي+ مع زكريا طالب السلامة: كتهضر على استراتيجية المغرب الرقمي 2030 وكيفاش الحرايفية يلقاو بلاصتهم ف التحول الرقمي."
+    },
+    {
+      "id": "portfolio-realisations",
+      "keywords": [
+        "portfolio",
+        "realisations",
+        "realisations web",
+        "realisation",
+        "sites web",
+        "projets web",
+        "مشاريع منجزة",
+        "اعمالنا",
+        "انجازاتنا",
+        "مواقع ويب",
+        "مشاريع ويب"
+      ],
+      "fr": "Le pôle digital de Le7rayfi conçoit des solutions web modernes. Notre portfolio compte 6 plateformes déployées : Consosos, MecaWay, 7tiyta, MADA Studio, CADEL Solutions et RuGe. Retrouvez tous les détails sur le7rayfi.com/references.php.",
+      "ar": "يطور القطب الرقمي للحرايفي منصات ويب متقدمة. يضم معرض أعمالنا 6 مشاريع كبرى: Consosos، MecaWay، 7tiyta، MADA Studio، CADEL Solutions و RuGe. التفاصيل كاملة على le7rayfi.com/references.php.",
+      "darija": "فريق لحرايفي كيقاد مواقع ويب احترافية. ف البورتفوليو كاينين 6 ديال السيتات خدامين: Consosos، MecaWay، 7tiyta، MADA Studio، CADEL Solutions و RuGe."
+    },
+    {
+      "id": "reference-consosos",
+      "keywords": [
+        "consosos",
+        "consosos.com",
+        "projet consosos",
+        "site consosos",
+        "كونسوسوس",
+        "موقع كونسوسوس",
+        "مشروع كونسوسوس"
+      ],
+      "fr": "Consosos (consosos.com) est une réalisation web signée Le7rayfi : une plateforme numérique conçue pour optimiser les échanges et services avec une interface réactive et moderne.",
+      "ar": "موقع Consosos (consosos.com) من إنجازات لحرايفي: منصة إلكترونية صُممت لتسهيل الخدمات مع واجهة استخدام تفاعلية وسريعة.",
+      "darija": "موقع Consosos (consosos.com): منصة ويب صاوباتها لحرايفي، خفيفة وساهلة ف الاستعمال للخدمات."
+    },
+    {
+      "id": "reference-mecaway",
+      "keywords": [
+        "mecaway",
+        "mecaway.fr",
+        "plateforme mecaway",
+        "ميكواي",
+        "منصة ميكواي",
+        "موقع ميكواي",
+        "mecaway plateforme"
+      ],
+      "fr": "MecaWay (mecaway.fr) est un projet web réalisé par l'équipe Le7rayfi pour les services et dépannages automobiles, facilitant la mise en relation entre automobilistes et mécaniciens qualifiés.",
+      "ar": "منصة MecaWay (mecaway.fr) مشروع ويب أنجزه فريق لحرايفي لقطاع صيانة وخدمات السيارات، يربط بين السائقين وورشات الميكانيك المؤهلة.",
+      "darija": "سيت MecaWay (mecaway.fr): صاوباتو لحرايفي لخدمات ديباناج وميكانيك الطوموبيلات، كيربط الشيفورات مع معلمين ميكانيسيانات."
+    },
+    {
+      "id": "reference-7tiyta",
+      "keywords": [
+        "7tiyta",
+        "7tiyta.com",
+        "حطيتة",
+        "حكايات",
+        "منصة حطيتة",
+        "موقع حطيتة"
+      ],
+      "fr": "7tiyta (7tiyta.com) est une plateforme web développée par Le7rayfi dédiée à l'expression, au storytelling communautaire et au partage de récits culturels authentiques.",
+      "ar": "منصة 7tiyta (7tiyta.com) موقع إلكتروني أنجزته لحرايفي مخصص للتعبير المجتمعي ومشاركة القصص والتجارب الثقافية الملهمة.",
+      "darija": "سيت 7tiyta (7tiyta.com): منصة صاوباتها لحرايفي مخصصة للقصص، الحكايات الشعبية والتجارب المجتمعية الأصيلة."
+    },
+    {
+      "id": "reference-madastudio",
+      "keywords": [
+        "mada studio",
+        "madastudio.ma",
+        "مادا ستوديو",
+        "تصميم ومعمار",
+        "موقع مادا"
+      ],
+      "fr": "MADA Studio (madastudio.ma) est un site vitrine et portfolio haut de gamme créé par Le7rayfi pour une agence d'architecture d'intérieur, d'art et de design contemporain.",
+      "ar": "موقع MADA Studio (madastudio.ma) معرض أعمال رقمي أنيق صممته لحرايفي لأستوديو متخصص في الهندسة المعمارية الداخلية والتصميم المعاصر.",
+      "darija": "سيت MADA Studio (madastudio.ma): سيت كيحمق وبورتفوليو قادتو لحرايفي لستوديو ديال الديزاين والديكور المعماري."
+    },
+    {
+      "id": "reference-cadelsolutions",
+      "keywords": [
+        "cadel solutions",
+        "cadelsolutions.ma",
+        "كاديل",
+        "حلول هندسية",
+        "موقع كاديل"
+      ],
+      "fr": "CADEL Solutions (cadelsolutions.ma) est une plateforme corporative conçue par Le7rayfi pour un bureau d'études et de solutions d'ingénierie et d'équipements techniques.",
+      "ar": "موقع CADEL Solutions (cadelsolutions.ma) بوابة مهنية متكاملة صممتها لحرايفي لمكتب دراسات وحلول هندسية وتقنية متقدمة.",
+      "darija": "سيت CADEL Solutions (cadelsolutions.ma): سيت احترافي قادتو لحرايفي لمكتب دراسات وحلول الهندسة والتجهيز."
+    },
+    {
+      "id": "reference-ruge",
+      "keywords": [
+        "ruge",
+        "ruge.le7rayfi.com",
+        "روجي",
+        "منصة روجي",
+        "موقع روجي"
+      ],
+      "fr": "RuGe (ruge.le7rayfi.com) est un système web applicatif développé par Le7rayfi avec architecture bilingue et gestion avancée de données pour les entreprises partenaires.",
+      "ar": "تطبيق RuGe (ruge.le7rayfi.com) نظام ويب طوره فريق لحرايفي بواجهة ثنائية اللغة وإدارة بيانات متقدمة للمؤسسات الشريكة.",
+      "darija": "سيت RuGe (ruge.le7rayfi.com): منصة ويب طورتها لحرايفي بجوج لغات لإدارة البيانات بطريقة سريعة ومنظمة."
+    },
+    {
+      "id": "metier-plomberie",
+      "keywords": [
+        "plombier",
+        "plomberie",
+        "fuite d eau",
+        "tuyauterie",
+        "chauffe-eau",
+        "robinet",
+        "سباك",
+        "سباكة",
+        "تسرب المياه",
+        "انابيب",
+        "سخان ماء",
+        "بلومبي",
+        "اصلاح السباكة",
+        "الما",
+        "ما",
+        "روبيني",
+        "قادوس",
+        "قوادس",
+        "شوفو",
+        "تسريب"
+      ],
+      "fr": "Pour vos travaux de plomberie (réparation de fuite d'eau, installation de chauffe-eau solaire ou électrique, remplacement de robinet, débouchage), trouvez un plombier qualifié et proche de chez vous sur le7rayfi.com.",
+      "ar": "لأعمال السباكة (إصلاح تسربات المياه، تركيب سخانات الماء الكهربائية أو الشمسية، تغيير الصنابير، وتسليك المجاري)، اعثر على سباك مؤهل وقريب منك عبر منصة le7rayfi.com.",
+      "darija": "باش تصاوب بلومبي (تسريب ديال الما، تركيب الشوفو، تبديل الروبينيات ولا قوادس مخنوقين)، قلب على بلومبي معلم وقريب ليك ف le7rayfi.com."
+    },
+    {
+      "id": "metier-menuiserie",
+      "keywords": [
+        "menuisier",
+        "menuiserie",
+        "bois",
+        "porte",
+        "fenetre",
+        "placard",
+        "dressing",
+        "نجار",
+        "نجارة",
+        "خشب",
+        "ابواب",
+        "نوافذ",
+        "خزائن",
+        "طاولات",
+        "نجار خشب",
+        "بيبان",
+        "شراجم",
+        "ماريو"
+      ],
+      "fr": "Besoin d'un menuisier pour des portes, dressings sur mesure, fenêtres ou restauration de meubles en bois massif ? Découvrez sur Le7rayfi les artisans menuisiers et ébénistes recommandés dans votre région.",
+      "ar": "هل تبحث عن نجار لصناعة الأبواب، الخزائن الجدارية، النوافذ، أو تجديد الأثاث الخشبي؟ اكتشف على منصة لحرايفي أمهر النجارين في منطقتك مع صور أعمالهم.",
+      "darija": "خاصك نجار خشب للبيبان، بلاكارات على العبار، النوافض ولا طبلات؟ تلقى ف لحرايفي نجارين كوانبيا ومعلمين تفرجو ف خدمتهم وتواصلو معاهم."
+    },
+    {
+      "id": "metier-peinture",
+      "keywords": [
+        "peintre",
+        "peinture",
+        "peindre",
+        "travaux de peinture",
+        "enduit",
+        "decoration",
+        "tadelakt",
+        "stucco",
+        "صباغ",
+        "صباغة",
+        "طلاء",
+        "تادلاكت",
+        "صباغة شقق",
+        "صباغ منازل",
+        "حيط",
+        "حيوط",
+        "ديكور"
+      ],
+      "fr": "Pour peindre votre appartement, villa ou local professionnel (peinture vinyle, satinée, enduits décoratifs, tadelakt marocain traditionnel), comparez les profils de peintres en bâtiment vérifiés sur le7rayfi.com.",
+      "ar": "لصباغة منزلك أو محلك المهني (صباغة الفينيل، الساتيني، الطلاء الديكوري، التادلاكت المغربي الأصيل)، قارن ملفات صباغي المباني المؤهلين عبر موقع le7rayfi.com.",
+      "darija": "باغي تصبغ الدار ولا المحل (فينيل، صباغة زيتية، كرافي، ولا تدلاكت بلدي)؟ قارن الحرايفية الصباغة ف لحرايفي وشوف خدمتهم قبل ما تتافق."
+    },
+    {
+      "id": "metier-climatisation",
+      "keywords": [
+        "climatiseur",
+        "frigoriste",
+        "recharge gaz",
+        "freon",
+        "froid",
+        "climatisation",
+        "panne climatiseur",
+        "climatiseur en panne",
+        "reparer climatiseur",
+        "panne",
+        "مكيف",
+        "فني تكييف",
+        "تبريد",
+        "شحن غاز",
+        "اصلاح مكيفات",
+        "مكيف هوائي",
+        "اصلاح مكيف",
+        "كليم",
+        "كليماتيزور",
+        "كليماتيزاسيون",
+        "فريكوريست"
+      ],
+      "fr": "Dans les régions chaudes comme Laâyoune, Smara et Guelmim, un bon climatiseur est indispensable. Trouvez sur Le7rayfi des frigoristes spécialistes de l'installation, du nettoyage de filtres et de la recharge de gaz fréon.",
+      "ar": "في الأقاليم ذات المناخ الحار كالعيون والسمارة وكلميم، يعد التكييف أساسياً. اعثر عبر لحرايفي على فنيي تكييف وتبريد معتمدين للتركيب والصيانة وشحن الغاز.",
+      "darija": "ف الصهد ديال الجنوب (العيون، السمارة، كلميم...) الكليماتيزور ضروري. ف لحرايفي كاينين معلمين فريكوريست كيركبو لكليم، كيعمرو الغاز وكيصلحو البانات."
+    },
+    {
+      "id": "metier-solaire",
+      "keywords": [
+        "panneau solaire",
+        "pompage solaire",
+        "energie solaire",
+        "onduleur",
+        "panneaux solaires",
+        "solaire",
+        "panneaux",
+        "pompage",
+        "طاقة شمسية",
+        "الواح شمسية",
+        "ضخ شمسي",
+        "محول طاقة",
+        "شمسية",
+        "شمسي",
+        "ضخ"
+      ],
+      "fr": "L'énergie solaire est en plein essor au Sahara marocain : installation de panneaux photovoltaïques pour particuliers, éclairage autonome et pompage solaire agricole. Contactez des installateurs solaires certifiés sur Le7rayfi.",
+      "ar": "تشهد الطاقة الشمسية ازدهاراً واسعاً في الصحراء المغربية: تركيب الألواح الكهروضوئية للمنازل، الإنارة المستقلة، والضخ الشمسي الفلاحي. تواصل مع تقنيي الطاقة الشمسية عبر لحرايفي.",
+      "darija": "الطاقة الشمسية مطلوبة بزاف ف الجنوب: تركيب البلايك ديال الضو، البومباج الشمسي للفلاحة والديور المنعزلة. كاينين معلمين مختصين ف الطاقة الشمسية ف لحرايفي."
+    },
+    {
+      "id": "metier-platre-staff",
+      "keywords": [
+        "platre",
+        "platre marocain",
+        "staff",
+        "faux plafond",
+        "corniche",
+        "جبص",
+        "نقش جبص",
+        "اسقف معلقة",
+        "ستاف",
+        "زخرفة جبص",
+        "جباص",
+        "معلم جبص"
+      ],
+      "fr": "Le plâtre marocain sculpté à la main et les faux plafonds modernes en staff transforment vos intérieurs. Découvrez des maâlems plâtriers héritiers de la tradition géométrique marocaine sur la plateforme Le7rayfi.",
+      "ar": "يضفي الجبص المغربي المنقوش باليد والأسقف المعلقة المعاصرة لمسة فخامة على منازلكم. اكتشف على لحرايفي معلمين مختصين في النقش والستاف بأعلى معايير الدقة.",
+      "darija": "الجبص المغربي المنقوش والستاف كيزوقو الدار والصالونات. ف لحرايفي كاينين معلمين جباصة كبار كينقشو الهندسة البلدية والأسقف العصرية."
+    },
+    {
+      "id": "metier-ferronnerie",
+      "keywords": [
+        "ferronnier",
+        "ferronnerie",
+        "soudeur",
+        "soudure",
+        "grille",
+        "portail fer",
+        "حداد",
+        "حدادة",
+        "لحام",
+        "شباك حديد",
+        "بوابات حديدية",
+        "سودور",
+        "معلم حدادة",
+        "سودار",
+        "الحديد"
+      ],
+      "fr": "Ferronnerie d'art et soudure : fabrication de grilles de fenêtres sécurisées, portails en fer forgé, rampes d'escalier et charpentes métalliques légères. Trouvez votre artisan soudeur sur le7rayfi.com.",
+      "ar": "الحدادة الفنية واللحام: صناعة شبابيك الحماية، البوابات الحديدية الكبرى، درابزين السلالم، والهياكل المعدنية. اعثر على حداد ماهر في مدينتك عبر le7rayfi.com.",
+      "darija": "الحدادة والسودور: بيبان د الحديد، كاجات ديال الشراجم للأمان، درابزينات ديال الدروج وسقائف معدنية. قلب على سودور حرايفي ف سيت لحرايفي."
+    },
+    {
+      "id": "metier-tissage",
+      "keywords": [
+        "tissage",
+        "tisseuse",
+        "tapis marocain",
+        "zarbiya",
+        "hanbel",
+        "laine",
+        "tapis traditionnel",
+        "نسيج",
+        "زربية مغربية",
+        "حياكة",
+        "منسج",
+        "صوف",
+        "ناسجة",
+        "صناعة الزرابي",
+        "الزرابي"
+      ],
+      "fr": "L'art du tissage au Maroc : tapis berbères zayanes, hanbel, tapis sahraouis en laine et poils fins. Le7rayfi valorise directement les coopératives de tisseuses pour commercialiser leurs créations sans intermédiaires.",
+      "ar": "فن النسيج بالمغرب: الزرابي الأمازيغية، الحنبل، والمنسوجات الصحراوية من الصوف والوبر. تدعم لحرايفي تعاونيات الناسجات لعرض إبداعاتهن مباشرة للزبناء دون وسطاء.",
+      "darija": "النسيج والزرابي ف المغرب: زربية بلدية، حنبل، وفراش صحراوي من الصوف الحر. لحرايفي كتعاون تعاونيات النساء باش يبيعو زربيتهم بكرامة ونيشان للكليان."
+    },
+    {
+      "id": "metier-maroquinerie",
+      "keywords": [
+        "maroquinier",
+        "maroquinerie",
+        "cuir",
+        "babouche",
+        "sac cuir",
+        "tannage",
+        "sacs en cuir",
+        "صانع جلد",
+        "صناعة جلدية",
+        "جلد طبيعي",
+        "بلغة",
+        "حقائب جلدية",
+        "دباغة",
+        "بلاغي"
+      ],
+      "fr": "Maroquinerie d'excellence : babouches traditionnelles, sacs en cuir pleine fleur, porte-documents et ceintures façonnées à la main. Le7rayfi unit les tanneurs et maroquiniers de Marrakech et du Sud marocain.",
+      "ar": "الصناعة الجلدية الرفيعة: البلاغي التقليدية، الحقائب الجلدية الطبيعية، والمحافظ والأحزمة المصنوعة يدوياً. تجمع لحرايفي بين حرفيي الجلد في مراكش والأقاليم الجنوبية.",
+      "darija": "صناعة الجلد الرفيع: شراجم، بلاغي فاسية وصحراوية، صاكات وسماطي من الجلد الحر. لحرايفي كتربط بين معلمين الدباغة ف مراكش وف الجنوب."
+    },
+    {
+      "id": "metier-vannerie",
+      "keywords": [
+        "vannerie",
+        "panier",
+        "doum",
+        "alfa",
+        "fibres vegetales",
+        "couffin",
+        "paniers en doum",
+        "حلفاء",
+        "دوم",
+        "ضفر الحلفاء",
+        "قفة",
+        "سلال",
+        "الياف نباتية",
+        "ضفر الدوم"
+      ],
+      "fr": "Vannerie et tressage végétal : paniers en palmier doum, suspensions design, couffins et nattes tressées à Guelmim et dans le Souss. Un art écologique et durable valorisé par Le7rayfi.",
+      "ar": "ضفر الحلفاء والألياف النباتية: قفاف الدوم، وحدات الإنارة العصرية، والحصائر البيئية بكلميم وسوس. صناعة يدوية مستدامة وصديقة للبيئة تدعمها منصة لحرايفي.",
+      "darija": "الحلفاء وسلال الدوم: قفاف، كاش-بولات، وحصاير بلديين مخدومين باليد ف كلميم وسوس. صنعة نقية وبيئية 100% كتلقاو المعلمين ديالها ف لحرايفي."
+    },
+    {
+      "id": "metier-poterie",
+      "keywords": [
+        "poterie",
+        "potier",
+        "tajine",
+        "argile",
+        "zellige",
+        "ceramiste",
+        "ceramique safi",
+        "poterie safi",
+        "poterie et ceramique",
+        "ceramique de safi",
+        "safi",
+        "وخزف",
+        "فخار",
+        "خزف",
+        "طين",
+        "طاجين",
+        "فخار تقليدي",
+        "خزف تقليدي",
+        "خزف اسفي"
+      ],
+      "fr": "Poterie et céramique d'art : tajines en terre cuite culinaires, vases décoratifs, vaisselle émaillée de Safi et Fès, zellige marocain. Découvrez nos maîtres potiers et leurs ateliers sur Le7rayfi.",
+      "ar": "الفخار والخزف التقليدي: طواجن الطين للطبخ الصحي، الأواني المزخرفة من آسفي وفاس، والزليج البلدي المغربي. اكتشف معلمي الفخار وورشاتهم عبر منصة لحرايفي.",
+      "darija": "الفخار والخزف: طواجن الطين، غراف ومواعن مزوقين ديال آسفي وفاس، والزليج البلدي المتقون. تلقى معلمين الفخارة الأصليين ف لحرايفي."
+    },
+    {
+      "id": "metier-maconnerie",
+      "keywords": [
+        "macon",
+        "maconnerie",
+        "carreleur",
+        "carrelage",
+        "faience",
+        "gros oeuvre",
+        "poser du carrelage",
+        "بناء",
+        "بناء شقق",
+        "زليجي",
+        "تبليط",
+        "سيراميك",
+        "تركيب الزليج",
+        "بناي",
+        "بناية",
+        "مرطوب",
+        "زلايجي",
+        "زليج",
+        "رخام"
+      ],
+      "fr": "Gros œuvre et finitions : maçons pour surélévation, ouvertures de cloisons, pose de carrelage au sol, faïence de salle de bain et zellige marocain. Demandez un devis clair et détaillé sur le7rayfi.com.",
+      "ar": "أعمال البناء والتشطيبات: بناء الجدران، فتح الحواجز، تركيب أرضيات السيراميك والزليج، وتجديد الحمامات والمطابخ. اطلب عرض سعر مفصلاً وموثوقاً عبر le7rayfi.com.",
+      "darija": "البني والفينيسيون: معلمين بناية للشوانط، تبديل التقسيم ف الدار، وبوز ديال الزليج والرخام ف الكوزينة والدوش. طلب الدوفي ف لحرايفي وشوف ثمن السوق."
+    },
+    {
+      "id": "metier-electromenager",
+      "keywords": [
+        "reparation electromenager",
+        "machine a laver",
+        "refrigerateur",
+        "four",
+        "اصلاح الاجهزة المنزلية",
+        "غسالة",
+        "ثلاجة",
+        "فرن كهربائي",
+        "ديباناج اجهزة",
+        "اصلاح الغسالة",
+        "اصلاح الثلاجة",
+        "ماكينة الصابون",
+        "ماكينة لغسيل",
+        "تلاجة",
+        "تلاجات",
+        "فران"
+      ],
+      "fr": "Dépannage électroménager à domicile : réparation de lave-linge, réfrigérateurs, fours électriques, plaques de cuisson et micro-ondes par des techniciens de confiance répertoriés sur Le7rayfi.",
+      "ar": "إصلاح الأجهزة الكهرومنزلية بالمنزل: صيانة الغسالات، الثلاجات، الأفران الكهربائية وأجهزة الميكروويف عبر فنيين مؤهلين تجدهم في دليل لحرايفي.",
+      "darija": "إصلاح الماعن والأجهزة الكهربائية: ماكينة الصابون، التلاجة، الفران والميكرووند. جيب تقني ثقة من لحرايفي يصلح ليك ف الدار وبثمن معقول."
+    },
+    {
+      "id": "metier-mecanique",
+      "keywords": [
+        "mecanicien",
+        "mecanique auto",
+        "garage",
+        "vidange",
+        "freins",
+        "panne voiture",
+        "ميكانيكي",
+        "ميكانيك سيارات",
+        "كراج",
+        "تغيير الزيت",
+        "فرامل",
+        "عطل سيارة",
+        "ميكانيسيان",
+        "طوموبيل",
+        "طوموبيلات",
+        "بانا"
+      ],
+      "fr": "Mécanique et entretien auto : garages indépendants pour vidange, système de freinage, diagnostic valise et dépannage mécanique rapide répertoriés dans l'annuaire Le7rayfi.",
+      "ar": "صيانة وميكانيك السيارات: كراجات مستقلة لتغيير الزيوت، فحص الفرامل، التشخيص الإلكتروني (سكانير)، وإصلاح الأعطال الميكانيكية عبر دليل لحرايفي.",
+      "darija": "الميكانيك والسيارات: كراجات معلمين للفيدونج، البلاكيط، السكانير، والديباناج د الطوموبيلات ف كاع المدن مبيّنين ف دليل لحرايفي."
+    },
+    {
+      "id": "metier-tapisserie",
+      "keywords": [
+        "tapissier",
+        "salon marocain",
+        "seddari",
+        "mousse",
+        "tissu ameublement",
+        "طابيسي",
+        "صالون مغربي",
+        "سداري",
+        "اسفنج صالون",
+        "ثوب الصالون",
+        "تنجيد"
+      ],
+      "fr": "Confection de salons marocains traditionnels et contemporains : tapissiers pour la découpe de mousse haute densité, l'habillage de seddaris, le choix des tissus d'ameublement et coussins sur mesure sur Le7rayfi.",
+      "ar": "تفصيل الصالونات المغربية الأصيلة والعصرية: معلم طابيسي لتفصيل الإسفنج الممتاز، تغليف السدادر، واختيار أقمشة الأثاث والوسائد عبر منصة لحرايفي.",
+      "darija": "تفصيل وتنجيد الصالونات المغربية: طابيسي حرايفي يقاد ليك السدادر، البونج المزيان، والتواب ديال الصالون بالعبار ف لحرايفي."
+    },
+    {
+      "id": "metier-bijouterie",
+      "keywords": [
+        "bijoutier",
+        "bijoux argent",
+        "bijoux en argent",
+        "filigrane",
+        "argent du sud",
+        "fibule",
+        "صائغ فضة",
+        "حلي فضية",
+        "نقرة",
+        "خلخال",
+        "بزيمة",
+        "فضة الجنوب",
+        "حلي الفضة"
+      ],
+      "fr": "Bijouterie d'argent traditionnelle du Sud : colliers ambrés, fibules émaillées (Tiznit, Guelmim), bracelets ciselés et travail du filigrane d'argent réalisé par les maîtres orfèvres du patrimoine marocain.",
+      "ar": "صياغة الفضة التقليدية بالجنوب: الحلي الفضية الأمازيغية والصحراوية، الخلخال، البزائم المنقوشة، وأشغال الفيلغران اليدوية بمدن تيزنيت وكلميم والعيون.",
+      "darija": "النقرة وحلي الفضة البلدية ف الجنوب: الخلخال، الدبالج المنقوشين، والبزايم د الفضة ديال كلميم وتيزنيت مخدومين عند معلمية كبار ف لحرايفي."
+    },
+    {
+      "id": "metier-couture",
+      "keywords": [
+        "couturier",
+        "daraa",
+        "daraa sahraouie",
+        "djellaba",
+        "caftan",
+        "couture traditionnelle",
+        "خياط",
+        "دراعة صحراوية",
+        "جلابة مغربية",
+        "قفطان",
+        "خياطة تقليدية",
+        "سفيفة",
+        "تفصيل الدراعة"
+      ],
+      "fr": "Couture marocaine d'art : confection de la prestigieuse Daraâ sahraouie pour hommes, Mlhafa brodée pour femmes, Djellaba avec randa et sfifa travaillées à la main, et Caftans d'apparat sur Le7rayfi.",
+      "ar": "الخياطة التقليدية الراقية: تفصيل الدراعة الصحراوية الفاخرة للرجال، الملحفة المطرزة، الجلابة المغربية بخدمة المعلم والراندا، والقفطان الأصيل عبر لحرايفي.",
+      "darija": "الخياطة البلدية: تفصيل الدراعة الصحراوية المعتبرة، الملحفة، الجلابة بالراندة والسفيفة، والقفطان البلدي مخدوم عند خياطة معلمين ف لحرايفي."
+    },
+    {
+      "id": "metier-aluminium",
+      "keywords": [
+        "aluminium",
+        "menuiserie aluminium",
+        "pvc",
+        "volet roulant",
+        "double vitrage",
+        "المنيوم",
+        "نجارة الالمنيوم",
+        "نوافذ المنيوم",
+        "ستائر كهربائية",
+        "بي في سي"
+      ],
+      "fr": "Menuiserie aluminium et PVC : installation de baies vitrées coulissantes, fenêtres à rupture de pont thermique, volets roulants motorisés et vitrines de commerces avec des professionnels sélectionnés.",
+      "ar": "نجارة الألمنيوم والـ PVC: تركيب النوافذ العازلة، الواجهات الزجاجية للمحلات، والستائر الدوارة الكهربائية بأيدي مهنيين متخصصين عبر منصة لحرايفي.",
+      "darija": "نجارة الألومنيوم والـ PVC: شراجم كوليس، ريدويات بالماكينة، والواجهات د المحلات بالزاج المزدوج مخدومين عند معلمين ف لحرايفي."
+    },
+    {
+      "id": "metier-jardinage",
+      "keywords": [
+        "jardinier",
+        "jardinage",
+        "arrosage goutte a goutte",
+        "palmier",
+        "espaces verts",
+        "بستاني",
+        "حدائق",
+        "سقي بالتنقيط",
+        "تشذيب النخيل",
+        "لتشذيب النخيل",
+        "مساحات خضراء"
+      ],
+      "fr": "Aménagement et entretien d'espaces verts : élagage de palmiers, pose de gazon naturel ou synthétique, systèmes d'arrosage goutte-à-goutte économes en eau pour jardins et cours au Sahara.",
+      "ar": "تصميم وصيانة المساحات الخضراء: تشذيب النخيل، زراعة العشب الطبيعي أو الاصطناعي، وتركيب شبكات السقي بالتنقيط الموفرة للماء في الحدائق الصحراوية.",
+      "darija": "الجرديني وبستنة المساحات الخضراء: زبار النخل، غرس الكازون، وريزو ديال كوت-آ-كوت مقتصد للما ف الجردات ديور وفيلات الجنوب."
+    },
+    {
+      "id": "metier-serrurerie",
+      "keywords": [
+        "serrurier",
+        "serrure",
+        "ouverture de porte",
+        "cle",
+        "porte blindee",
+        "ouvrir une porte",
+        "قفل",
+        "صانع اقفال",
+        "فتح ابواب",
+        "مفاتيح",
+        "تغيير القفل",
+        "فتح الباب"
+      ],
+      "fr": "Serrurier d'urgence et dépannage : ouverture de porte claquée sans dégâts, remplacement de cylindres de sécurité, installation de verrous et renforcement de portes d'entrée sur Le7rayfi.",
+      "ar": "خدمات الأقفال والمفاتيح العاجلة: فتح الأبواب المغلقة دون إتلاف، تغيير أقفال الأمان، وتركيب الأقفال المتعددة النقاط لحماية منزلك عبر لحرايفي.",
+      "darija": "قفل وأقفال ف الحين: فتح الباب مسدود بلا ما يهرس الساروت، تبديل الكانون د القفل، وتركيب قفولات دو كاليتي لحماية دارك ومحلك."
+    },
+    {
+      "id": "ville-laayoune",
+      "keywords": [
+        "ville laayoune",
+        "artisans laayoune",
+        "artisans a laayoune",
+        "laayoune",
+        "artisan laayoune",
+        "sakia el hamra",
+        "quartier massira",
+        "مدينة العيون",
+        "الساقية الحمراء",
+        "حي المسيرة",
+        "حي القدس",
+        "حرفيو العيون",
+        "صناع العيون"
+      ],
+      "fr": "Laâyoune, métropole dynamique du Sahara marocain : Le7rayfi y recense des artisans dans tous les métiers (bâtiment, climatisation, électricité, soudure, artisanat) dans les quartiers Al-Massira, Hay Al-Quds, Bd Mekka et Al-Wifaq.",
+      "ar": "العيون، حاضرة الصحراء المغربية المزدهرة: توفر لحرايفي دليلاً شاملاً لحرفيي المدينة (البناء، التكييف، الكهرباء، الحدادة، والصناعة التقليدية) بأحياء المسيرة، القدس، شارع مكة، والوفاق.",
+      "darija": "مدينة العيون: ف لحرايفي كاينين حرايفية ف كاع الضومينات (بني، كليم، ضو، سودور، وصنعة) ف كاع حومات العيون بحال المسيرة، القدس، وشارع مكة."
+    },
+    {
+      "id": "ville-dakhla",
+      "keywords": [
+        "ville dakhla",
+        "artisans dakhla",
+        "artisans a dakhla",
+        "dakhla",
+        "artisan dakhla",
+        "oued ed-dahab",
+        "lagune",
+        "مدينة الداخلة",
+        "وادي الذهب",
+        "خليج الداخلة",
+        "حرفيو الداخلة",
+        "صناع الداخلة"
+      ],
+      "fr": "Dakhla, la perle du Sud entre désert et océan : découvrez sur Le7rayfi des professionnels spécialisés dans les installations résistantes au climat marin, l'aménagement d'hôtels écologiques et l'artisanat du cuir et du coquillage.",
+      "ar": "الداخلة، لؤلؤة الجنوب المغربي: اعثر عبر لحرايفي على مهنيين متخصصين في التجهيزات المقاومة للرطوبة البحرية، تهيئة المشاريع السياحية البيئية، وصناعة الجلد البحرية.",
+      "darija": "مدينة الداخلة لؤلؤة الجنوب: كاينين ف لحرايفي معلمين كيعرفو للخدمة اللي كتقاوم رطوبة وملوحة البحر، تجهيز مشاريع السياحة وصناعة الجلد الأصيلة."
+    },
+    {
+      "id": "ville-guelmim",
+      "keywords": [
+        "ville guelmim",
+        "artisans guelmim",
+        "artisans a guelmim",
+        "guelmim",
+        "artisan guelmim",
+        "bab essahara",
+        "oued noun",
+        "مدينة كلميم",
+        "باب الصحراء",
+        "واد نون",
+        "حرفيو كلميم",
+        "صناع كلميم"
+      ],
+      "fr": "Guelmim, Porte du Sahara (باب الصحراء) : carrefour historique réputé pour sa bijouterie d'argent, son travail des cuirs de dromadaire et sa vannerie d'alfa. Trouvez des maîtres artisans de Guelmim et d'Oued Noun sur Le7rayfi.",
+      "ar": "كلميم، باب الصحراء التاريخي: قطب عريق يشتهر بصياغة الفضة، دباغة جلود الإبل، وضفر الحلفاء. تواصل مع أمهر صناع كلميم وجهة واد نون عبر منصة لحرايفي.",
+      "darija": "مدينة كلميم باب الصحراء: مشهورة بالنقرة الحرة، خدمة جلد الإبل، وضفير الحلفاء. كاع معلمين واد نون كتلقاهم مجموعين ف سيت لحرايفي."
+    },
+    {
+      "id": "ville-smara",
+      "keywords": [
+        "ville smara",
+        "artisans smara",
+        "artisans a smara",
+        "smara",
+        "artisan smara",
+        "es-semara",
+        "sculpture pierre",
+        "مدينة السمارة",
+        "السمارة",
+        "نحت الحجر",
+        "حرفيو السمارة",
+        "صناع السمارة"
+      ],
+      "fr": "Smara, capitale spirituelle et culturelle du Sud marocain : réputée pour sa taille et sculpture sur pierre locale, ses tapis traditionnels et son riche patrimoine sahraoui soutenu par la plateforme Le7rayfi.",
+      "ar": "السمارة، العاصمة الروحية والثقافية بالجنوب: تشتهر بنحت الحجر المحلي الفريد، صناعة السجاد الصحراوي الأصيل، وتراثها العريق الموثق عبر لحرايفي.",
+      "darija": "مدينة السمارة: عاصمة العلم والروحانيات ف الجنوب، مشهورة بنقش الحجر المحلي، الزرابي الصحراوية والصنعة اللي كتوثقها لحرايفي."
+    },
+    {
+      "id": "ville-boujdour",
+      "keywords": [
+        "ville boujdour",
+        "artisans boujdour",
+        "artisans a boujdour",
+        "boujdour",
+        "artisan boujdour",
+        "boujdour",
+        "مدينة بوجدور",
+        "بوجدور",
+        "حرفيو بوجدور",
+        "صناع بوجدور"
+      ],
+      "fr": "Boujdour, cité côtière dynamique : retrouvez sur Le7rayfi les artisans du froid, électriciens, soudeurs navals et artisans du bâtiment pour tous vos besoins professionnels et résidentiels.",
+      "ar": "بوجدور، المدينة الساحلية الواعدة: يوفر دليل لحرايفي فنيي التبريد والتكييف، الكهربائيين، الحدادين، ومهنيي البناء لتلبية كافة متطلبات المشاريع والسكان.",
+      "darija": "مدينة بوجدور: ف لحرايفي كاينين معلمين الكليم، تريسيانات، سودورات بحريين وبناية واجدين يخدمو ليك ف الدار ولا ف المشروع ديالك."
+    },
+    {
+      "id": "guide-demander-devis",
+      "keywords": [
+        "demander devis",
+        "rediger devis",
+        "comparer devis",
+        "prix travaux",
+        "conseil devis",
+        "طلب عرض سعر",
+        "صياغة دوفي",
+        "مقارنة الاسعار",
+        "تكلفة الاشغال",
+        "دوفي"
+      ],
+      "fr": "Conseil Le7rayfi pour demander un bon devis : 1. Prenez des photos claires de la zone des travaux ; 2. Précisez les dimensions et les matériaux souhaités ; 3. Indiquez vos délais idéaux ; 4. Demandez toujours un devis écrit et détaillé avant de démarrer.",
+      "ar": "نصائح لحرايفي لإعداد طلب عرض ثمن ممتاز: 1. التقط صوراً واضحة لمكان الأشغال؛ 2. حدد القياسات ونوع المواد المطلوبة؛ 3. اذكر الأجل الزمني المناسب لك؛ 4. اطلب دائماً عرض سعر مكتوباً ومفصلاً قبل بدء العمل.",
+      "darija": "نصيحة لحرايفي باش تطلب دوفي ناضي: صور البلاصة مزيان بالتيلفون، حدد العبارات والسلعة اللي باغي، اتفق على الوقت وقتاش تسالي الخدمة، وطلب دوفي مكتوب قبل ما يبدا المعلم."
+    },
+    {
+      "id": "guide-choisir-artisan",
+      "keywords": [
+        "choisir artisan",
+        "bon artisan",
+        "confiance",
+        "avis clients",
+        "artisan verifie",
+        "اختيار الحرفي",
+        "حرفي موثوق",
+        "تقييمات الزبناء",
+        "حرفي معتمد"
+      ],
+      "fr": "Comment bien choisir son artisan sur Le7rayfi ? 1. Consultez son portfolio de réalisations passées ; 2. Vérifiez le badge de profil vérifié ; 3. Lisez les avis laissés par d'autres clients après chantier ; 4. Concluez un accord clair sur les prix et fournitures.",
+      "ar": "كيف تختار الحرفي المناسب عبر لحرايفي؟ 1. تفحص معرض أعماله السابقة؛ 2. تأكد من شارة التوثيق بالملف؛ 3. اقرأ تقييمات الزبناء السابقين بعد انتهاء الأشغال؛ 4. اتفق مسبقاً بوضوح على التكلفة والسلعة.",
+      "darija": "كيفاش تختار المعلم المزيان ف لحرايفي: شوف تصاور خدمتو القديمة، تأكد من شارة التوثيق ف البروفايل، قرا آراء الكليان اللي خدم عندهم، واتفقو على السلعة واليد العاملة من اللول."
+    },
+    {
+      "id": "guide-auto-entrepreneur",
+      "keywords": [
+        "auto entrepreneur",
+        "auto-entrepreneur",
+        "statut auto entrepreneur",
+        "devenir auto entrepreneur",
+        "rnme",
+        "cnss artisan",
+        "المقاول الذاتي",
+        "نظام المقاول الذاتي",
+        "مقاول ذاتي",
+        "المقاول الذاتي بالمغرب",
+        "التسجيل في المقاول الذاتي",
+        "تغطية صحية",
+        "ضريبة المقاول الذاتي"
+      ],
+      "fr": "Le statut d'Auto-Entrepreneur au Maroc offre aux artisans : facturation légale, taux d'impôt très réduit (1% à 2%), exonération de taxe professionnelle pendant 5 ans et accès à la couverture médicale obligatoire CNSS (AMO). Inscription en ligne sur rnme.marocpme.gov.ma.",
+      "ar": "يوفر نظام المقاول الذاتي بالمغرب للحرفيين: إمكانية إصدار فواتير رسمية، ضريبة تفضيلية منخفضة (1% إلى 2%)، إعفاء من الرسم المهني لمدة 5 سنوات، واستفادة من التغطية الصحية AMO عبر الضمان الاجتماعي CNSS. التسجيل عبر rnme.marocpme.gov.ma.",
+      "darija": "ستاتي ديال المقاول الذاتي ف المغرب كيعطي للحرايفية: تخرج فاكتورات قانونية للشركات، ضريبة طايحة (1%)، إعفاء 5 سنين من الباتانط، ولاCNSS للتغطية الصحية. التسجيل ساهل ف السيت الوطني."
+    },
+    {
+      "id": "guide-securite-chantier",
+      "keywords": [
+        "securite chantier",
+        "epi",
+        "protection",
+        "gants",
+        "casque",
+        "danger",
+        "سلامة الورش",
+        "معدات الحماية",
+        "خوذة وقفازات",
+        "وقاية من الحوادث"
+      ],
+      "fr": "Sécurité sur le chantier : portez toujours vos Équipements de Protection Individuelle (EPI : gants isolants, chaussures de sécurité, lunettes). Coupez systématiquement le disjoncteur général avant toute intervention électrique et sécurisez les échelles.",
+      "ar": "إرشادات السلامة في الورشات: احرص دائماً على ارتداء معدات الوقاية الفردية (قفازات عازلة، حذاء أمان، ونظارات واقية). اقطع قاطع التيار الكهربائي العام قبل أي تدخل وتأكد من تثبيت السلالم بإحكام.",
+      "darija": "السلامة ف الشانطي هي اللولة: ديما لبس الصباط د السيكيريتي، الليكات، والنواظر. طفي الديجونكتور د الضو قبل ما تقيس الخيوطا، وثبت السلوم مزيان باش تفادى الطيحة."
+    },
+    {
+      "id": "guide-photos-portfolio",
+      "keywords": [
+        "photographier",
+        "photographier creations",
+        "conseils pour photographier",
+        "creations",
+        "photos",
+        "photos creations",
+        "photos smartphone",
+        "portfolio photo",
+        "تصوير الاعمال",
+        "تصوير بالهاتف",
+        "معرض صور الحرفي",
+        "نصائح تصوير"
+      ],
+      "fr": "Conseils Le7rayfi Academy pour photographier ses réalisations avec un smartphone : 1. Nettoyez l'objectif de la caméra ; 2. Privilégiez la lumière naturelle ; 3. Prenez une photo « avant » et « après » ; 4. Cadrez droit et évitez les photos floues pour attirer plus de clients.",
+      "ar": "نصائح أكاديمية لحرايفي لتصوير أعمالك بالهاتف: 1. امسح عدسة الكاميرا جيداً؛ 2. اعتمد على الإضاءة الطبيعية للنهار؛ 3. التقط صورة «قبل» وصورة «بعد» الإنجاز؛ 4. اضبط الزاوية دون اهتزاز لإبراز جودة عملك.",
+      "darija": "نصائح أكاديمية لحرايفي باش تصور خدمتك نقية بالتيلفون: مسح الكاميرا مزيان، صور ف الضو د النهار، صور «قبل» و«من بعد» باش يبان الفرق، وتفادى الهزان باش تجيب كليان كثار."
+    },
+    {
+      "id": "guide-calculer-prix",
+      "keywords": [
+        "calculer prix",
+        "prix des travaux",
+        "cout des travaux",
+        "fixer tarif",
+        "cout main d oeuvre",
+        "حساب السعر",
+        "اسعار الاشغال",
+        "اسعار الخدمات",
+        "تحديد اسعار الخدمات",
+        "تحديد الاسعار",
+        "تحديد الثمن",
+        "تكلفة اليد العاملة"
+      ],
+      "fr": "Comment fixer ses tarifs d'artisan ? Calculez : 1. Le coût exact des matériaux et consommables ; 2. Votre temps de travail et déplacement ; 3. Une marge de sécurité pour imprévus (10%) ; 4. Présentez un montant clair sans surprises pour instaurer une confiance durable.",
+      "ar": "كيف تحدد أسعار خدماتك الحرفية؟ احسب: 1. تكلفة المواد والسلع المستهلكة؛ 2. ساعات العمل والتنقل؛ 3. نسبة أمان للمصاريف غير المتوقعة (10%)؛ 4. قدم سعراً واضحاً دون مفاجآت لبناء ثقة دائمة مع الزبون.",
+      "darija": "كيفاش تحسب ثمن خدمتك كحرايفي؟ حسب ثمن السلعة كاملة، الوقت والطريق، زيد واحد 10% ديال المفاجآت، وعطي ثمن واضح ومفصل باش الكليان يرتاح ويتعامل معاك ديما."
+    },
+    {
+      "id": "technologie-pwa",
+      "keywords": [
+        "pwa",
+        "progressive web app",
+        "service worker",
+        "installer app",
+        "sans play store",
+        "تطبيق ويب",
+        "تثبيت التطبيق",
+        "تطبيق بدون متجر",
+        "pwa technologie"
+      ],
+      "fr": "Le7rayfiBot est une Progressive Web App (PWA) : installable en un clic sur l'écran d'accueil sans passer par le Play Store, elle pèse moins de 1 Mo, démarre instantanément et met en cache l'ensemble des réponses pour un usage 100% hors-ligne.",
+      "ar": "حريف بوت تطبيق ويب تقدمي (PWA): يمكن تثبيته بنقرة واحدة على شاشة هاتفك دون الحاجة لمتجر التطبيقات، خفيف الحجم (أقل من ميغابايت)، سريع جداً، ويخزن البيانات ليعمل دون اتصال.",
+      "darija": "حريف بوت مبني بـ PWA: كيتثبت كأبليكاسيون ف التيليفون بلا متجر، خفيف بزاف، كيتحل دغيا، وخدام بلا أنترنيت بفضل التخزين الداخلي."
+    },
+    {
+      "id": "hardware-chassis",
+      "keywords": [
+        "chassis",
+        "fabrication robot",
+        "fabrication du robot",
+        "robot",
+        "carton",
+        "tenue sahraouie",
+        "plans robot",
+        "هيكل الروبوت",
+        "صناعة الروبوت",
+        "لباس صحراوي للروبوت",
+        "تصميم الروبوت",
+        "هيكل حريف بوت",
+        "هيكل حريف بوت ميني"
+      ],
+      "fr": "Le châssis de Le7rayfiBot Mini V1 est éco-conçu en carton plume ou bois recyclé découpé, habillé d'une tenue sahraouie traditionnelle miniature confectionnée par un artisan local, avec une fente arrière sécurisée pour le smartphone Android NFC.",
+      "ar": "صُمم هيكل حريف بوت ميني بمواد مستدامة من الكرتون المقوى أو الخشب المعاد تدويره، ويكتسي زياً صحراوياً مصغراً حاكته أيادي خياط محلي، مع فتحة خلفية مخصصة لهاتف أندرويد NFC.",
+      "darija": "الكادر ديال حريف بوت ميني مصاوب من كرتون صلب ولا خشب معود، ملبس بكسوة صحراوية مفصلة عند خياط بلدي، وفيه بلاصة اللور كيدخل فيها التيلفون."
     }
   ]
 }

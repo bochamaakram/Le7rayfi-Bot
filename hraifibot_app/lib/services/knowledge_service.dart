@@ -63,6 +63,16 @@ class KnowledgeService {
     }
   }
 
+  static const Set<String> _stopWords = {
+    'بغيت', 'باغي', 'خاصني', 'خصني', 'عندي', 'كاين', 'كاينة', 'واش', 'شي',
+    'ديال', 'ديالي', 'ف', 'عفاك', 'باش', 'فين', 'كنقلب', 'نلقى', 'نصاوب',
+    'نصلح', 'ليا', 'ليك', 'لينا', 'دابا', 'هاد', 'هادي', 'هادا', 'شنو',
+    'اش', 'أش', 'علاش', 'شكون', 'كيفاش', 'في', 'من', 'على', 'إلى', 'الى',
+    'عن', 'مع', 'هل', 'ما', 'كيف', 'لماذا', 'هذا', 'هذه', 'ذلك', 'و', 'او', 'أو',
+    'ثم', 'ان', 'أن', 'لا', 'هو', 'هي', 'انا', 'أنا', 'نحن', 'يمكن',
+    'مشكل', 'مشكلة', 'عطب', 'خاسر', 'خاسرة', 'بانة', 'بانا'
+  };
+
   String normalizeText(String input) {
     String text = input.toLowerCase();
     // Normalize Arabic letters and diacritics
@@ -85,13 +95,34 @@ class KnowledgeService {
     return text.replaceAll(RegExp(r'\s+'), ' ').trim();
   }
 
+  Set<String> _extractTokens(String text) {
+    final base = normalizeText(text).split(' ').where((w) => w.length > 1).toList();
+    final tokens = <String>{};
+    for (final token in base) {
+      tokens.add(token);
+      if (token.length >= 4) {
+        final stripped = token
+            .replaceFirst(RegExp(r'^وال'), '')
+            .replaceFirst(RegExp(r'^بال'), '')
+            .replaceFirst(RegExp(r'^فال'), '')
+            .replaceFirst(RegExp(r'^كال'), '')
+            .replaceFirst(RegExp(r'^لل'), '')
+            .replaceFirst(RegExp(r'^ال'), '');
+        if (stripped.length >= 3) {
+          tokens.add(stripped);
+        }
+      }
+    }
+    return tokens;
+  }
+
   KnowledgeItem? findAnswer(String question) {
     if (_items.isEmpty) return null;
     final normalized = normalizeText(question);
     if (normalized.isEmpty) return null;
 
-    final queryWords = normalized.split(' ').where((w) => w.length > 1).toList();
-    if (queryWords.isEmpty) return null;
+    final tokens = _extractTokens(normalized);
+    if (tokens.isEmpty) return null;
 
     KnowledgeItem? bestItem;
     int maxScore = 0;
@@ -102,27 +133,28 @@ class KnowledgeService {
 
       // Check full keyword phrase match
       for (final kw in normKeywords) {
-        if (kw.isNotEmpty && normalized.contains(kw)) {
+        if (kw.isNotEmpty && (normalized == kw || normalized.contains(kw))) {
           score += 6;
         }
-        for (final word in queryWords) {
-          if (kw.split(' ').contains(word)) {
-            score += 3;
-          } else if (kw.contains(word)) {
-            score += 1;
+        for (final token in tokens) {
+          if (kw.split(' ').contains(token)) {
+            score += 4;
+          } else if (kw.length >= 4 && (kw.startsWith(token) || token.startsWith(kw))) {
+            score += 2;
           }
         }
       }
 
-      // Check content match in FR/AR
+      // Check content match in FR/AR/Darija
       final normFr = normalizeText(item.fr);
       final normAr = normalizeText(item.ar);
       final normDarija = item.darija != null ? normalizeText(item.darija!) : '';
 
-      for (final word in queryWords) {
-        if (normFr.contains(word)) score += 1;
-        if (normAr.contains(word)) score += 1;
-        if (normDarija.isNotEmpty && normDarija.contains(word)) score += 1;
+      for (final token in tokens) {
+        if (_stopWords.contains(token)) continue;
+        if (normFr.contains(token)) score += 1;
+        if (normAr.contains(token)) score += 1;
+        if (normDarija.isNotEmpty && normDarija.contains(token)) score += 1;
       }
 
       if (score > maxScore) {

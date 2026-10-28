@@ -1142,7 +1142,7 @@
     }
     const item = state.knowledge && state.knowledge.items.find(i => i.id === state.response.itemId);
     if (item) {
-      const text = (state.lang === 'ar' || state.lang === 'darija') ? item.ar : item.fr;
+      const text = (state.lang === 'darija' && item.darija) ? item.darija : ((state.lang === 'ar' || state.lang === 'darija') ? item.ar : item.fr);
       speakText(text);
       return;
     }
@@ -1225,6 +1225,14 @@
 
       recognition.onerror = (event) => {
         const code = event && event.error;
+        if (code === 'language-not-supported' && (recognition.lang === 'ar-MA' || state.lang === 'darija')) {
+          console.warn('STT: ar-MA not supported by browser Web Speech API, falling back to ar-SA');
+          recognition.lang = 'ar-SA';
+          try {
+            recognition.start();
+            return;
+          } catch (_) {}
+        }
         cleanUpMicrophone();
         if (code === 'not-allowed' || code === 'service-not-allowed') {
           if (dom.micPermissionModal && dom.micPermissionModal.showModal) {
@@ -1314,7 +1322,11 @@
     'quelles', 'sont', 'peut', 'on', 'ca', 'cette', 'mon', 'ton', 'son', 'votre',
     'في', 'من', 'على', 'إلى', 'الى', 'عن', 'مع', 'هل', 'ما', 'كيف', 'لماذا', 'هذا',
     'هذه', 'ذلك', 'التي', 'الذي', 'و', 'او', 'أو', 'ثم', 'ان', 'أن', 'لا', 'هو', 'هي',
-    'انا', 'أنا', 'نحن', 'يمكن', 'الى', 'جد', 'أجد'
+    'انا', 'أنا', 'نحن', 'يمكن', 'الى', 'جد', 'أجد',
+    'بغيت', 'باغي', 'خاصني', 'خصني', 'عندي', 'كاين', 'كاينة', 'واش', 'شي',
+    'ديال', 'ديالي', 'ف', 'عفاك', 'باش', 'فين', 'كنقلب', 'نلقى', 'نصاوب',
+    'نصلح', 'ليا', 'ليك', 'لينا', 'دابا', 'هاد', 'هادي', 'هادا', 'شنو',
+    'اش', 'أش', 'علاش', 'شكون', 'كيفاش', 'مشكل', 'مشكلة', 'عطب', 'خاسر', 'خاسرة', 'بانة', 'بانا'
   ]);
 
   function queryTokens(text) {
@@ -1468,7 +1480,7 @@
     } else {
       dom.speechBubble.classList.remove('is-fallback');
       const item = state.knowledge.items.find(i => i.id === payload.itemId);
-      const answerText = (state.lang === 'ar' || state.lang === 'darija') ? item.ar : item.fr;
+      const answerText = (state.lang === 'darija' && item && item.darija) ? item.darija : ((state.lang === 'ar' || state.lang === 'darija') ? (item ? item.ar : '') : (item ? item.fr : ''));
 
       if (dom.bubbleBadge) {
         dom.bubbleBadge.hidden = false;
@@ -1501,12 +1513,16 @@
       .replace(/فاس/g, 'Fes')
       .replace(/طنجة/g, 'Tanger')
       .replace(/أكادير/g, 'Agadir')
-      .replace(/تريسيان|كهربائي|كهرباء/g, 'electrician')
-      .replace(/بلومبي|سباك|سباكة/g, 'plumber')
-      .replace(/نجار|نجارة/g, 'carpenter')
-      .replace(/صباغ|صباغة/g, 'painter')
-      .replace(/ميكانيك/g, 'mechanic')
+      .replace(/تريسيان|كهربائي|كهرباء|الضو|ضو/g, 'electrician')
+      .replace(/بلومبي|سباك|سباكة|الما|روبيني|قادوس|شوفو/g, 'plumber')
+      .replace(/كليم|كليماتيزور|مكيف|تبريد/g, 'air conditioning')
+      .replace(/ماكينة الصابون|ماكينة لغسيل|تلاجة|غسالة|ثلاجة/g, 'home appliances')
+      .replace(/نجار|نجارة|بيبان|شراجم/g, 'carpenter')
+      .replace(/صباغ|صباغة|حيط/g, 'painter')
+      .replace(/ميكانيك|ميكانيسيان|طوموبيل/g, 'mechanic car')
       .replace(/طاقة شمسية/g, 'solar energy')
+      .replace(/بناي|بناء|زلايجي|زليج/g, 'mason tiler')
+      .replace(/سودور|حداد/g, 'welder')
       .replace(/صناعة تقليدية/g, 'traditional crafts');
 
     const charMap = {
@@ -1547,7 +1563,8 @@ Always answer directly in ${targetLangDesc}. Keep answers concise, direct, helpf
 
       if (res.ok) {
         const data = await res.json();
-        const text = data?.output?.[0]?.content?.[0]?.text;
+        const msg = data?.output?.find(o => o.type === 'message');
+        const text = msg?.content?.find(c => c.text)?.text || data?.output?.[0]?.content?.[0]?.text;
         if (text && text.trim()) return text.trim();
       }
     } catch (e) {
@@ -1595,7 +1612,7 @@ Always answer directly in ${targetLangDesc}. Keep answers concise, direct, helpf
     if (match) {
       state.previousTopic = match.item.id;
       state.response = { itemId: match.item.id, query: question, fallback: false };
-      const answer = (state.lang === 'ar' || state.lang === 'darija') ? match.item.ar : match.item.fr;
+      const answer = (state.lang === 'darija' && match.item.darija) ? match.item.darija : ((state.lang === 'ar' || state.lang === 'darija') ? match.item.ar : match.item.fr);
       renderResponseBubble(state.response);
       addMessageToConvo('bot', answer, true, match.item.id);
       speakCurrentResponse();

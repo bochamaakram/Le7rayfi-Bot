@@ -53,7 +53,7 @@ adb install -r build/app/outputs/flutter-apk/app-debug.apk
 ```
 hraifibot_app/
 ├── assets/
-│   ├── knowledge.json          # Base de connaissances locale (20 fiches FR/AR/Darija)
+│   ├── knowledge.json          # Base de connaissances locale (85 fiches FR/AR/Darija)
 │   ├── icon-192.png
 │   └── icon-512.png
 ├── lib/
